@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona de Fondeo — Compara Empresas de Fondeo de Futuros 2026</title>
+<meta name="description" content="Compara las mejores empresas de fondeo de futuros. Simulador de pruebas de fondeo, ranking actualizado y descuentos exclusivos para traders del NQ Nasdaq.">
+<meta name="keywords" content="empresas de fondeo, pruebas de fondeo, comparar empresas fondeo futuros 2026, zona de fondeo, fondeo NQ Nasdaq">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════ VARIABLES */
+:root {
+  --bg: #080b10;
+  --surface: #0e1219;
+  --surface2: #141a23;
+  --border: #1c2333;
+  --border2: #2a3545;
+  --primary: #00d4aa;
+  --primary-dim: rgba(0,212,170,0.10);
+  --primary-glow: rgba(0,212,170,0.30);
+  --gold: #f5b731;
+  --red: #ff4560;
+  --red-dim: rgba(255,69,96,0.10);
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --text3: #4a5568;
+  --font-d: 'Syne', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
+  --font-m: 'JetBrains Mono', monospace;
+  --r: 12px; --rl: 18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:15px;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% -10%,rgba(0,212,170,0.06) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 110%,rgba(245,183,49,0.04) 0%,transparent 60%);pointer-events:none;z-index:0}
+
+/* ═══════════════════════ NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(8,11,16,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:6px;height:58px}
+.logo{font-family:var(--font-d);font-size:19px;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px;margin-right:10px;white-space:nowrap;cursor:pointer}
+.logo span{color:var(--primary)}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;overflow-x:auto}
+.nav-links::-webkit-scrollbar{display:none}
+.nb{padding:6px 13px;border-radius:8px;color:var(--text2);font-size:13.5px;font-weight:500;white-space:nowrap;cursor:pointer;border:none;background:none;font-family:var(--font-b);transition:all .2s}
+.nb:hover,.nb.active{background:var(--surface2);color:var(--text)}
+.nb.active{color:var(--primary)}
+.nbadge{background:var(--primary);color:var(--bg);font-size:10px;font-weight:700;padding:2px 5px;border-radius:20px;margin-left:3px}
+.nav-cta{margin-left:auto;background:var(--primary);color:var(--bg);padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;border:none;font-family:var(--font-b);transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:#00efc4;transform:translateY(-1px);box-shadow:0 4px 20px var(--primary-glow)}
+
+/* ═══════════════════════ PAGES */
+.page{display:none;animation:fadeUp .35s ease}
+.page.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ═══════════════════════ LAYOUT */
+.container{max-width:1280px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.section{padding:70px 0}
+.section-sm{padding:44px 0}
+
+/* ═══════════════════════ TYPE */
+.section-label{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-m);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);margin-bottom:14px}
+.section-label::before{content:'';width:18px;height:1px;background:var(--primary)}
+h1{font-family:var(--font-d);font-size:clamp(34px,6vw,68px);font-weight:800;line-height:1.05;letter-spacing:-2px}
+h2{font-family:var(--font-d);font-size:clamp(26px,4vw,44px);font-weight:800;line-height:1.1;letter-spacing:-1.5px}
+h3{font-family:var(--font-d);font-size:21px;font-weight:700;letter-spacing:-.5px}
+h4{font-family:var(--font-d);font-size:16px;font-weight:700}
+.muted{color:var(--text2)}
+.mono{font-family:var(--font-m)}
+
+/* ═══════════════════════ BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;border:none;font-family:var(--font-b);transition:all .2s;white-space:nowrap}
+.btn-primary{background:var(--primary);color:var(--bg);box-shadow:0 0 18px var(--primary-glow)}
+.btn-primary:hover{background:#00efc4;box-shadow:0 0 30px var(--primary-glow);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-dim)}
+
+/* MEGA CTA */
+.cta{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary),#00b896);color:var(--bg);padding:14px 28px;border-radius:11px;font-size:15px;font-weight:800;box-shadow:0 0 36px var(--primary-glow),0 6px 20px rgba(0,0,0,.4);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;font-family:var(--font-b);border:1px solid rgba(255,255,255,.15);transition:all .25s}
+.cta::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transition:.5s}
+.cta:hover::before{left:100%}
+.cta:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 0 56px var(--primary-glow),0 10px 28px rgba(0,0,0,.5)}
+.cta-pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 18px var(--primary-glow)}50%{box-shadow:0 0 40px var(--primary-glow)}}
+
+/* ═══════════════════════ BADGES */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:6px;font-size:11.5px;font-weight:600;font-family:var(--font-m)}
+.bg{background:rgba(0,212,170,.14);color:var(--primary);border:1px solid rgba(0,212,170,.22)}
+.by{background:rgba(245,183,49,.14);color:var(--gold);border:1px solid rgba(245,183,49,.22)}
+.br{background:var(--red-dim);color:var(--red);border:1px solid rgba(255,69,96,.22)}
+.bb{background:rgba(96,165,250,.14);color:#60a5fa;border:1px solid rgba(96,165,250,.22)}
+
+/* ═══════════════════════ CARDS */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:all .3s}
+.card:hover{border-color:var(--border2);box-shadow:0 8px 36px rgba(0,0,0,.28);transform:translateY(-2px)}
+
+/* ═══════════════════════ STAT */
+.stat{background:var(--surface2);border:1px solid var(--border);border-radius:11px;padding:18px 20px;text-align:center}
+.stat .v{font-family:var(--font-d);font-size:30px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:4px}
+.stat .l{color:var(--text2);font-size:12px}
+
+/* ═══════════════════════ TICKER */
+.ticker-wrap{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;padding:9px 0}
+.ticker{display:flex;animation:ticker 32s linear infinite;width:max-content}
+.ti{display:flex;align-items:center;gap:7px;padding:0 28px;font-family:var(--font-m);font-size:12px;color:var(--text2);border-right:1px solid var(--border);white-space:nowrap}
+.up{color:var(--primary)} .dn{color:var(--red)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════ HERO */
+.hero{padding:90px 0 70px;position:relative;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;background:var(--primary-dim);border:1px solid rgba(0,212,170,.18);border-radius:20px;padding:5px 13px;font-size:12px;font-weight:600;color:var(--primary);margin-bottom:26px;font-family:var(--font-m)}
+.dot{width:7px;height:7px;background:var(--primary);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin-bottom:52px;margin-top:28px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;padding-top:44px;border-top:1px solid var(--border)}
+
+/* ═══════════════════════ SIZE TABS */
+.size-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}
+.stab{padding:7px 16px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:var(--font-m)}
+.stab.active{background:var(--primary);border-color:var(--primary);color:var(--bg)}
+
+/* ═══════════════════════ FILTER BAR */
+.filter-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:18px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.fg{display:flex;flex-direction:column;gap:5px;min-width:150px}
+.fl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);font-family:var(--font-m)}
+select,input{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:9px 13px;color:var(--text);font-size:13.5px;font-family:var(--font-b);outline:none;cursor:pointer;appearance:none;transition:border-color .2s}
+select:focus,input:focus{border-color:var(--primary)}
+.freset{background:none;border:1px solid var(--border2);border-radius:8px;padding:9px 15px;color:var(--text2);font-size:13px;cursor:pointer;font-family:var(--font-b);transition:all .2s;margin-top:auto}
+.freset:hover{border-color:var(--red);color:var(--red)}
+
+/* ═══════════════════════ TABLE */
+.tw{overflow-x:auto;border-radius:var(--rl);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:860px}
+thead tr{background:var(--surface2);border-bottom:2px solid var(--border)}
+th{padding:13px 18px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);font-family:var(--font-m);text-align:left;white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--primary)}
+th.sa::after{content:' ↑';color:var(--primary)}
+th.sd::after{content:' ↓';color:var(--primary)}
+tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+tbody tr:hover{background:rgba(14,18,25,.8)}
+tbody tr:last-child{border-bottom:none}
+tbody tr.feat{background:rgba(0,212,170,.04)}
+tbody tr.feat td:first-child{border-left:3px solid var(--primary)}
+td{padding:15px 18px;vertical-align:middle}
+.fc{display:flex;align-items:center;gap:11px}
+.fav{width:36px;height:36px;border-radius:8px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--primary);font-family:var(--font-d);flex-shrink:0}
+.fn{font-weight:600;font-size:14px}
+.fc2{font-size:11px;color:var(--text2);margin-top:1px;font-family:var(--font-m)}
+.pc .price{font-family:var(--font-m);font-size:15px;font-weight:600}
+.pc .orig{font-size:11px;color:var(--text3);text-decoration:line-through;font-family:var(--font-m)}
+.pc .disc{font-size:11px;color:var(--primary);font-family:var(--font-m);font-weight:600}
+.nc{font-family:var(--font-m);font-size:14px;font-weight:500}
+.rc{display:flex;align-items:center;gap:5px}
+.rv{font-family:var(--font-m);font-size:14px;font-weight:600;color:var(--gold)}
+.stars{color:var(--gold);font-size:13px}
+.chk{color:var(--primary);font-size:15px}
+.crs{color:var(--red);font-size:13px}
+.empty-state{text-align:center;padding:60px 20px;color:var(--text2)}
+.empty-state .ei{font-size:44px;margin-bottom:12px}
+
+/* ═══════════════════════ REVIEWS GRID */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.rc2{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:22px;cursor:pointer;transition:all .3s;display:flex;flex-direction:column;gap:14px}
+.rc2:hover{border-color:var(--primary);box-shadow:0 8px 36px rgba(0,0,0,.28),0 0 18px var(--primary-dim);transform:translateY(-4px)}
+.rch{display:flex;justify-content:space-between;align-items:flex-start}
+.ra{width:48px;height:48px;border-radius:10px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--primary);font-family:var(--font-d)}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.si{background:var(--surface2);border-radius:8px;padding:9px 11px}
+.si .sl{font-size:10px;color:var(--text2);font-family:var(--font-m);text-transform:uppercase;letter-spacing:.08em}
+.si .sv{font-family:var(--font-m);font-size:14px;font-weight:600;color:var(--text);margin-top:2px}
+.rtags{display:flex;gap:5px;flex-wrap:wrap}
+
+/* ═══════════════════════ DISCOUNTS */
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.dc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:22px;position:relative;overflow:hidden;transition:all .3s}
+.dc:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.dpct{position:absolute;top:18px;right:18px;background:var(--primary);color:var(--bg);font-family:var(--font-d);font-size:20px;font-weight:800;padding:5px 13px;border-radius:7px;line-height:1}
+.db{margin-top:44px}
+.dfirm{font-size:12px;color:var(--text2);margin-bottom:3px;font-family:var(--font-m)}
+.dtit{font-family:var(--font-d);font-size:18px;font-weight:700;margin-bottom:10px}
+.ddesc{font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.6}
+.dexp{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);font-family:var(--font-m);margin-bottom:14px}
+.codebox{background:var(--surface2);border:1px dashed var(--border2);border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-m);font-size:13px;flex:1;min-width:120px}
+.cpbtn{background:none;border:1px solid var(--border2);color:var(--text2);font-size:11px;padding:4px 9px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:var(--font-b)}
+.cpbtn:hover{border-color:var(--primary);color:var(--primary)}
+
+/* ═══════════════════════ RANKING */
+.rk-table{width:100%;border-collapse:collapse}
+.rk-table thead tr{background:var(--surface2);border-bottom:2px solid var(--border)}
+.rk-table th{padding:12px 16px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);font-family:var(--font-m);text-align:left}
+.rk-table td{padding:16px;border-bottom:1px solid var(--border);vertical-align:middle}
+.rk-table tr:last-child td{border-bottom:none}
+.rk-table tr:hover td{background:rgba(14,18,25,.6)}
+.rk-pos{font-family:var(--font-d);font-size:22px;font-weight:800;width:50px;text-align:center}
+.rk-pos.p1{color:var(--gold)}
+.rk-pos.p2{color:#c0c0c0}
+.rk-pos.p3{color:#cd7f32}
+.rk-bar-wrap{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden;min-width:80px}
+.rk-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--primary),#00b896)}
+.score-num{font-family:var(--font-m);font-size:16px;font-weight:700;color:var(--primary);width:40px}
+
+/* ═══════════════════════ SIMULATOR */
+.sim-wrap{display:grid;grid-template-columns:380px 1fr;gap:24px;align-items:start}
+.sim-form{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:28px}
+.sim-form h3{margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.sf{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.sf label{font-size:11px;color:var(--text2);font-family:var(--font-m);text-transform:uppercase;letter-spacing:.08em}
+.sf input,.sf select{width:100%}
+.sim-results{display:flex;flex-direction:column;gap:12px}
+.sr-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:20px;display:flex;align-items:center;gap:16px;transition:all .3s}
+.sr-card:hover{border-color:var(--border2);transform:translateX(4px)}
+.sr-card.best{border-color:var(--primary);background:rgba(0,212,170,.04)}
+.sr-badge{position:relative}
+.sr-av{width:44px;height:44px;border-radius:9px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:var(--primary);font-family:var(--font-d);flex-shrink:0}
+.sr-info{flex:1}
+.sr-name{font-weight:600;font-size:14px;margin-bottom:3px}
+.sr-sub{font-size:12px;color:var(--text2);font-family:var(--font-m)}
+.sr-payout{font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--primary);white-space:nowrap}
+.sr-roi{font-size:11px;color:var(--text2);font-family:var(--font-m);text-align:right;margin-top:2px}
+.best-label{font-size:10px;background:var(--primary);color:var(--bg);padding:2px 7px;border-radius:4px;font-weight:700;font-family:var(--font-m);margin-bottom:4px;display:inline-block}
+.sim-empty{text-align:center;padding:60px 20px;color:var(--text2);font-size:14px}
+.sim-empty .ei{font-size:52px;margin-bottom:14px}
+
+/* ═══════════════════════ BLOG */
+.bg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.bc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:all .3s;cursor:pointer}
+.bc:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.28)}
+.bthumb{height:160px;background:linear-gradient(135deg,var(--surface2),var(--surface));display:flex;align-items:center;justify-content:center;font-size:50px;opacity:.55}
+.bcon{padding:18px}
+.bcat{font-family:var(--font-m);font-size:11px;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.btit{font-family:var(--font-d);font-size:17px;font-weight:700;margin-bottom:8px;color:var(--text);line-height:1.3}
+.bex{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:14px}
+.bmeta{display:flex;justify-content:space-between;font-size:12px;color:var(--text3);font-family:var(--font-m)}
+
+/* ═══════════════════════ AFFILIATE SIDEBAR */
+.aff-box{background:linear-gradient(135deg,rgba(0,212,170,.09),rgba(0,184,150,.04));border:1px solid rgba(0,212,170,.22);border-radius:var(--rl);padding:26px;position:sticky;top:76px}
+.aff-price{font-family:var(--font-d);font-size:30px;font-weight:800;color:var(--primary);margin:10px 0}
+.aff-orig{font-size:13px;color:var(--text2);text-decoration:line-through;font-family:var(--font-m)}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2)}
+.trust-item::before{content:'✓';color:var(--primary);font-size:11px}
+
+/* ═══════════════════════ FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:52px 0 26px;margin-top:70px}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.fl2{display:flex;flex-direction:column;gap:7px}
+.fl2 a{font-size:13px;color:var(--text2);text-decoration:none;cursor:pointer;transition:color .2s}
+.fl2 a:hover{color:var(--primary)}
+.fb{border-top:1px solid var(--border);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fb p{font-size:12px;color:var(--text3)}
+.fb .disc{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:7px 13px;font-size:11px;color:var(--text3);font-family:var(--font-m);max-width:440px}
+
+/* ═══════════════════════ TOAST */
+.toast{position:fixed;bottom:22px;right:22px;background:var(--surface);border:1px solid var(--primary);border-radius:10px;padding:13px 18px;font-size:13px;font-weight:600;color:var(--primary);z-index:999;transform:translateY(80px);opacity:0;transition:all .3s}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ═══════════════════════ LOADING */
+.loading{display:flex;align-items:center;justify-content:center;padding:80px;color:var(--text2);gap:12px;font-family:var(--font-m);font-size:13px}
+.spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ═══════════════════════ MISC */
+.divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+.tag{display:inline-block;padding:3px 9px;background:var(--surface2);border:1px solid var(--border2);border-radius:20px;font-size:12px;color:var(--text2);font-family:var(--font-m)}
+
+@media(max-width:768px){
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .fg2{grid-template-columns:1fr 1fr}
+  .sim-wrap{grid-template-columns:1fr}
+  nav{padding:0 12px}
+  .container{padding:0 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="logo" onclick="showPage('home')">Zona de <span>Fondeo</span></span>
+    <div class="nav-links">
+      <button class="nb active" onclick="showPage('home')">Inicio</button>
+      <button class="nb" onclick="showPage('comparador')">Comparador</button>
+      <button class="nb" onclick="showPage('simulador')">Simulador</button>
+      <button class="nb" onclick="showPage('ranking')">Ranking</button>
+      <button class="nb" onclick="showPage('reviews')">Reviews</button>
+      <button class="nb" onclick="showPage('descuentos')">Descuentos <span class="nbadge" id="discountCount">8</span></button>
+      <button class="nb" onclick="showPage('blog')">Blog</button>
+    </div>
+    <button class="nav-cta" onclick="showPage('comparador')">Comparar →</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════ HOME -->
+<div id="page-home" class="page active">
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker" id="ticker"></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span><span id="heroLabel">Cargando datos...</span></div>
+      <h1>Compara todas las<br><span style="color:var(--primary)">Empresas de Fondeo</span><br>de Futuros</h1>
+      <p class="muted" style="font-size:17px;max-width:540px;line-height:1.7;margin-top:18px">Encontrá tu prueba de fondeo ideal. Simulador de payouts, comparador con filtros y descuentos exclusivos actualizados.</p>
+      <div class="hero-actions">
+        <button class="cta cta-pulse" onclick="showPage('comparador')">🔍 Abrir Comparador</button>
+        <button class="cta cta-pulse" style="background:linear-gradient(135deg,var(--gold),#e6a800);box-shadow:0 0 30px rgba(245,183,49,.3)" onclick="showPage('simulador')">🧮 Simular Payout</button>
+        <button class="btn btn-outline" onclick="showPage('descuentos')">🎁 Ver Descuentos</button>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="stat"><div class="v" id="hs-firms">—</div><div class="l">Empresas</div></div>
+        <div class="stat"><div class="v" id="hs-disc">—</div><div class="l">Descuento máx.</div></div>
+        <div class="stat"><div class="v" id="hs-split">—</div><div class="l">Profit split top</div></div>
+        <div class="stat"><div class="v" id="hs-price">—</div><div class="l">Precio mínimo</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME MINI TABLE -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Top Firmas Ahora</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;flex-wrap:wrap;gap:10px">
+        <h2>Las más populares esta semana</h2>
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver todas →</button>
+      </div>
+      <div class="size-tabs" id="homeTabs"></div>
+      <div class="tw"><table><thead><tr>
+        <th>Empresa de Fondeo</th><th>Precio</th><th>Drawdown</th><th>Profit Split</th><th>Payout</th><th>Rating</th><th></th>
+      </tr></thead><tbody id="homeTableBody"><tr><td colspan="7"><div class="loading"><div class="spinner"></div>Cargando empresas...</div></td></tr></tbody></table></div>
+      <div style="text-align:center;margin-top:18px">
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver las <span id="totalFirmsLink">10</span> empresas con filtros avanzados →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME SIMULATOR PROMO -->
+  <div class="section-sm" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;flex-wrap:wrap">
+        <div>
+          <div class="section-label">Nuevo en Fase 2</div>
+          <h2 style="margin-bottom:14px">Simulá cuánto ganarías<br>en cada empresa</h2>
+          <p class="muted" style="font-size:15px;line-height:1.7;margin-bottom:24px">Ingresá tu ganancia mensual y el simulador te muestra cuánto recibirías en payout en cada empresa de fondeo, ordenado del más al menos rentable.</p>
+          <button class="cta" onclick="showPage('simulador')">🧮 Ir al Simulador de Payout</button>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--rl);padding:24px">
+          <div class="section-label" style="margin-bottom:10px">Ejemplo: $3,000 ganancia en cuenta $50K</div>
+          <div id="simPreview" style="display:flex;flex-direction:column;gap:8px">
+            <div class="loading"><div class="spinner"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME DISCOUNTS PREVIEW -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Descuentos Activos</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;flex-wrap:wrap;gap:10px">
+        <h2>Ahorrá hasta un <span style="color:var(--primary)" id="maxDiscHome">89%</span></h2>
+        <button class="btn btn-outline" onclick="showPage('descuentos')">Ver todos →</button>
+      </div>
+      <div class="dg" id="homeDiscounts"></div>
+    </div>
+  </div>
+
+</div>
+<!-- ══════════════════════════════════════════════ END HOME -->
+
+
+<!-- ══════════════════════════════════════════════ COMPARADOR -->
+<div id="page-comparador" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Comparador Completo</div>
+      <h2 class="mb2" style="margin-bottom:6px">Comparador de Empresas de Fondeo</h2>
+      <p class="muted" style="margin-bottom:28px">Datos actualizados · con descuentos en tiempo real · click en encabezado para ordenar</p>
+      <div class="filter-bar">
+        <div class="fg">
+          <label class="fl">Tamaño de cuenta</label>
+          <select id="fSize" onchange="applyFilters()">
+            <option value="25000">$25K</option>
+            <option value="50000" selected>$50K</option>
+            <option value="100000">$100K</option>
+            <option value="150000">$150K</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Precio máximo</label>
+          <select id="fPrice" onchange="applyFilters()">
+            <option value="">Sin límite</option>
+            <option value="80">Hasta $80</option>
+            <option value="120">Hasta $120</option>
+            <option value="170">Hasta $170</option>
+            <option value="250">Hasta $250</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Tipo drawdown</label>
+          <select id="fDD" onchange="applyFilters()">
+            <option value="">Todos</option>
+            <option value="trailing">Trailing</option>
+            <option value="eod">EOD / Estático</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Profit Split mín.</label>
+          <select id="fSplit" onchange="applyFilters()">
+            <option value="">Sin mínimo</option>
+            <option value="80">≥ 80%</option>
+            <option value="85">≥ 85%</option>
+            <option value="90">≥ 90%</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">News Trading</label>
+          <select id="fNews" onchange="applyFilters()">
+            <option value="">Todos</option>
+            <option value="1">Permitido</option>
+            <option value="0">No permitido</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Fases</label>
+          <select id="fPhases" onchange="applyFilters()">
+            <option value="">Todas</option>
+            <option value="1">1 Fase</option>
+            <option value="2">2 Fases</option>
+          </select>
+        </div>
+        <button class="freset" onclick="resetFilters()">↺ Resetear</button>
+      </div>
+      <div style="margin-bottom:8px;font-size:12px;color:var(--text2);font-family:var(--font-m)"><span id="filterCount">—</span> resultados</div>
+      <div class="tw"><table id="mainTable">
+        <thead><tr>
+          <th onclick="sortTable('name')">Empresa</th>
+          <th onclick="sortTable('price')" class="sa">Precio</th>
+          <th onclick="sortTable('drawdown')">Drawdown</th>
+          <th>Tipo DD</th>
+          <th onclick="sortTable('profitTarget')">Profit Target</th>
+          <th onclick="sortTable('split')">Profit Split</th>
+          <th onclick="sortTable('payout')">Payout</th>
+          <th>News</th>
+          <th onclick="sortTable('rating')">Rating</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="mainTableBody"><tr><td colspan="10"><div class="loading"><div class="spinner"></div>Cargando...</div></td></tr></tbody>
+      </table></div>
+      <div class="card" style="padding:18px;margin-top:20px">
+        <p style="font-size:12px;color:var(--text2);line-height:1.7"><strong style="color:var(--text)">⚠️ Aviso:</strong> Esta tabla contiene enlaces de afiliado. Si comprás una prueba de fondeo a través de nuestros botones, podemos recibir una comisión sin costo adicional para vos. Verificá siempre el precio final en el sitio oficial.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ SIMULADOR -->
+<div id="page-simulador" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Simulador de Payout</div>
+      <h2 style="margin-bottom:6px">¿Cuánto recibirías en cada empresa?</h2>
+      <p class="muted" style="margin-bottom:32px">Ingresá tu ganancia mensual y el simulador calcula el payout real en cada empresa de fondeo, de mayor a menor.</p>
+      <div class="sim-wrap">
+        <!-- FORM -->
+        <div class="sim-form">
+          <h3>🧮 Configurá tu simulación</h3>
+          <div class="sf">
+            <label>Ganancia mensual bruta (USD)</label>
+            <input type="number" id="simProfit" value="3000" min="100" max="50000" placeholder="ej: 3000" oninput="runSimulator()">
+          </div>
+          <div class="sf">
+            <label>Tamaño de cuenta</label>
+            <select id="simSize" onchange="runSimulator()">
+              <option value="25000">$25K</option>
+              <option value="50000" selected>$50K</option>
+              <option value="100000">$100K</option>
+              <option value="150000">$150K</option>
+            </select>
+          </div>
+          <div class="sf">
+            <label>Ordenar por</label>
+            <select id="simSort" onchange="runSimulator()">
+              <option value="payout">Mayor payout</option>
+              <option value="roi">Mejor ROI (payout/precio)</option>
+              <option value="price">Menor precio</option>
+            </select>
+          </div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:16px;margin-top:8px">
+            <div style="font-size:11px;color:var(--text2);font-family:var(--font-m);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Resumen</div>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span class="muted">Ganancia simulada</span>
+                <span class="mono" style="color:var(--text)" id="simSummaryProfit">$3,000</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span class="muted">Mejor payout posible</span>
+                <span class="mono" style="color:var(--primary)" id="simSummaryBest">—</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span class="muted">Peor payout posible</span>
+                <span class="mono" style="color:var(--text2)" id="simSummaryWorst">—</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span class="muted">Diferencia entre firmas</span>
+                <span class="mono" style="color:var(--gold)" id="simSummaryDiff">—</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:11px;color:var(--text3);margin-top:14px;line-height:1.6">El payout se calcula como: ganancia × (profit split %). No incluye comisiones de retiro ni impuestos.</p>
+        </div>
+
+        <!-- RESULTS -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+            <h4>Resultados por empresa</h4>
+            <span style="font-size:12px;color:var(--text2);font-family:var(--font-m)" id="simResultCount">— empresas disponibles</span>
+          </div>
+          <div class="sim-results" id="simResults">
+            <div class="sim-empty"><div class="ei">🧮</div>Configurá los parámetros para ver resultados</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CALCULATOR TOOLS -->
+      <div style="margin-top:48px">
+        <div class="section-label">Más Calculadoras</div>
+        <h3 style="margin-bottom:20px">Herramientas de análisis</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
+          <div class="card" style="padding:22px;cursor:pointer" onclick="showCalc('drawdown')">
+            <div style="font-size:32px;margin-bottom:10px">📉</div>
+            <h4 style="margin-bottom:6px">Calculadora de Drawdown NQ</h4>
+            <p style="font-size:13px;color:var(--text2)">¿Cuántos ticks podés perder antes de violar? Calculá por cuenta y tipo de drawdown.</p>
+          </div>
+          <div class="card" style="padding:22px;cursor:pointer" onclick="showCalc('roi')">
+            <div style="font-size:32px;margin-bottom:10px">📈</div>
+            <h4 style="margin-bottom:6px">ROI de la Prueba de Fondeo</h4>
+            <p style="font-size:13px;color:var(--text2)">¿Cuántos payouts necesitás para recuperar el costo de la prueba?</p>
+          </div>
+          <div class="card" style="padding:22px;cursor:pointer" onclick="showCalc('position')">
+            <div style="font-size:32px;margin-bottom:10px">🎯</div>
+            <h4 style="margin-bottom:6px">Tamaño de Posición NQ</h4>
+            <p style="font-size:13px;color:var(--text2)">Calculá cuántos contratos operar según tu riesgo por trade y tamaño de drawdown.</p>
+          </div>
+        </div>
+
+        <!-- MINI CALC -->
+        <div id="calcArea" style="margin-top:24px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ RANKING -->
+<div id="page-ranking" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Ranking Oficial</div>
+      <h2 style="margin-bottom:6px">Las mejores empresas de fondeo 2026</h2>
+      <p class="muted" style="margin-bottom:10px">Puntuación basada en: reglas (30%) · precio/calidad (25%) · reputación (25%) · payout (20%)</p>
+      <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap">
+        <span class="tag">Actualizado Mar 2026</span>
+        <span class="badge bg">✓ Datos verificados</span>
+      </div>
+
+      <!-- PODIUM -->
+      <div id="podium" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px;max-width:700px"></div>
+
+      <!-- FULL RANKING TABLE -->
+      <div class="tw">
+        <table class="rk-table">
+          <thead><tr>
+            <th style="width:60px">#</th>
+            <th>Empresa</th>
+            <th>Puntuación</th>
+            <th>Rating TP</th>
+            <th>Precio $50K</th>
+            <th>Split</th>
+            <th>News</th>
+            <th></th>
+          </tr></thead>
+          <tbody id="rankingBody"><tr><td colspan="8"><div class="loading"><div class="spinner"></div></div></td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="card" style="padding:20px;margin-top:20px">
+        <p style="font-size:12px;color:var(--text2);line-height:1.7">El ranking es elaborado de forma independiente por el equipo de Zona de Fondeo. No aceptamos pagos para mejorar posiciones. Los datos se actualizan mensualmente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ REVIEWS -->
+<div id="page-reviews" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Reviews Completas</div>
+      <h2 style="margin-bottom:6px">Análisis de cada empresa de fondeo</h2>
+      <p class="muted" style="margin-bottom:28px">Reviews independientes sin conflictos de interés</p>
+      <div class="rg" id="reviewsGrid"><div class="loading"><div class="spinner"></div>Cargando reviews...</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ DESCUENTOS -->
+<div id="page-descuentos" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Códigos de Descuento</div>
+      <h2 style="margin-bottom:6px">Descuentos verificados</h2>
+      <p class="muted" style="margin-bottom:10px">Actualizados diariamente · Solo códigos activos</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px">
+        <span class="badge bg" id="activeDiscBadge">✓ — activos</span>
+        <span class="tag">Verificados hoy</span>
+      </div>
+      <div class="dg" id="discountsGrid"><div class="loading"><div class="spinner"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ BLOG -->
+<div id="page-blog" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Blog & Guías</div>
+      <h2 style="margin-bottom:28px">Aprendé y decidí con datos</h2>
+      <div class="bg2" id="blogGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fg2">
+      <div>
+        <h3 style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:10px">Zona de <span style="color:var(--primary)">Fondeo</span></h3>
+        <p style="font-size:13px;color:var(--text2);line-height:1.7;max-width:270px">El comparador más completo de empresas de fondeo de futuros. Simulador de payouts, descuentos exclusivos y reviews honestas.</p>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <span class="tag">🇦🇷 Español</span>
+          <span class="tag">📊 NQ Nasdaq</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-d);font-size:14px;margin-bottom:14px">Comparar</h4>
+        <div class="fl2">
+          <a onclick="showPage('comparador')">Comparador completo</a>
+          <a onclick="showPage('simulador')">Simulador de payout</a>
+          <a onclick="showPage('ranking')">Ranking 2026</a>
+          <a onclick="showPage('descuentos')">Descuentos activos</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-d);font-size:14px;margin-bottom:14px">Recursos</h4>
+        <div class="fl2">
+          <a onclick="showPage('reviews')">Reviews</a>
+          <a onclick="showPage('blog')">Blog trading</a>
+          <a onclick="showPage('simulador')">Calculadoras</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-d);font-size:14px;margin-bottom:14px">Legal</h4>
+        <div class="fl2">
+          <a>Aviso legal</a>
+          <a>Política de privacidad</a>
+          <a>Divulgación afiliados</a>
+          <a>Sobre nosotros</a>
+        </div>
+      </div>
+    </div>
+    <div class="fb">
+      <p>© 2026 Zona de Fondeo. Todos los derechos reservados.</p>
+      <div class="disc">⚠️ Sitio con enlaces de afiliado. El trading de futuros conlleva alto riesgo. No somos asesores financieros.</div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ══════════════════════════════════════
+// GLOBAL STATE
+// ══════════════════════════════════════
+let FIRMS = [];
+let DISCOUNTS = [];
+let SORT_KEY = 'price';
+let SORT_DIR = 1;
+let CURRENT_SIZE = 50000;
+
+const BLOG_POSTS = [
+  { cat:'GUÍA', icon:'📚', title:'Cómo pasar tu primera prueba de fondeo de futuros en 30 días', excerpt:'Estrategia paso a paso para traders del NQ. Gestión de riesgo, número de contratos y plan de trading diario.', date:'Mar 2026', time:'11 min' },
+  { cat:'COMPARATIVA', icon:'⚖️', title:'Apex vs Bulenox 2026: ¿Cuál es mejor para el NQ?', excerpt:'Comparamos en profundidad las dos empresas de fondeo con mayor descuento del mercado actual.', date:'Mar 2026', time:'8 min' },
+  { cat:'EDUCACIÓN', icon:'🎓', title:'Drawdown Trailing vs EOD: Todo lo que necesitás saber', excerpt:'La diferencia que puede costarte la cuenta. Explicación clara con ejemplos reales de operativas en NQ.', date:'Feb 2026', time:'7 min' },
+  { cat:'HERRAMIENTAS', icon:'🛠', title:'Las 5 mejores herramientas para gestionar tu cuenta financiada', excerpt:'Desde diarios de trading hasta calculadoras de riesgo. Todo lo que necesita un trader profesional.', date:'Feb 2026', time:'6 min' },
+  { cat:'NOTICIAS', icon:'📰', title:'Ranking de empresas de fondeo 2026: Actualización completa', excerpt:'Actualizamos nuestro ranking con las novedades del sector, nuevas firmas y cambios de reglas importantes.', date:'Ene 2026', time:'12 min' },
+  { cat:'ESTRATEGIA', icon:'🎯', title:'Gestión de riesgo en NQ para no violar el drawdown', excerpt:'El NQ se mueve rápido. Aprendé a calcular el tamaño ideal de posición según tu cuenta y tipo de drawdown.', date:'Ene 2026', time:'9 min' },
+];
+
+// ══════════════════════════════════════
+// DATOS INCRUSTADOS (no requiere fetch)
+// ══════════════════════════════════════
+const RAW_DATA = {"lastUpdated":"2026-03-26","firms":[{"id":"apex","name":"Apex Trader Funding","short":"AP","country":"USA","flag":"🇺🇸","founded":2021,"affiliateUrl":"https://apextraderfunding.com/?ref=ZONA","affiliateCode":"ZONA85","trustpilotRating":4.4,"trustpilotReviews":18089,"platforms":["NinjaTrader","Tradovate"],"payoutMethods":["Plane","ACH"],"phases":1,"newsTrading":true,"overnightHold":true,"rankingScore":87,"plans":[{"size":25000,"priceOriginal":147,"priceDiscount":25,"discount":83,"drawdown":1500,"drawdownType":"trailing","profitTarget":1500,"profitSplit":90,"payoutDays":"7-14"},{"size":50000,"priceOriginal":527,"priceDiscount":77,"discount":85,"drawdown":2500,"drawdownType":"trailing","profitTarget":3000,"profitSplit":90,"payoutDays":"7-14"},{"size":100000,"priceOriginal":947,"priceDiscount":147,"discount":84,"drawdown":3000,"drawdownType":"trailing","profitTarget":6000,"profitSplit":90,"payoutDays":"7-14"},{"size":150000,"priceOriginal":1447,"priceDiscount":167,"discount":88,"drawdown":4500,"drawdownType":"trailing","profitTarget":9000,"profitSplit":90,"payoutDays":"7-14"}]},{"id":"bulenox","name":"Bulenox","short":"BX","country":"USA","flag":"🇺🇸","founded":2021,"affiliateUrl":"https://bulenox.com/?ref=ZONA","affiliateCode":"TRADER89","trustpilotRating":4.8,"trustpilotReviews":1507,"platforms":["NinjaTrader","R Trader"],"payoutMethods":["Transferencia Bancaria","PayPal"],"phases":1,"newsTrading":false,"overnightHold":true,"rankingScore":85,"plans":[{"size":25000,"priceOriginal":167,"priceDiscount":18,"discount":89,"drawdown":1500,"drawdownType":"eod","profitTarget":1500,"profitSplit":80,"payoutDays":"7"},{"size":50000,"priceOriginal":609,"priceDiscount":67,"discount":89,"drawdown":2000,"drawdownType":"eod","profitTarget":3000,"profitSplit":80,"payoutDays":"7"},{"size":100000,"priceOriginal":1009,"priceDiscount":111,"discount":89,"drawdown":3000,"drawdownType":"eod","profitTarget":6000,"profitSplit":80,"payoutDays":"7"},{"size":150000,"priceOriginal":1509,"priceDiscount":166,"discount":89,"drawdown":4500,"drawdownType":"eod","profitTarget":9000,"profitSplit":80,"payoutDays":"7"}]},{"id":"mff","name":"My Funded Futures","short":"MF","country":"USA","flag":"🇺🇸","founded":2022,"affiliateUrl":"https://myfundedfutures.com/?ref=ZONA","affiliateCode":"ZONA","trustpilotRating":4.9,"trustpilotReviews":16748,"platforms":["NinjaTrader","Tradovate"],"payoutMethods":["Rise"],"phases":1,"newsTrading":true,"overnightHold":true,"rankingScore":92,"plans":[{"size":25000,"priceOriginal":85,"priceDiscount":85,"discount":0,"drawdown":1500,"drawdownType":"eod","profitTarget":1500,"profitSplit":90,"payoutDays":"14"},{"size":50000,"priceOriginal":165,"priceDiscount":165,"discount":0,"drawdown":2000,"drawdownType":"eod","profitTarget":3000,"profitSplit":90,"payoutDays":"14"},{"size":100000,"priceOriginal":315,"priceDiscount":315,"discount":0,"drawdown":3500,"drawdownType":"eod","profitTarget":6000,"profitSplit":90,"payoutDays":"14"},{"size":150000,"priceOriginal":465,"priceDiscount":465,"discount":0,"drawdown":5000,"drawdownType":"eod","profitTarget":9000,"profitSplit":90,"payoutDays":"14"}]},{"id":"tpt","name":"TakeProfitTrader","short":"TP","country":"USA","flag":"🇺🇸","founded":2019,"affiliateUrl":"https://takeprofittrader.com/?ref=ZONA","affiliateCode":"ZONA40","trustpilotRating":4.4,"trustpilotReviews":8746,"platforms":["NinjaTrader","Tradovate"],"payoutMethods":["Plaid","Wise"],"phases":1,"newsTrading":false,"overnightHold":false,"rankingScore":79,"plans":[{"size":25000,"priceOriginal":150,"priceDiscount":90,"discount":40,"drawdown":1500,"drawdownType":"static","profitTarget":1500,"profitSplit":80,"payoutDays":"7-14"},{"size":50000,"priceOriginal":165,"priceDiscount":97,"discount":40,"drawdown":2000,"drawdownType":"static","profitTarget":3000,"profitSplit":80,"payoutDays":"7-14"},{"size":100000,"priceOriginal":250,"priceDiscount":150,"discount":40,"drawdown":3000,"drawdownType":"static","profitTarget":6000,"profitSplit":80,"payoutDays":"7-14"},{"size":150000,"priceOriginal":375,"priceDiscount":225,"discount":40,"drawdown":4500,"drawdownType":"static","profitTarget":9000,"profitSplit":80,"payoutDays":"7-14"}]},{"id":"tradeify","name":"Tradeify","short":"TF","country":"USA","flag":"🇺🇸","founded":2024,"affiliateUrl":"https://tradeify.co/?ref=ZONA","affiliateCode":"ZONA30","trustpilotRating":4.6,"trustpilotReviews":2393,"platforms":["Tradovate","NinjaTrader"],"payoutMethods":["Rise","Plane"],"phases":1,"newsTrading":true,"overnightHold":true,"rankingScore":83,"plans":[{"size":25000,"priceOriginal":97,"priceDiscount":68,"discount":30,"drawdown":1500,"drawdownType":"trailing","profitTarget":1500,"profitSplit":85,"payoutDays":"7"},{"size":50000,"priceOriginal":153,"priceDiscount":107,"discount":30,"drawdown":2500,"drawdownType":"trailing","profitTarget":3000,"profitSplit":85,"payoutDays":"7"},{"size":100000,"priceOriginal":297,"priceDiscount":208,"discount":30,"drawdown":3500,"drawdownType":"trailing","profitTarget":6000,"profitSplit":85,"payoutDays":"7"},{"size":150000,"priceOriginal":447,"priceDiscount":313,"discount":30,"drawdown":5000,"drawdownType":"trailing","profitTarget":9000,"profitSplit":85,"payoutDays":"7"}]},{"id":"alphaf","name":"Alpha Futures","short":"AF","country":"USA","flag":"🇺🇸","founded":2023,"affiliateUrl":"https://alphafutures.io/?ref=ZONA","affiliateCode":"ZONA","trustpilotRating":4.9,"trustpilotReviews":3243,"platforms":["NinjaTrader","Tradovate"],"payoutMethods":["Rise","Transferencia Bancaria"],"phases":1,"newsTrading":true,"overnightHold":true,"rankingScore":88,"plans":[{"size":25000,"priceOriginal":80,"priceDiscount":72,"discount":10,"drawdown":1500,"drawdownType":"trailing","profitTarget":1500,"profitSplit":90,"payoutDays":"14"},{"size":50000,"priceOriginal":150,"priceDiscount":135,"discount":10,"drawdown":2500,"drawdownType":"trailing","profitTarget":3000,"profitSplit":90,"payoutDays":"14"},{"size":100000,"priceOriginal":280,"priceDiscount":252,"discount":10,"drawdown":4000,"drawdownType":"trailing","profitTarget":6000,"profitSplit":90,"payoutDays":"14"},{"size":150000,"priceOriginal":420,"priceDiscount":378,"discount":10,"drawdown":6000,"drawdownType":"trailing","profitTarget":9000,"profitSplit":90,"payoutDays":"14"}]},{"id":"topone","name":"Top One Futures","short":"TO","country":"USA","flag":"🇺🇸","founded":2025,"affiliateUrl":"https://toponefutures.com/?ref=ZONA","affiliateCode":"ZONA60","trustpilotRating":4.8,"trustpilotReviews":3516,"platforms":["NinjaTrader","Tradovate"],"payoutMethods":["Rise"],"phases":1,"newsTrading":true,"overnightHold":true,"rankingScore":84,"plans":[{"size":25000,"priceOriginal":97,"priceDiscount":39,"discount":60,"drawdown":1500,"drawdownType":"eod","profitTarget":1500,"profitSplit":90,"payoutDays":"7"},{"size":50000,"priceOriginal":197,"priceDiscount":77,"discount":60,"drawdown":2000,"drawdownType":"eod","profitTarget":2000,"profitSplit":90,"payoutDays":"7"},{"size":100000,"priceOriginal":347,"priceDiscount":139,"discount":60,"drawdown":3500,"drawdownType":"eod","profitTarget":4000,"profitSplit":90,"payoutDays":"7"},{"size":150000,"priceOriginal":497,"priceDiscount":199,"discount":60,"drawdown":5000,"drawdownType":"eod","profitTarget":6000,"profitSplit":90,"payoutDays":"7"}]},{"id":"fundednext","name":"FundedNext","short":"FN","country":"UAE","flag":"🇦🇪","founded":2022,"affiliateUrl":"https://fundednext.com/?ref=ZONA","affiliateCode":"ZONA40","trustpilotRating":4.5,"trustpilotReviews":62666,"platforms":["NinjaTrader","TradingView"],"payoutMethods":["Rise","Crypto"],"phases":2,"newsTrading":true,"overnightHold":true,"rankingScore":81,"plans":[{"size":25000,"priceOriginal":99,"priceDiscount":59,"discount":40,"drawdown":1500,"drawdownType":"eod","profitTarget":2000,"profitSplit":90,"payoutDays":"7"},{"size":50000,"priceOriginal":199,"priceDiscount":119,"discount":40,"drawdown":2500,"drawdownType":"eod","profitTarget":4000,"profitSplit":90,"payoutDays":"7"},{"size":100000,"priceOriginal":349,"priceDiscount":209,"discount":40,"drawdown":5000,"drawdownType":"eod","profitTarget":8000,"profitSplit":90,"payoutDays":"7"},{"size":150000,"priceOriginal":499,"priceDiscount":299,"discount":40,"drawdown":7500,"drawdownType":"eod","profitTarget":12000,"profitSplit":90,"payoutDays":"7"}]},{"id":"earn2t","name":"Earn2Trade","short":"E2","country":"USA","flag":"🇺🇸","founded":2016,"affiliateUrl":"https://earn2trade.com/?ref=ZONA","affiliateCode":"ZONA30","trustpilotRating":4.7,"trustpilotReviews":4693,"platforms":["NinjaTrader","Finamark"],"payoutMethods":["Rise","Deel"],"phases":2,"newsTrading":false,"overnightHold":true,"rankingScore":78,"plans":[{"size":25000,"priceOriginal":150,"priceDiscount":105,"discount":30,"drawdown":1500,"drawdownType":"eod","profitTarget":1500,"profitSplit":80,"payoutDays":"7-14"},{"size":50000,"priceOriginal":214,"priceDiscount":150,"discount":30,"drawdown":2000,"drawdownType":"eod","profitTarget":3000,"profitSplit":80,"payoutDays":"7-14"},{"size":100000,"priceOriginal":350,"priceDiscount":245,"discount":30,"drawdown":3500,"drawdownType":"eod","profitTarget":6000,"profitSplit":80,"payoutDays":"7-14"}]},{"id":"emerge","name":"EmergeProfit","short":"EP","country":"UK","flag":"🇬🇧","founded":2024,"affiliateUrl":"https://emergeprofit.com/?ref=ZONA","affiliateCode":"ZONA","trustpilotRating":4.6,"trustpilotReviews":440,"platforms":["Tradovate","NinjaTrader"],"payoutMethods":["Transferencia Bancaria","Crypto"],"phases":1,"newsTrading":false,"overnightHold":true,"rankingScore":74,"plans":[{"size":25000,"priceOriginal":99,"priceDiscount":71,"discount":28,"drawdown":1500,"drawdownType":"eod","profitTarget":1500,"profitSplit":85,"payoutDays":"14"},{"size":50000,"priceOriginal":179,"priceDiscount":129,"discount":28,"drawdown":2000,"drawdownType":"eod","profitTarget":2000,"profitSplit":85,"payoutDays":"14"},{"size":100000,"priceOriginal":299,"priceDiscount":215,"discount":28,"drawdown":3500,"drawdownType":"eod","profitTarget":4000,"profitSplit":85,"payoutDays":"14"}]}],"discounts":[{"firmId":"bulenox","code":"TRADER89","pct":89,"permanent":false,"expiry":"2026-03-31"},{"firmId":"apex","code":"ZONA85","pct":85,"permanent":false,"expiry":"2026-04-05"},{"firmId":"topone","code":"ZONA60","pct":60,"permanent":false,"expiry":"2026-04-15"},{"firmId":"tpt","code":"ZONA40","pct":40,"permanent":true,"expiry":null},{"firmId":"fundednext","code":"ZONA40","pct":40,"permanent":false,"expiry":"2026-04-20"},{"firmId":"tradeify","code":"ZONA30","pct":30,"permanent":true,"expiry":null},{"firmId":"earn2t","code":"ZONA30","pct":30,"permanent":true,"expiry":null},{"firmId":"alphaf","code":"ZONA","pct":10,"permanent":true,"expiry":null}]};
+
+function loadData() {
+  FIRMS = RAW_DATA.firms;
+  DISCOUNTS = RAW_DATA.discounts;
+  initAll();
+}
+
+// ══════════════════════════════════════
+// INIT ALL SECTIONS
+// ══════════════════════════════════════
+function initAll() {
+  updateHeroStats();
+  buildTicker();
+  buildHomeTabs();
+  renderHomeTable(50000);
+  renderSimPreview();
+  renderHomeDiscounts();
+  renderMainTable();
+  renderSimulator();
+  renderRanking();
+  renderReviews();
+  renderDiscounts();
+  renderBlog();
+  document.getElementById('totalFirmsLink').textContent = FIRMS.length;
+  document.getElementById('heroLabel').textContent = `Actualizado Mar 2026 · ${FIRMS.length} Empresas de fondeo analizadas`;
+  document.getElementById('discountCount').textContent = DISCOUNTS.length;
+  document.getElementById('activeDiscBadge').textContent = `✓ ${DISCOUNTS.length} activos`;
+}
+
+// ══════════════════════════════════════
+// HERO STATS
+// ══════════════════════════════════════
+function updateHeroStats() {
+  const plans50 = FIRMS.flatMap(f => f.plans.filter(p => p.size === 50000));
+  const maxDisc = Math.max(...DISCOUNTS.map(d => d.pct));
+  const maxSplit = Math.max(...plans50.map(p => p.profitSplit));
+  const minPrice = Math.min(...plans50.map(p => p.priceDiscount));
+  document.getElementById('hs-firms').textContent = FIRMS.length;
+  document.getElementById('hs-disc').textContent = maxDisc + '%';
+  document.getElementById('hs-split').textContent = maxSplit + '%';
+  document.getElementById('hs-price').textContent = '$' + minPrice;
+  document.getElementById('maxDiscHome').textContent = maxDisc + '%';
+}
+
+// ══════════════════════════════════════
+// TICKER
+// ══════════════════════════════════════
+function buildTicker() {
+  const items = [
+    ['NQ', '+1.42%', true], ['ES', '-0.31%', false],
+    ...FIRMS.flatMap(f => {
+      const p = f.plans.find(pl => pl.size === 50000);
+      if (!p) return [];
+      const label = p.discount > 0 ? `-${p.discount}% OFF` : 'Precio estándar';
+      return [[f.name.split(' ')[0] + ' 50K', `$${p.priceDiscount} ${label}`, true]];
+    })
+  ];
+  const doubled = [...items, ...items];
+  const ticker = document.getElementById('ticker');
+  ticker.innerHTML = doubled.map(([label, val, up]) =>
+    `<div class="ti">${label} <span class="${up ? 'up' : 'dn'}">${val}</span></div>`
+  ).join('');
+}
+
+// ══════════════════════════════════════
+// HOME TABLE
+// ══════════════════════════════════════
+function buildHomeTabs() {
+  const sizes = [25000, 50000, 100000, 150000];
+  const wrap = document.getElementById('homeTabs');
+  wrap.innerHTML = sizes.map(s =>
+    `<button class="stab ${s === 50000 ? 'active' : ''}" onclick="renderHomeTable(${s});setActiveTab(this)">$${(s/1000).toFixed(0)}K</button>`
+  ).join('');
+}
+
+function setActiveTab(el) {
+  el.closest('.size-tabs').querySelectorAll('.stab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function renderHomeTable(size) {
+  CURRENT_SIZE = size;
+  const tbody = document.getElementById('homeTableBody');
+  const top5 = FIRMS
+    .map(f => ({ f, plan: f.plans.find(p => p.size === size) }))
+    .filter(x => x.plan)
+    .sort((a, b) => a.plan.priceDiscount - b.plan.priceDiscount)
+    .slice(0, 5);
+
+  tbody.innerHTML = top5.map(({ f, plan }, i) => tableRow(f, plan, i === 0)).join('');
+}
+
+function tableRow(f, plan, featured = false) {
+  const ddBadge = plan.drawdownType === 'trailing'
+    ? '<span class="badge by">Trailing</span>'
+    : plan.drawdownType === 'eod'
+    ? '<span class="badge bg">EOD</span>'
+    : '<span class="badge bb">Estático</span>';
+
+  return `<tr${featured ? ' class="feat"' : ''}>
+    <td><div class="fc">
+      <div class="fav">${f.short}</div>
+      <div><div class="fn">${f.name}</div><div class="fc2">${f.flag} ${f.country} · ${f.founded}</div></div>
+    </div></td>
+    <td class="pc">
+      <div class="price">$${plan.priceDiscount}</div>
+      ${plan.discount > 0 ? `<div><span class="orig">$${plan.priceOriginal}</span> <span class="disc">-${plan.discount}%</span></div>` : '<div style="font-size:11px;color:var(--text3)">Precio estándar</div>'}
+    </td>
+    <td><span class="nc">$${plan.drawdown.toLocaleString()}</span></td>
+    <td>${ddBadge}</td>
+    <td><span class="nc" style="color:${plan.profitSplit >= 90 ? 'var(--primary)' : 'var(--text)'}">${plan.profitSplit}%</span></td>
+    <td><span class="nc">${plan.payoutDays}d</span></td>
+    <td><div class="rc"><span class="rv">${f.trustpilotRating}</span><div><div class="stars">${'★'.repeat(Math.round(f.trustpilotRating))}${'☆'.repeat(5-Math.round(f.trustpilotRating))}</div><div style="font-size:10px;color:var(--text3);font-family:var(--font-m)">${(f.trustpilotReviews/1000).toFixed(1)}K</div></div></div></td>
+    <td><button class="cta" style="padding:8px 16px;font-size:13px" onclick="affClick('${f.id}','${f.affiliateUrl}')">Ir →</button></td>
+  </tr>`;
+}
+
+// ══════════════════════════════════════
+// MAIN COMPARATOR TABLE
+// ══════════════════════════════════════
+let filteredFirms = [];
+
+function getFiltered() {
+  const size = parseInt(document.getElementById('fSize')?.value || 50000);
+  const maxPrice = document.getElementById('fPrice')?.value;
+  const ddType = document.getElementById('fDD')?.value;
+  const minSplit = document.getElementById('fSplit')?.value;
+  const news = document.getElementById('fNews')?.value;
+  const phases = document.getElementById('fPhases')?.value;
+
+  return FIRMS
+    .map(f => ({ f, plan: f.plans.find(p => p.size === size) }))
+    .filter(({ plan }) => {
+      if (!plan) return false;
+      if (maxPrice && plan.priceDiscount > parseInt(maxPrice)) return false;
+      if (ddType && plan.drawdownType !== ddType) return false;
+      if (minSplit && plan.profitSplit < parseInt(minSplit)) return false;
+      return true;
+    })
+    .filter(({ f }) => {
+      if (news === '1' && !f.newsTrading) return false;
+      if (news === '0' && f.newsTrading) return false;
+      if (phases && f.phases !== parseInt(phases)) return false;
+      return true;
+    });
+}
+
+function applyFilters() { renderMainTable(); }
+
+function resetFilters() {
+  ['fSize','fPrice','fDD','fSplit','fNews','fPhases'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = id === 'fSize' ? '50000' : '';
+  });
+  SORT_KEY = 'price'; SORT_DIR = 1;
+  renderMainTable();
+}
+
+function sortTable(key) {
+  if (SORT_KEY === key) SORT_DIR *= -1;
+  else { SORT_KEY = key; SORT_DIR = 1; }
+  renderMainTable();
+}
+
+function renderMainTable() {
+  const tbody = document.getElementById('mainTableBody');
+  if (!tbody) return;
+
+  let rows = getFiltered();
+
+  rows.sort((a, b) => {
+    let va, vb;
+    switch(SORT_KEY) {
+      case 'price':   va = a.plan.priceDiscount; vb = b.plan.priceDiscount; break;
+      case 'drawdown':va = a.plan.drawdown; vb = b.plan.drawdown; break;
+      case 'split':   va = a.plan.profitSplit; vb = b.plan.profitSplit; break;
+      case 'profitTarget': va = a.plan.profitTarget; vb = b.plan.profitTarget; break;
+      case 'rating':  va = a.f.trustpilotRating; vb = b.f.trustpilotRating; break;
+      case 'name':    va = a.f.name; vb = b.f.name; break;
+      default:        va = a.plan.priceDiscount; vb = b.plan.priceDiscount;
+    }
+    return typeof va === 'string' ? va.localeCompare(vb) * SORT_DIR : (va - vb) * SORT_DIR;
+  });
+
+  document.getElementById('filterCount').textContent = rows.length;
+
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="10"><div class="empty-state"><div class="ei">🔍</div><p>No hay empresas que coincidan con los filtros.<br>Probá con criterios menos restrictivos.</p></div></td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = rows.map(({ f, plan }, i) => {
+    const ddBadge = plan.drawdownType === 'trailing' ? '<span class="badge by">Trailing</span>' : plan.drawdownType === 'eod' ? '<span class="badge bg">EOD</span>' : '<span class="badge bb">Estático</span>';
+    return `<tr${plan.profitSplit >= 90 ? ' class="feat"' : ''}>
+      <td><div class="fc"><div class="fav">${f.short}</div><div><div class="fn">${f.name}</div><div class="fc2">${f.flag} ${f.country} · ${f.founded}</div></div></div></td>
+      <td class="pc">
+        <div class="price">$${plan.priceDiscount}</div>
+        ${plan.discount > 0 ? `<div><span class="orig">$${plan.priceOriginal}</span> <span class="disc">-${plan.discount}%</span></div>` : '<div style="font-size:11px;color:var(--text3)">Estándar</div>'}
+      </td>
+      <td><span class="nc">$${plan.drawdown.toLocaleString()}</span></td>
+      <td>${ddBadge}</td>
+      <td><span class="nc">$${plan.profitTarget.toLocaleString()}</span></td>
+      <td><span class="nc" style="color:${plan.profitSplit >= 90 ? 'var(--primary)' : 'var(--text)'}">${plan.profitSplit}%</span></td>
+      <td><span class="nc">${plan.payoutDays}d</span></td>
+      <td><span class="${f.newsTrading ? 'chk' : 'crs'}">${f.newsTrading ? '✓' : '✗'}</span></td>
+      <td><div class="rc"><span class="rv">${f.trustpilotRating}</span><div class="stars">${'★'.repeat(Math.round(f.trustpilotRating))}</div></div></td>
+      <td><button class="cta" style="padding:8px 15px;font-size:13px;white-space:nowrap" onclick="affClick('${f.id}','${f.affiliateUrl}')">Empezar →</button></td>
+    </tr>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// SIMULATOR
+// ══════════════════════════════════════
+function renderSimPreview() {
+  const profit = 3000;
+  const size = 50000;
+  const preview = FIRMS
+    .map(f => ({ f, plan: f.plans.find(p => p.size === size) }))
+    .filter(x => x.plan)
+    .sort((a, b) => (b.plan.profitSplit * profit / 100) - (a.plan.profitSplit * profit / 100))
+    .slice(0, 4);
+
+  document.getElementById('simPreview').innerHTML = preview.map((x, i) => {
+    const payout = Math.round(x.plan.profitSplit * profit / 100);
+    return `<div style="display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid ${i===0?'var(--primary)':'var(--border)'};border-radius:8px;padding:10px 14px;gap:10px">
+      <div style="display:flex;align-items:center;gap:8px">
+        ${i===0?'<span class="badge bg" style="font-size:10px">TOP</span>':'<span style="font-family:var(--font-m);font-size:12px;color:var(--text3);width:20px">#'+(i+1)+'</span>'}
+        <span style="font-size:13px;font-weight:600">${x.f.name}</span>
+      </div>
+      <span style="font-family:var(--font-m);font-size:15px;font-weight:700;color:${i===0?'var(--primary)':'var(--text)'};white-space:nowrap">$${payout.toLocaleString()}</span>
+    </div>`;
+  }).join('');
+}
+
+function runSimulator() {
+  const profit = parseFloat(document.getElementById('simProfit')?.value) || 0;
+  const size = parseInt(document.getElementById('simSize')?.value || 50000);
+  const sortBy = document.getElementById('simSort')?.value || 'payout';
+
+  document.getElementById('simSummaryProfit').textContent = '$' + profit.toLocaleString();
+
+  const rows = FIRMS
+    .map(f => {
+      const plan = f.plans.find(p => p.size === size);
+      if (!plan) return null;
+      const payout = Math.round(plan.profitSplit * profit / 100);
+      const roi = plan.priceDiscount > 0 ? (payout / plan.priceDiscount).toFixed(2) : '∞';
+      return { f, plan, payout, roi };
+    })
+    .filter(Boolean);
+
+  rows.sort((a, b) => {
+    if (sortBy === 'payout') return b.payout - a.payout;
+    if (sortBy === 'roi') return parseFloat(b.roi) - parseFloat(a.roi);
+    if (sortBy === 'price') return a.plan.priceDiscount - b.plan.priceDiscount;
+    return 0;
+  });
+
+  const payouts = rows.map(r => r.payout);
+  const best = Math.max(...payouts), worst = Math.min(...payouts);
+  document.getElementById('simSummaryBest').textContent = '$' + best.toLocaleString();
+  document.getElementById('simSummaryWorst').textContent = '$' + worst.toLocaleString();
+  document.getElementById('simSummaryDiff').textContent = '$' + (best - worst).toLocaleString();
+  document.getElementById('simResultCount').textContent = `${rows.length} empresas disponibles para $${(size/1000).toFixed(0)}K`;
+
+  const container = document.getElementById('simResults');
+  if (profit <= 0) {
+    container.innerHTML = `<div class="sim-empty"><div class="ei">🧮</div>Ingresá una ganancia mayor que $0</div>`;
+    return;
+  }
+
+  container.innerHTML = rows.map((r, i) => `
+    <div class="sr-card${i === 0 ? ' best' : ''}">
+      <div class="sr-badge">
+        ${i === 0 ? '<div class="best-label">MEJOR PAYOUT</div>' : ''}
+        <div class="sr-av">${r.f.short}</div>
+      </div>
+      <div class="sr-info">
+        <div class="sr-name">${r.f.name}</div>
+        <div class="sr-sub">${r.plan.profitSplit}% split · $${r.plan.priceDiscount} prueba · ${r.plan.drawdownType.toUpperCase()} DD</div>
+      </div>
+      <div style="text-align:right">
+        <div class="sr-payout">$${r.payout.toLocaleString()}</div>
+        <div class="sr-roi">ROI: ${r.roi}×</div>
+        ${r.plan.discount > 0 ? `<div style="font-size:10px;color:var(--primary);font-family:var(--font-m);margin-top:3px">-${r.plan.discount}% OFF</div>` : ''}
+      </div>
+      <button class="cta" style="padding:8px 14px;font-size:12px;white-space:nowrap" onclick="affClick('${r.f.id}','${r.f.affiliateUrl}')">Ir →</button>
+    </div>
+  `).join('');
+}
+
+// Mini calcs
+function showCalc(type) {
+  const area = document.getElementById('calcArea');
+  if (type === 'drawdown') {
+    area.innerHTML = `
+      <div style="background:var(--surface);border:1px solid var(--primary);border-radius:var(--rl);padding:28px;max-width:480px">
+        <h3 style="margin-bottom:20px">📉 Calculadora de Drawdown NQ</h3>
+        <div class="sf"><label>Drawdown máximo (USD)</label><input type="number" id="cdDD" value="2500" oninput="calcDD()"></div>
+        <div class="sf"><label>Tipo de drawdown</label><select id="cdType" onchange="calcDD()"><option value="trailing">Trailing</option><option value="eod">EOD / Estático</option></select></div>
+        <div style="background:var(--primary-dim);border:1px solid rgba(0,212,170,.22);border-radius:10px;padding:18px;text-align:center;margin-top:16px">
+          <div style="font-size:11px;color:var(--text2);font-family:var(--font-m);margin-bottom:6px">PODÉS PERDER HASTA</div>
+          <div style="font-family:var(--font-d);font-size:34px;font-weight:800;color:var(--primary)" id="cdResult">500 ticks</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:5px" id="cdSub">= $2,500 en NQ · 1 contrato</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:3px">NQ tick = $5 por contrato</div>
+        </div>
+      </div>`;
+    calcDD();
+  } else if (type === 'roi') {
+    area.innerHTML = `
+      <div style="background:var(--surface);border:1px solid var(--primary);border-radius:var(--rl);padding:28px;max-width:480px">
+        <h3 style="margin-bottom:20px">📈 ROI de la Prueba de Fondeo</h3>
+        <div class="sf"><label>Costo de la prueba (USD)</label><input type="number" id="roiCost" value="77" oninput="calcROI()"></div>
+        <div class="sf"><label>Payout mensual esperado (USD)</label><input type="number" id="roiPayout" value="2700" oninput="calcROI()"></div>
+        <div style="background:var(--primary-dim);border:1px solid rgba(0,212,170,.22);border-radius:10px;padding:18px;text-align:center;margin-top:16px">
+          <div style="font-size:11px;color:var(--text2);font-family:var(--font-m);margin-bottom:6px">RECUPERÁS LA INVERSIÓN EN</div>
+          <div style="font-family:var(--font-d);font-size:34px;font-weight:800;color:var(--primary)" id="roiResult">—</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:5px" id="roiSub">—</div>
+        </div>
+      </div>`;
+    calcROI();
+  } else if (type === 'position') {
+    area.innerHTML = `
+      <div style="background:var(--surface);border:1px solid var(--primary);border-radius:var(--rl);padding:28px;max-width:480px">
+        <h3 style="margin-bottom:20px">🎯 Tamaño de Posición NQ</h3>
+        <div class="sf"><label>Drawdown disponible (USD)</label><input type="number" id="psDD" value="2500" oninput="calcPS()"></div>
+        <div class="sf"><label>Riesgo por trade (%)</label><input type="number" id="psPct" value="5" min="1" max="50" oninput="calcPS()"></div>
+        <div class="sf"><label>Stop loss en ticks</label><input type="number" id="psSL" value="20" oninput="calcPS()"></div>
+        <div style="background:var(--primary-dim);border:1px solid rgba(0,212,170,.22);border-radius:10px;padding:18px;text-align:center;margin-top:16px">
+          <div style="font-size:11px;color:var(--text2);font-family:var(--font-m);margin-bottom:6px">TAMAÑO ÓPTIMO DE POSICIÓN</div>
+          <div style="font-family:var(--font-d);font-size:34px;font-weight:800;color:var(--primary)" id="psResult">—</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:5px" id="psSub">—</div>
+        </div>
+      </div>`;
+    calcPS();
+  }
+}
+
+function calcDD() {
+  const dd = parseFloat(document.getElementById('cdDD')?.value) || 0;
+  const ticks = Math.floor(dd / 5);
+  document.getElementById('cdResult').textContent = ticks + ' ticks';
+  document.getElementById('cdSub').textContent = `= $${dd.toLocaleString()} en NQ · 1 contrato`;
+}
+
+function calcROI() {
+  const cost = parseFloat(document.getElementById('roiCost')?.value) || 0;
+  const payout = parseFloat(document.getElementById('roiPayout')?.value) || 0;
+  if (cost <= 0 || payout <= 0) return;
+  const months = cost / payout;
+  const pct = ((payout / cost) * 100).toFixed(0);
+  document.getElementById('roiResult').textContent = months < 1
+    ? 'Menos de 1 payout'
+    : (months).toFixed(2) + ' payouts';
+  document.getElementById('roiSub').textContent = `ROI mensual: ${pct}% · Recuperás $${cost} en ${(months * 30).toFixed(0)} días`;
+}
+
+function calcPS() {
+  const dd = parseFloat(document.getElementById('psDD')?.value) || 0;
+  const pct = parseFloat(document.getElementById('psPct')?.value) || 1;
+  const sl = parseFloat(document.getElementById('psSL')?.value) || 1;
+  const riskUSD = dd * (pct / 100);
+  const slUSD = sl * 5;
+  const contracts = Math.floor(riskUSD / slUSD);
+  document.getElementById('psResult').textContent = Math.max(1, contracts) + ' contrato' + (contracts !== 1 ? 's' : '');
+  document.getElementById('psSub').textContent = `Riesgo: $${riskUSD.toFixed(0)} · SL: $${slUSD} por contrato`;
+}
+
+// ══════════════════════════════════════
+// RANKING
+// ══════════════════════════════════════
+function renderRanking() {
+  const sorted = [...FIRMS].sort((a, b) => b.rankingScore - a.rankingScore);
+  const tbody = document.getElementById('rankingBody');
+  const podiumEl = document.getElementById('podium');
+
+  // Podium top 3
+  const podiumOrder = [sorted[1], sorted[0], sorted[2]];
+  const podiumPos = [2, 1, 3];
+  const podiumH = ['60px', '80px', '50px'];
+  podiumEl.innerHTML = podiumOrder.map((f, i) => {
+    const p = f.plans.find(pl => pl.size === 50000);
+    return `<div style="background:var(--surface);border:1px solid ${i===1?'var(--primary)':'var(--border)'};border-radius:var(--rl);padding:20px;text-align:center;order:${i===0?2:i===1?1:3};margin-top:${podiumH[i]}">
+      <div style="font-family:var(--font-d);font-size:28px;font-weight:800;color:${podiumPos[i]===1?'var(--gold)':podiumPos[i]===2?'#c0c0c0':'#cd7f32'};margin-bottom:6px">${podiumPos[i]===1?'🥇':podiumPos[i]===2?'🥈':'🥉'}</div>
+      <div style="font-size:28px;font-weight:800;color:var(--primary);font-family:var(--font-d);margin-bottom:6px">${f.short}</div>
+      <div style="font-weight:600;font-size:13px;margin-bottom:4px">${f.name}</div>
+      <div style="font-family:var(--font-m);font-size:18px;font-weight:700;color:var(--primary)">${f.rankingScore}/100</div>
+      ${p ? `<div style="font-size:12px;color:var(--text2);margin-top:6px;font-family:var(--font-m)">$${p.priceDiscount} · ${p.profitSplit}% split</div>` : ''}
+    </div>`;
+  }).join('');
+
+  tbody.innerHTML = sorted.map((f, i) => {
+    const plan = f.plans.find(p => p.size === 50000);
+    const pos = i + 1;
+    const posClass = pos === 1 ? 'p1' : pos === 2 ? 'p2' : pos === 3 ? 'p3' : '';
+    return `<tr>
+      <td class="rk-pos ${posClass}">${pos === 1 ? '🥇' : pos === 2 ? '🥈' : pos === 3 ? '🥉' : pos}</td>
+      <td><div class="fc"><div class="fav">${f.short}</div><div><div class="fn">${f.name}</div><div class="fc2">${f.flag} ${f.country} · ${f.founded}</div></div></div></td>
+      <td><div style="display:flex;align-items:center;gap:10px"><div class="rk-bar-wrap"><div class="rk-bar" style="width:${f.rankingScore}%"></div></div><span class="score-num">${f.rankingScore}</span></div></td>
+      <td><div class="rc"><span class="rv">${f.trustpilotRating}</span><div class="stars">${'★'.repeat(Math.round(f.trustpilotRating))}</div></div></td>
+      <td class="pc">${plan ? `<div class="price">$${plan.priceDiscount}</div>${plan.discount > 0 ? `<div class="disc">-${plan.discount}%</div>` : ''}` : '—'}</td>
+      <td><span class="nc" style="color:${plan && plan.profitSplit >= 90 ? 'var(--primary)' : 'var(--text)'}">${plan ? plan.profitSplit + '%' : '—'}</span></td>
+      <td><span class="${f.newsTrading ? 'chk' : 'crs'}">${f.newsTrading ? '✓' : '✗'}</span></td>
+      <td><button class="cta" style="padding:7px 14px;font-size:12px" onclick="affClick('${f.id}','${f.affiliateUrl}')">Ir →</button></td>
+    </tr>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// REVIEWS
+// ══════════════════════════════════════
+function renderReviews() {
+  const grid = document.getElementById('reviewsGrid');
+  grid.innerHTML = FIRMS.map(f => {
+    const plan = f.plans.find(p => p.size === 50000);
+    const disc = DISCOUNTS.find(d => d.firmId === f.id);
+    return `<div class="rc2" onclick="affClick('${f.id}','${f.affiliateUrl}')">
+      <div class="rch">
+        <div class="ra">${f.short}</div>
+        <div style="text-align:right">
+          <div class="stars">${'★'.repeat(Math.round(f.trustpilotRating))}</div>
+          <span style="font-family:var(--font-m);font-size:13px;color:var(--gold);font-weight:700">${f.trustpilotRating}</span>
+          <div style="font-size:11px;color:var(--text3);font-family:var(--font-m)">${(f.trustpilotReviews/1000).toFixed(1)}K reseñas</div>
+        </div>
+      </div>
+      <div>
+        <h4>${f.name}</h4>
+        <p style="font-size:12px;color:var(--text2);font-family:var(--font-m);margin-top:3px">${f.flag} ${f.country} · ${f.founded} · ${f.phases} fase${f.phases>1?'s':''}</p>
+      </div>
+      ${plan ? `<div class="sg">
+        <div class="si"><div class="sl">Precio $50K</div><div class="sv" style="color:${plan.discount>50?'var(--primary)':'var(--text)'}">$${plan.priceDiscount}</div></div>
+        <div class="si"><div class="sl">Split</div><div class="sv" style="color:var(--primary)">${plan.profitSplit}%</div></div>
+        <div class="si"><div class="sl">Drawdown</div><div class="sv">$${(plan.drawdown/1000).toFixed(1)}K</div></div>
+        <div class="si"><div class="sl">Payout</div><div class="sv">${plan.payoutDays}d</div></div>
+      </div>` : ''}
+      <div class="rtags">
+        ${f.newsTrading ? '<span class="badge bg">News ✓</span>' : ''}
+        ${f.overnightHold ? '<span class="badge bb">Overnight ✓</span>' : ''}
+        ${disc && disc.pct >= 50 ? `<span class="badge by">-${disc.pct}% OFF</span>` : ''}
+        ${f.phases === 1 ? '<span class="badge bg">1 Fase</span>' : '<span class="badge bb">2 Fases</span>'}
+      </div>
+      <button class="cta" style="width:100%;justify-content:center" onclick="event.stopPropagation();affClick('${f.id}','${f.affiliateUrl}')">Ver prueba de fondeo →</button>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// DISCOUNTS
+// ══════════════════════════════════════
+function renderDiscounts() {
+  renderDiscountGrid('discountsGrid', DISCOUNTS.length);
+}
+
+function renderHomeDiscounts() {
+  renderDiscountGrid('homeDiscounts', 3);
+}
+
+function renderDiscountGrid(containerId, limit) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const items = DISCOUNTS.slice(0, limit);
+  container.innerHTML = items.map(d => {
+    const firm = FIRMS.find(f => f.id === d.firmId);
+    if (!firm) return '';
+    return `<div class="dc">
+      <div class="dpct">-${d.pct}%</div>
+      <div class="db">
+        <div class="dfirm">${firm.name.toUpperCase()}</div>
+        <div class="dtit">${d.pct >= 80 ? '🔥 Oferta máxima' : d.pct >= 50 ? '⚡ Gran descuento' : '✅ Descuento activo'}</div>
+        <div class="ddesc">Descuento ${d.permanent ? 'permanente' : 'temporal'} de -${d.pct}% en ${firm.name}. Usá el código o el link directo.</div>
+        <div class="dexp">${d.permanent ? '✅ Sin fecha de caducidad' : `⏰ Caduca: ${d.expiry}`}</div>
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+          <div class="codebox"><span style="color:var(--primary);font-weight:700">${d.code}</span><button class="cpbtn" onclick="copyCode('${d.code}')">📋 Copiar</button></div>
+          <button class="cta" style="padding:9px 16px;font-size:13px" onclick="affClick('${firm.id}','${firm.affiliateUrl}')">Ir →</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// BLOG
+// ══════════════════════════════════════
+function renderBlog() {
+  const grid = document.getElementById('blogGrid');
+  grid.innerHTML = BLOG_POSTS.map(p => `
+    <div class="bc">
+      <div class="bthumb">${p.icon}</div>
+      <div class="bcon">
+        <div class="bcat">${p.cat}</div>
+        <div class="btit">${p.title}</div>
+        <div class="bex">${p.excerpt}</div>
+        <div class="bmeta"><span>${p.date}</span><span>${p.time} lectura</span></div>
+      </div>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════
+// PAGE NAVIGATION
+// ══════════════════════════════════════
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id)?.classList.add('active');
+  document.querySelector(`.nb[onclick="showPage('${id}')"]`)?.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (id === 'simulador') runSimulator();
+  if (id === 'comparador') renderMainTable();
+}
+
+// ══════════════════════════════════════
+// AFFILIATE CLICK
+// ══════════════════════════════════════
+function affClick(firmId, url) {
+  showToast('🚀 Redirigiendo a ' + firmId + '...');
+  // En producción: window.open(url, '_blank');
+}
+
+// ══════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════
+function copyCode(code) {
+  navigator.clipboard.writeText(code).catch(() => {});
+  showToast(`✅ Código "${code}" copiado`);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ══════════════════════════════════════
+// START
+// ══════════════════════════════════════
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
