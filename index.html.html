@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona de Fondeo — Compara Empresas de fondeo de Futuros | Mejores Pruebas de fondeo 2026</title>
+<meta name="description" content="Compara las mejores empresas de fondeo de futuros para traders del NQ Nasdaq. Descuentos exclusivos, reviews honestas y comparador interactivo con filtros avanzados.">
+<meta name="keywords" content="empresas de fondeo futuros, pruebas de fondeo trading NQ, empresas fondeo futuros, comparar empresas de fondeo 2026, Apex Trader Funding, Bulenox, My Funded Futures">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #080b10;
+  --surface: #0e1219;
+  --surface2: #141a23;
+  --border: #1c2333;
+  --border2: #2a3545;
+  --primary: #00d4aa;
+  --primary-dim: rgba(0,212,170,0.12);
+  --primary-glow: rgba(0,212,170,0.35);
+  --gold: #f5b731;
+  --gold-dim: rgba(245,183,49,0.12);
+  --red: #ff4560;
+  --red-dim: rgba(255,69,96,0.12);
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --text3: #4a5568;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 0 40px rgba(0,212,170,0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════ GRID NOISE BG */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0,212,170,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(245,183,49,0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════ NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,16,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+.nav-link:hover, .nav-link.active {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.nav-link.active { color: var(--primary); }
+
+.nav-badge {
+  background: var(--primary);
+  color: var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.nav-cta {
+  margin-left: auto;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+
+.nav-cta:hover {
+  background: #00efc4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+
+/* ═══════════════════════════════════════ PAGE SYSTEM */
+.page { display: none; animation: fadeUp 0.4s ease; }
+.page.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════ LAYOUT */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.section { padding: 80px 0; }
+.section-sm { padding: 48px 0; }
+
+/* ═══════════════════════════════════════ LABELS */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--primary);
+}
+
+/* ═══════════════════════════════════════ TYPOGRAPHY */
+h1 { font-family: var(--font-display); font-size: clamp(36px, 6vw, 72px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; }
+h2 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; }
+h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+
+.text-primary { color: var(--primary); }
+.text-gold { color: var(--gold); }
+.text-muted { color: var(--text2); }
+.text-mono { font-family: var(--font-mono); }
+
+/* ═══════════════════════════════════════ BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background: #00efc4;
+  box-shadow: 0 0 32px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border2);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-dim);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #1a1200;
+  box-shadow: 0 0 20px rgba(245,183,49,0.3);
+}
+
+.btn-gold:hover {
+  background: #ffd04a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(245,183,49,0.45);
+}
+
+/* MEGA CTA - conversion optimized */
+.btn-convert {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), #00b896);
+  color: var(--bg);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 40px var(--primary-glow), 0 8px 24px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  transition: all 0.25s;
+}
+
+.btn-convert::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: 0.5s;
+}
+
+.btn-convert:hover::before { left: 100%; }
+.btn-convert:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 60px var(--primary-glow), 0 12px 32px rgba(0,0,0,0.5);
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--primary-glow), 0 4px 16px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 0 40px var(--primary-glow), 0 8px 24px rgba(0,0,0,0.4); }
+}
+
+/* ═══════════════════════════════════════ CARDS */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--border2);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════ BADGES */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.badge-green { background: rgba(0,212,170,0.15); color: var(--primary); border: 1px solid rgba(0,212,170,0.25); }
+.badge-gold { background: rgba(245,183,49,0.15); color: var(--gold); border: 1px solid rgba(245,183,49,0.25); }
+.badge-red { background: var(--red-dim); color: var(--red); border: 1px solid rgba(255,69,96,0.25); }
+.badge-blue { background: rgba(96,165,250,0.15); color: #60a5fa; border: 1px solid rgba(96,165,250,0.25); }
+
+/* ═══════════════════════════════════════ STARS */
+.stars { color: var(--gold); font-size: 14px; }
+
+/* ═══════════════════════════════════════ STAT CHIPS */
+.stat-chip {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.stat-chip .value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-chip .label { color: var(--text2); font-size: 12px; }
+
+/* ═══════════════════════════════════════ TAG */
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+}
+
+/* ═══════════════════════════════════════ DIVIDER */
+.divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+/* ═══════════════════════════════════════ 
+   PAGE 1: HOME 
+═══════════════════════════════════════ */
+
+/* HERO */
+.hero {
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+}
+
+.hero-eyebrow .dot {
+  width: 7px; height: 7px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.hero h1 { margin-bottom: 24px; }
+.hero h1 em { font-style: normal; color: var(--primary); }
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--text2);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text2);
+  font-size: 13px;
+}
+
+.proof-item svg { color: var(--primary); flex-shrink: 0; }
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+/* TICKER TAPE */
+.ticker-wrap {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.ticker {
+  display: flex;
+  gap: 0;
+  animation: ticker 30s linear infinite;
+  width: max-content;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 32px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text2);
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.ticker-item .up { color: var(--primary); }
+.ticker-item .down { color: var(--red); }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* FEATURED FIRMS LOGOS */
+.logos-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.firm-logo-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.firm-logo-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-dim);
+}
+
+/* ═══════════════════════════════════════ 
+   PAGE 2: COMPARADOR
+═══════════════════════════════════════ */
+
+/* FILTER BAR */
+.filter-bar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 6px; min-width: 160px; }
+
+.filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  font-family: var(--font-mono);
+}
+
+.filter-select, .filter-input {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: var(--text);
+  font-size: 13.5px;
+  font-family: var(--font-body);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus, .filter-input:focus { border-color: var(--primary); }
+
+.filter-reset {
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 9px 16px;
+  color: var(--text2);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.filter-reset:hover { border-color: var(--red); color: var(--red); }
+
+/* COMPARATOR TABLE */
+.comp-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.comp-table thead tr {
+  background: var(--surface2);
+  border-bottom: 2px solid var(--border);
+}
+
+.comp-table th {
+  padding: 14px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text2);
+  font-family: var(--font-mono);
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comp-table th:hover { color: var(--primary); }
+.comp-table th.sort-asc::after { content: ' ↑'; color: var(--primary); }
+.comp-table th.sort-desc::after { content: ' ↓'; color: var(--primary); }
+
+.comp-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.comp-table tbody tr:hover { background: rgba(14,18,25,0.8); }
+.comp-table tbody tr:last-child { border-bottom: none; }
+.comp-table tbody tr.featured { background: rgba(0,212,170,0.04); }
+.comp-table tbody tr.featured td:first-child { border-left: 3px solid var(--primary); }
+
+.comp-table td { padding: 16px 20px; vertical-align: middle; }
+
+.firm-cell { display: flex; align-items: center; gap: 12px; }
+
+.firm-avatar {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+
+.firm-name { font-weight: 600; font-size: 14px; color: var(--text); }
+.firm-country { font-size: 11px; color: var(--text2); margin-top: 2px; font-family: var(--font-mono); }
+
+.price-cell .price { font-family: var(--font-mono); font-size: 16px; font-weight: 600; color: var(--text); }
+.price-cell .original { font-size: 11px; color: var(--text3); text-decoration: line-through; font-family: var(--font-mono); }
+.price-cell .discount { font-size: 11px; color: var(--primary); font-family: var(--font-mono); font-weight: 600; }
+
+.num-cell { font-family: var(--font-mono); font-size: 14px; font-weight: 500; }
+
+.rating-cell { display: flex; align-items: center; gap: 6px; }
+.rating-val { font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--gold); }
+
+.check { color: var(--primary); font-size: 16px; }
+.cross { color: var(--red); font-size: 14px; }
+
+.score-bar {
+  width: 60px; height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.score-fill { height: 100%; background: var(--primary); border-radius: 2px; }
+
+/* ACCOUNT SIZE TABS */
+.size-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.size-tab {
+  padding: 7px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text2);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-mono);
+}
+
+.size-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg);
+}
+
+/* ═══════════════════════════════════════ 
+   PAGE 3: REVIEWS
+═══════════════════════════════════════ */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 20px var(--primary-dim);
+  transform: translateY(-4px);
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.review-avatar {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.review-meta { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+
+.review-score-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.score-item { background: var(--surface2); border-radius: 8px; padding: 10px 12px; }
+.score-item .s-label { font-size: 10px; color: var(--text2); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+.score-item .s-val { font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--text); margin-top: 2px; }
+
+.review-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* ═══════════════════════════════════════ 
+   PAGE 4: SINGLE REVIEW
+═══════════════════════════════════════ */
+.review-hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 28px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.review-hero-logo {
+  width: 80px; height: 80px;
+  border-radius: 16px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+
+.review-hero-info { flex: 1; min-width: 200px; }
+.review-hero-info h1 { font-size: 36px; margin-bottom: 8px; }
+
+.review-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.review-body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+}
+
+.review-content { min-width: 0; }
+
+.review-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.review-section h3 { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pros, .cons { display: flex; flex-direction: column; gap: 8px; }
+.pro-item { display: flex; gap: 8px; font-size: 14px; }
+.pro-item::before { content: '✓'; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+.con-item { display: flex; gap: 8px; font-size: 14px; }
+.con-item::before { content: '✗'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+
+/* AFFILIATE BOX */
+.affiliate-box {
+  background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(0,184,150,0.05));
+  border: 1px solid rgba(0,212,170,0.25);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: sticky;
+  top: 80px;
+}
+
+.affiliate-box h4 { margin-bottom: 6px; color: var(--text); }
+.affiliate-box .aff-price {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 12px 0;
+}
+
+.aff-original { font-size: 14px; color: var(--text2); text-decoration: line-through; font-family: var(--font-mono); }
+.aff-save { font-size: 12px; color: var(--primary); font-weight: 600; }
+
+.affiliate-box .btn-convert { width: 100%; justify-content: center; margin-top: 16px; }
+
+.aff-code-box {
+  background: var(--surface2);
+  border: 1px dashed var(--border2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.copy-btn {
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.copy-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text2);
+}
+
+.trust-item::before { content: '✓'; color: var(--primary); font-size: 11px; }
+
+/* ═══════════════════════════════════════ 
+   PAGE 5: DESCUENTOS
+═══════════════════════════════════════ */
+.discounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.discount-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.discount-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.discount-pct {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.discount-card-body { margin-top: 48px; }
+
+.discount-firm { font-size: 13px; color: var(--text2); margin-bottom: 4px; font-family: var(--font-mono); }
+.discount-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.discount-desc { font-size: 13px; color: var(--text2); margin-bottom: 20px; line-height: 1.6; }
+
+.discount-expiry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+  margin-bottom: 16px;
+}
+
+/* ═══════════════════════════════════════ 
+   PAGE 6: BLOG
+═══════════════════════════════════════ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.blog-thumb {
+  height: 180px;
+  background: linear-gradient(135deg, var(--surface2), var(--surface));
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-thumb .thumb-icon {
+  font-size: 52px;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.blog-thumb-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, var(--surface) 100%);
+}
+
+.blog-content { padding: 20px; }
+.blog-cat { font-family: var(--font-mono); font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.blog-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text); line-height: 1.3; }
+.blog-excerpt { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 16px; }
+.blog-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text3); font-family: var(--font-mono); }
+
+.blog-featured-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ═══════════════════════════════════════ 
+   PAGE 7: HERRAMIENTAS
+═══════════════════════════════════════ */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  border-color: var(--primary);
+  background: rgba(0,212,170,0.03);
+  transform: translateY(-2px);
+}
+
+.tool-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,212,170,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.tool-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.tool-desc { font-size: 13px; color: var(--text2); line-height: 1.6; flex: 1; }
+.tool-tag { font-family: var(--font-mono); font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* MINI CALCULATOR TOOL */
+.calc-tool {
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.calc-tool h3 { text-align: center; margin-bottom: 24px; }
+
+.calc-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.calc-field label { font-size: 12px; color: var(--text2); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+.calc-field input, .calc-field select {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  outline: none;
+}
+.calc-field input:focus, .calc-field select:focus { border-color: var(--primary); }
+
+.calc-result {
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calc-result .result-val {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ═══════════════════════════════════════ 
+   ARCHITECTURE DOCS PAGE
+═══════════════════════════════════════ */
+
+.arch-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.arch-sidebar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  position: sticky;
+  top: 80px;
+}
+
+.arch-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13.5px;
+  color: var(--text2);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.arch-nav-item:hover { background: var(--surface2); color: var(--text); }
+.arch-nav-item.active { background: var(--primary-dim); color: var(--primary); }
+.arch-nav-item .num { font-family: var(--font-mono); font-size: 11px; color: var(--text3); width: 18px; }
+
+.doc-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.doc-section h3 { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+
+.sitemap-tree {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text2);
+}
+
+.sitemap-tree .root { color: var(--primary); font-weight: 600; }
+.sitemap-tree .branch::before { content: '├── '; color: var(--text3); }
+.sitemap-tree .branch-last::before { content: '└── '; color: var(--text3); }
+.sitemap-tree .leaf::before { content: '    ├── '; color: var(--text3); }
+.sitemap-tree .leaf-last::before { content: '    └── '; color: var(--text3); }
+.sitemap-tree .kw { color: var(--gold); font-size: 11px; }
+
+.db-schema {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  color: var(--text2);
+  line-height: 1.8;
+  border: 1px solid var(--border);
+}
+
+.db-table { margin-bottom: 24px; }
+.db-table-name { color: var(--primary); font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.db-field { padding-left: 20px; }
+.db-field .field-name { color: var(--text); }
+.db-field .field-type { color: var(--gold); }
+.db-field .field-note { color: var(--text3); }
+
+.monetization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.mono-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.mono-card h4 { margin-bottom: 8px; color: var(--text); }
+.mono-card .amount { font-family: var(--font-mono); font-size: 22px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+.mono-card p { font-size: 12px; color: var(--text2); }
+
+/* SEO TABLE */
+.seo-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.seo-table th { text-align: left; padding: 10px 14px; background: var(--surface2); color: var(--text2); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+.seo-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text2); vertical-align: top; }
+.seo-table tr:last-child td { border-bottom: none; }
+.seo-table .kw-main { color: var(--text); font-weight: 500; }
+.seo-table .vol { color: var(--primary); font-family: var(--font-mono); }
+.seo-table .intent { color: var(--gold); }
+
+/* ═══════════════════════════════════════ FOOTER */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 30px;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand h3 { font-family: var(--font-display); font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+.footer-brand p { font-size: 13px; color: var(--text2); line-height: 1.7; max-width: 280px; }
+
+.footer-col h4 { font-family: var(--font-display); font-size: 14px; margin-bottom: 16px; }
+
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 13px; color: var(--text2); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+.footer-links a:hover { color: var(--primary); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+  gap: 16px;
+}
+
+.footer-bottom p { font-size: 12px; color: var(--text3); }
+.footer-bottom .affiliate-disclaimer {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  max-width: 450px;
+}
+
+/* ═══════════════════════════════════════ TOAST */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  z-index: 1000;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ═══════════════════════════════════════ RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .review-hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .review-body { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .arch-grid { grid-template-columns: 1fr; }
+  .pros-cons { grid-template-columns: 1fr; }
+  nav { padding: 0 16px; }
+  .container { padding: 0 16px; }
+}
+
+/* Misc helpers */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-4 { margin-bottom: 16px; }
+.mb-6 { margin-bottom: 24px; }
+.mb-8 { margin-bottom: 32px; }
+.mt-4 { margin-top: 16px; }
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="showPage('home')">Zona de <span>Fondeo</span></a>
+    <div class="nav-links">
+      <button class="nav-link active" onclick="showPage('home')">Inicio</button>
+      <button class="nav-link" onclick="showPage('comparador')">Comparador</button>
+      <button class="nav-link" onclick="showPage('reviews')">Reviews</button>
+      <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">13</span></button>
+      <button class="nav-link" onclick="showPage('herramientas')">Herramientas</button>
+      <button class="nav-link" onclick="showPage('blog')">Blog</button>
+      <button class="nav-link" onclick="showPage('arquitectura')">📋 Arquitectura</button>
+    </div>
+    <button class="nav-cta" onclick="showPage('comparador')">Comparar →</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ PAGE: HOME -->
+<div id="page-home" class="page active">
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker" id="ticker">
+      <div class="ticker-item">NQ <span class="up">+1.42%</span></div>
+      <div class="ticker-item">Apex 50K <span class="up">$77</span> <span class="up">-85% OFF</span></div>
+      <div class="ticker-item">Bulenox 50K <span class="up">$67</span> <span class="up">-89% OFF</span></div>
+      <div class="ticker-item">MFF 50K <span class="up">$165</span></div>
+      <div class="ticker-item">ES <span class="down">-0.31%</span></div>
+      <div class="ticker-item">TakeProfitTrader <span class="up">-40% OFF</span></div>
+      <div class="ticker-item">Alpha Futures <span class="up">-10% OFF</span></div>
+      <div class="ticker-item">Tradeify 50K <span class="up">$107</span> <span class="up">-30% OFF</span></div>
+      <div class="ticker-item">NQ <span class="up">+1.42%</span></div>
+      <div class="ticker-item">Apex 50K <span class="up">$77</span> <span class="up">-85% OFF</span></div>
+      <div class="ticker-item">Bulenox 50K <span class="up">$67</span> <span class="up">-89% OFF</span></div>
+      <div class="ticker-item">MFF 50K <span class="up">$165</span></div>
+      <div class="ticker-item">ES <span class="down">-0.31%</span></div>
+      <div class="ticker-item">TakeProfitTrader <span class="up">-40% OFF</span></div>
+      <div class="ticker-item">Alpha Futures <span class="up">-10% OFF</span></div>
+      <div class="ticker-item">Tradeify 50K <span class="up">$107</span> <span class="up">-30% OFF</span></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Actualizado — Marzo 2026 · 12 Empresas de fondeo analizadas
+      </div>
+      <h1>El comparador definitivo de<br><em>Empresas de fondeo de Futuros NQ</em></h1>
+      <p class="hero-sub">Compara pruebas de fondeo, drawdowns, profit splits y costes en segundos. Descuentos exclusivos actualizados diariamente para traders del Nasdaq.</p>
+      <div class="hero-actions">
+        <button class="btn-convert btn-pulse" onclick="showPage('comparador')">
+          🔍 Abrir Comparador Completo
+        </button>
+        <button class="btn btn-outline" onclick="showPage('descuentos')">
+          🎁 Ver Descuentos hasta 90%
+        </button>
+      </div>
+      <div class="hero-social-proof">
+        <div class="proof-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Datos verificados semanalmente
+        </div>
+        <div class="proof-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Sin sesgo ni patrocinios ocultos
+        </div>
+        <div class="proof-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          50,000+ traders de la comunidad
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <div class="value">12</div>
+          <div class="label">Empresas de fondeo</div>
+        </div>
+        <div class="stat-chip">
+          <div class="value">89%</div>
+          <div class="label">Descuento máx.</div>
+        </div>
+        <div class="stat-chip">
+          <div class="value">100%</div>
+          <div class="label">Profit Split top</div>
+        </div>
+        <div class="stat-chip">
+          <div class="value">50K+</div>
+          <div class="label">Traders activos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED FIRMS -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Empresas de fondeo Analizadas</div>
+      <h2 class="mb-6">Las mejores empresas de fondeo<br>para futuros NQ</h2>
+      <div class="logos-strip">
+        <div class="firm-logo-chip" onclick="showPage('review')">Apex Trader Funding</div>
+        <div class="firm-logo-chip">My Funded Futures</div>
+        <div class="firm-logo-chip">Bulenox</div>
+        <div class="firm-logo-chip">TakeProfitTrader</div>
+        <div class="firm-logo-chip">Tradeify</div>
+        <div class="firm-logo-chip">Alpha Futures</div>
+        <div class="firm-logo-chip">Top One Futures</div>
+        <div class="firm-logo-chip">FundedNext</div>
+        <div class="firm-logo-chip">Earn2Trade</div>
+        <div class="firm-logo-chip">EmergeProfit</div>
+        <div class="firm-logo-chip" style="border-color: var(--border2); color: var(--text3);">+ 2 más →</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MINI COMPARATOR PREVIEW -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Comparador Rápido</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <h2>Encuentra tu cuenta ideal</h2>
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver tabla completa →</button>
+      </div>
+      <div class="size-tabs">
+        <button class="size-tab active">$50K</button>
+        <button class="size-tab">$100K</button>
+        <button class="size-tab">$150K</button>
+      </div>
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Empresa de fondeo</th>
+              <th>Precio</th>
+              <th>Drawdown</th>
+              <th>Profit Target</th>
+              <th>Profit Split</th>
+              <th>Payout</th>
+              <th>Rating</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="featured">
+              <td><div class="firm-cell"><div class="firm-avatar">AP</div><div><div class="firm-name">Apex Trader Funding</div><div class="firm-country">🇺🇸 USA · 2021</div></div></div></td>
+              <td class="price-cell"><div class="price">$77</div><div><span class="original">$527</span> <span class="discount">-85%</span></div></td>
+              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Trailing</span></td>
+              <td class="num-cell">$3,000</td>
+              <td><span class="num-cell" style="color:var(--primary)">90%</span></td>
+              <td class="num-cell">7-14d</td>
+              <td><div class="rating-cell"><span class="rating-val">4.4</span> <span class="stars">★★★★</span></div></td>
+              <td><button class="btn-convert" style="padding:9px 16px; font-size:13px;" onclick="affClick('Apex')">Empezar →</button></td>
+            </tr>
+            <tr>
+              <td><div class="firm-cell"><div class="firm-avatar">BX</div><div><div class="firm-name">Bulenox</div><div class="firm-country">🇺🇸 USA · 2021</div></div></div></td>
+              <td class="price-cell"><div class="price">$67</div><div><span class="original">$609</span> <span class="discount">-89%</span></div></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">EOD</span></td>
+              <td class="num-cell">$3,000</td>
+              <td><span class="num-cell" style="color:var(--primary)">80%</span></td>
+              <td class="num-cell">7d</td>
+              <td><div class="rating-cell"><span class="rating-val">4.8</span> <span class="stars">★★★★★</span></div></td>
+              <td><button class="btn-convert" style="padding:9px 16px; font-size:13px;" onclick="affClick('Bulenox')">Empezar →</button></td>
+            </tr>
+            <tr>
+              <td><div class="firm-cell"><div class="firm-avatar">MF</div><div><div class="firm-name">My Funded Futures</div><div class="firm-country">🇺🇸 USA · 2022</div></div></div></td>
+              <td class="price-cell"><div class="price">$165</div><div><span class="original">$165</span> <span class="discount">Sin desc.</span></div></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">EOD</span></td>
+              <td class="num-cell">$3,000</td>
+              <td><span class="num-cell" style="color:var(--primary)">90%</span></td>
+              <td class="num-cell">14d</td>
+              <td><div class="rating-cell"><span class="rating-val">4.9</span> <span class="stars">★★★★★</span></div></td>
+              <td><button class="btn-convert" style="padding:9px 16px; font-size:13px;" onclick="affClick('MFF')">Empezar →</button></td>
+            </tr>
+            <tr>
+              <td><div class="firm-cell"><div class="firm-avatar">TP</div><div><div class="firm-name">TakeProfitTrader</div><div class="firm-country">🇺🇸 USA · 2019</div></div></div></td>
+              <td class="price-cell"><div class="price">$97</div><div><span class="original">$165</span> <span class="discount">-40%</span></div></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-blue" style="font-size:10px;">Static</span></td>
+              <td class="num-cell">$3,000</td>
+              <td><span class="num-cell" style="color:var(--primary)">80%</span></td>
+              <td class="num-cell">7-14d</td>
+              <td><div class="rating-cell"><span class="rating-val">4.4</span> <span class="stars">★★★★</span></div></td>
+              <td><button class="btn-convert" style="padding:9px 16px; font-size:13px;" onclick="affClick('TPT')">Empezar →</button></td>
+            </tr>
+            <tr>
+              <td><div class="firm-cell"><div class="firm-avatar">TF</div><div><div class="firm-name">Tradeify</div><div class="firm-country">🇺🇸 USA · 2024</div></div></div></td>
+              <td class="price-cell"><div class="price">$107</div><div><span class="original">$153</span> <span class="discount">-30%</span></div></td>
+              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Trailing</span></td>
+              <td class="num-cell">$3,000</td>
+              <td><span class="num-cell" style="color:var(--primary)">85%</span></td>
+              <td class="num-cell">7d</td>
+              <td><div class="rating-cell"><span class="rating-val">4.6</span> <span class="stars">★★★★★</span></div></td>
+              <td><button class="btn-convert" style="padding:9px 16px; font-size:13px;" onclick="affClick('Tradeify')">Empezar →</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="text-align:center; margin-top:20px;">
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver las 12 empresas de fondeo con filtros avanzados →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS PREVIEW -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Herramientas Gratuitas</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <h2>Calcula tu riesgo antes<br>de comprar</h2>
+        <button class="btn btn-outline" onclick="showPage('herramientas')">Ver todas →</button>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card" onclick="showPage('herramientas')">
+          <div class="tool-icon">🧮</div>
+          <div class="tool-tag">CALCULADORA</div>
+          <div class="tool-name">Calculadora de Drawdown NQ</div>
+          <div class="tool-desc">Calcula cuántos ticks puedes perder con tu cuenta antes de violación. Específica para NQ y ES.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card" onclick="showPage('herramientas')">
+          <div class="tool-icon">📊</div>
+          <div class="tool-tag">SIMULADOR</div>
+          <div class="tool-name">Simulador de Profit Split</div>
+          <div class="tool-desc">Simula cuánto recibirías en payouts reales según tu tamaño de cuenta y % de split.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card" onclick="showPage('herramientas')">
+          <div class="tool-icon">⚖️</div>
+          <div class="tool-tag">COMPARADOR ROI</div>
+          <div class="tool-name">ROI de Prueba de fondeo</div>
+          <div class="tool-desc">¿Cuántas veces necesitas hacer payout para recuperar el coste del prueba de fondeo?</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card" onclick="showPage('herramientas')">
+          <div class="tool-icon">📅</div>
+          <div class="tool-tag">PLANIFICADOR</div>
+          <div class="tool-name">Planificador de Evaluación</div>
+          <div class="tool-desc">Planifica cuántos días necesitas para pasar el prueba de fondeo según tu profit objetivo diario.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCOUNTS PREVIEW -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Descuentos Exclusivos</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <h2>Ahorra hasta un 89%<br>en tu próximo prueba de fondeo</h2>
+        <button class="btn btn-outline" onclick="showPage('descuentos')">Ver todos los descuentos →</button>
+      </div>
+      <div class="discounts-grid">
+        <div class="discount-card">
+          <div class="discount-pct">-89%</div>
+          <div class="discount-card-body">
+            <div class="discount-firm">BULENOX</div>
+            <div class="discount-title">Mega Oferta Mensual</div>
+            <div class="discount-desc">Cuenta de $50K evaluación desde $67. El descuento más alto del mercado actualmente activo.</div>
+            <div class="discount-expiry">⏰ Caduca: 31 Mar 2026</div>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <div class="aff-code-box" style="flex:1;min-width:140px;">TRADER89 <button class="copy-btn" onclick="copyCode('TRADER89')">Copiar</button></div>
+              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('Bulenox')">Ir →</button>
+            </div>
+          </div>
+        </div>
+        <div class="discount-card">
+          <div class="discount-pct">-85%</div>
+          <div class="discount-card-body">
+            <div class="discount-firm">APEX TRADER FUNDING</div>
+            <div class="discount-title">Promo Especial</div>
+            <div class="discount-desc">Apex ofrece descuentos rotativos del 80-85%. Accede con código exclusivo de nuestra comunidad.</div>
+            <div class="discount-expiry">⏰ Caduca: 05 Abr 2026</div>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <div class="aff-code-box" style="flex:1;min-width:140px;">ZONA85 <button class="copy-btn" onclick="copyCode('ZONA85')">Copiar</button></div>
+              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('Apex')">Ir →</button>
+            </div>
+          </div>
+        </div>
+        <div class="discount-card">
+          <div class="discount-pct">-40%</div>
+          <div class="discount-card-body">
+            <div class="discount-firm">TAKEPROFITTRADER</div>
+            <div class="discount-title">Descuento Permanente</div>
+            <div class="discount-desc">TakeProfitTrader ofrece descuento fijo del 40% con nuestro código afiliado exclusivo.</div>
+            <div class="discount-expiry">✅ Sin fecha de caducidad</div>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <div class="aff-code-box" style="flex:1;min-width:140px;">ZONA40 <button class="copy-btn" onclick="copyCode('ZONA40')">Copiar</button></div>
+              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('TPT')">Ir →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- ═══════════════════════════════════════ END HOME -->
+
+
+<!-- ═══════════════════════════════════════ PAGE: COMPARADOR -->
+<div id="page-comparador" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Comparador Completo</div>
+      <h2 class="mb-2">Compara todas las Empresas de fondeo</h2>
+      <p class="text-muted mb-8">12 empresas · datos actualizados · con descuentos en tiempo real</p>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label class="filter-label">Tamaño de cuenta</label>
+          <select class="filter-select" onchange="applyFilters()">
+            <option value="">Todos</option>
+            <option value="25000">$25K</option>
+            <option value="50000" selected>$50K</option>
+            <option value="100000">$100K</option>
+            <option value="150000">$150K</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Precio máximo</label>
+          <select class="filter-select" id="priceFilter" onchange="applyFilters()">
+            <option value="">Sin límite</option>
+            <option value="100">Hasta $100</option>
+            <option value="150">Hasta $150</option>
+            <option value="200">Hasta $200</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Drawdown tipo</label>
+          <select class="filter-select" id="ddFilter" onchange="applyFilters()">
+            <option value="">Todos</option>
+            <option value="trailing">Trailing</option>
+            <option value="static">Estático (EOD)</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Profit Split mín.</label>
+          <select class="filter-select" id="splitFilter" onchange="applyFilters()">
+            <option value="">Sin mínimo</option>
+            <option value="80">≥ 80%</option>
+            <option value="85">≥ 85%</option>
+            <option value="90">≥ 90%</option>
+            <option value="100">100%</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">News Trading</label>
+          <select class="filter-select" id="newsFilter" onchange="applyFilters()">
+            <option value="">Todos</option>
+            <option value="si">Permitido</option>
+            <option value="no">No permitido</option>
+          </select>
+        </div>
+        <button class="filter-reset" onclick="resetFilters()">↺ Resetear</button>
+      </div>
+
+      <div style="margin-bottom:8px; font-size:12px; color:var(--text2); font-family:var(--font-mono);">
+        <span id="filterCount">12</span> resultados · Haz clic en el encabezado para ordenar
+      </div>
+
+      <div class="comp-table-wrap">
+        <table class="comp-table" id="mainTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Empresa de fondeo</th>
+              <th onclick="sortTable(1)" class="sort-asc">Precio <span style="color:var(--text3);font-size:10px">(con desc.)</span></th>
+              <th onclick="sortTable(2)">Drawdown</th>
+              <th onclick="sortTable(3)">Tipo DD</th>
+              <th onclick="sortTable(4)">Profit Target</th>
+              <th onclick="sortTable(5)">Profit Split</th>
+              <th onclick="sortTable(6)">Payout</th>
+              <th>News</th>
+              <th onclick="sortTable(7)">Rating TP</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Dynamically generated -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top:24px; padding:20px;">
+        <p style="font-size:12px; color:var(--text2); line-height:1.7;">
+          <strong style="color:var(--text)">⚠️ Aviso de afiliados:</strong> Esta tabla contiene enlaces de afiliado. Si compras un prueba de fondeo a través de nuestros botones, podemos recibir una comisión sin ningún coste adicional para ti. Los precios y descuentos se actualizan semanalmente. Siempre verifica el precio final en el sitio oficial de cada empresa.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: REVIEWS -->
+<div id="page-reviews" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Reviews Completas</div>
+      <h2 class="mb-2">Análisis honestos de cada Empresa de fondeo</h2>
+      <p class="text-muted mb-8">Reviews escritas por traders reales, sin conflictos de interés</p>
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- generated -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: SINGLE REVIEW -->
+<div id="page-review" class="page">
+  <div class="section">
+    <div class="container">
+      <div style="margin-bottom:16px;">
+        <button class="btn btn-outline" style="padding:7px 14px; font-size:12px;" onclick="showPage('reviews')">← Volver a Reviews</button>
+      </div>
+
+      <div class="review-hero">
+        <div class="review-hero-logo">AP</div>
+        <div class="review-hero-info">
+          <div class="section-label">Empresa de fondeo de Futuros</div>
+          <h1>Apex Trader Funding</h1>
+          <p style="color:var(--text2); font-size:14px; margin-bottom:12px;">🇺🇸 USA · Fundada en 2021 · NinjaTrader, Tradovate · Pago via Plane, ACH</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+            <div class="stars" style="font-size:18px;">★★★★</div>
+            <span style="font-family:var(--font-mono); font-weight:700; color:var(--gold); font-size:18px;">4.4</span>
+            <span style="color:var(--text2); font-size:13px;">(18,089 reseñas en Trustpilot)</span>
+            <span class="badge badge-green">✓ Verificado</span>
+            <span class="badge badge-gold">⚡ Descuento activo -85%</span>
+          </div>
+          <div class="review-hero-stats">
+            <div class="stat-chip"><div class="value">$77</div><div class="label">$50K precio</div></div>
+            <div class="stat-chip"><div class="value">90%</div><div class="label">Profit Split</div></div>
+            <div class="stat-chip"><div class="value">$2,500</div><div class="label">Drawdown</div></div>
+            <div class="stat-chip"><div class="value">7-14d</div><div class="label">Payout</div></div>
+            <div class="stat-chip"><div class="value">4.4★</div><div class="label">Trustpilot</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-body">
+        <div class="review-content">
+          <div class="review-section">
+            <h3>📝 Resumen Ejecutivo</h3>
+            <p style="color:var(--text2); font-size:14px; line-height:1.8; margin-bottom:16px;">
+              Apex Trader Funding es una de las empresas de fondeo de futuros más populares del mercado anglosajón, con especial popularidad entre traders del NQ Nasdaq. Fundada en 2021 en Austin, Texas, se ha consolidado como referencia por sus agresivos descuentos rotativos y sus reglas relativamente flexibles.
+            </p>
+            <p style="color:var(--text2); font-size:14px; line-height:1.8;">
+              El modelo de evaluación es de fase única (1-step), lo que la diferencia de otras firmas que requieren 2 fases. Esto permite pasar a cuenta financiada más rápido, aunque el drawdown tipo trailing hace la evaluación algo más exigente en gestión de riesgo.
+            </p>
+          </div>
+
+          <div class="review-section">
+            <h3>⚙️ Reglas y Condiciones</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="score-item"><div class="s-label">Fases de evaluación</div><div class="s-val">1 Fase</div></div>
+              <div class="score-item"><div class="s-label">Profit Target</div><div class="s-val">$3,000</div></div>
+              <div class="score-item"><div class="s-label">Drawdown Máx.</div><div class="s-val">$2,500 trailing</div></div>
+              <div class="score-item"><div class="s-label">Profit Split</div><div class="s-val" style="color:var(--primary)">90%</div></div>
+              <div class="score-item"><div class="s-label">Días mínimos</div><div class="s-val">1 día</div></div>
+              <div class="score-item"><div class="s-label">Límite de tiempo</div><div class="s-val">Sin límite</div></div>
+              <div class="score-item"><div class="s-label">News Trading</div><div class="s-val" style="color:var(--primary)">✓ Permitido</div></div>
+              <div class="score-item"><div class="s-label">Holding overnight</div><div class="s-val" style="color:var(--primary)">✓ Permitido</div></div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>✅ Pros y Contras</h3>
+            <div class="pros-cons">
+              <div class="pros">
+                <h4 style="color:var(--primary); margin-bottom:10px;">Pros</h4>
+                <div class="pro-item">Fase única — más rápido para fondear</div>
+                <div class="pro-item">Sin límite de tiempo para pasar</div>
+                <div class="pro-item">News trading y holding overnight permitidos</div>
+                <div class="pro-item">Descuentos frecuentes del 80-85%</div>
+                <div class="pro-item">Plataformas top: NinjaTrader y Tradovate</div>
+                <div class="pro-item">Múltiples cuentas permitidas (hasta 20)</div>
+              </div>
+              <div class="cons">
+                <h4 style="color:var(--red); margin-bottom:10px;">Contras</h4>
+                <div class="con-item">Drawdown trailing — más difícil de gestionar</div>
+                <div class="con-item">Consistency rule en cuenta financiada</div>
+                <div class="con-item">Primeros payouts limitados a $25K</div>
+                <div class="con-item">Fee de activación en cuentas grandes</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>💰 Precios por Tamaño de Cuenta</h3>
+            <div class="comp-table-wrap">
+              <table class="comp-table" style="min-width:500px;">
+                <thead>
+                  <tr>
+                    <th>Cuenta</th><th>Precio Normal</th><th>Con Descuento</th><th>Ahorro</th><th>Drawdown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>$25K</td><td class="text-mono">$147</td><td class="text-mono" style="color:var(--primary)">$25</td><td class="text-mono text-primary">-83%</td><td class="text-mono">$1,500</td></tr>
+                  <tr class="featured"><td>$50K ⭐</td><td class="text-mono">$527</td><td class="text-mono" style="color:var(--primary)">$77</td><td class="text-mono text-primary">-85%</td><td class="text-mono">$2,500</td></tr>
+                  <tr><td>$100K</td><td class="text-mono">$947</td><td class="text-mono" style="color:var(--primary)">$147</td><td class="text-mono text-primary">-84%</td><td class="text-mono">$3,000</td></tr>
+                  <tr><td>$150K</td><td class="text-mono">$1,447</td><td class="text-mono" style="color:var(--primary)">$167</td><td class="text-mono text-primary">-88%</td><td class="text-mono">$4,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>📊 Nuestra Puntuación</h3>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="display:flex; align-items:center; gap:16px;">
+                <span style="font-size:13px; color:var(--text2); width:140px;">Reglas y Condiciones</span>
+                <div style="flex:1; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                  <div style="height:100%; width:85%; background:var(--primary); border-radius:4px;"></div>
+                </div>
+                <span style="font-family:var(--font-mono); font-size:13px; color:var(--primary); width:30px;">8.5</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:16px;">
+                <span style="font-size:13px; color:var(--text2); width:140px;">Precio / Calidad</span>
+                <div style="flex:1; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                  <div style="height:100%; width:92%; background:var(--primary); border-radius:4px;"></div>
+                </div>
+                <span style="font-family:var(--font-mono); font-size:13px; color:var(--primary); width:30px;">9.2</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:16px;">
+                <span style="font-size:13px; color:var(--text2); width:140px;">Payout & Fiabilidad</span>
+                <div style="flex:1; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                  <div style="height:100%; width:78%; background:var(--gold); border-radius:4px;"></div>
+                </div>
+                <span style="font-family:var(--font-mono); font-size:13px; color:var(--gold); width:30px;">7.8</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:16px;">
+                <span style="font-size:13px; color:var(--text2); width:140px;">Soporte</span>
+                <div style="flex:1; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                  <div style="height:100%; width:70%; background:var(--gold); border-radius:4px;"></div>
+                </div>
+                <span style="font-family:var(--font-mono); font-size:13px; color:var(--gold); width:30px;">7.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AFFILIATE SIDEBAR -->
+        <div>
+          <div class="affiliate-box">
+            <div style="font-size:12px; color:var(--primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">💥 Descuento activo</div>
+            <h4>Apex Trader Funding</h4>
+            <div style="display:flex; align-items:baseline; gap:8px; margin:12px 0;">
+              <div class="aff-price">$77</div>
+              <div>
+                <div class="aff-original">Precio original: $527</div>
+                <div class="aff-save">Ahorras $450 con nuestro código</div>
+              </div>
+            </div>
+            <button class="btn-convert btn-pulse" onclick="affClick('Apex')" style="width:100%; justify-content:center; font-size:15px;">
+              🚀 Comprar Prueba de fondeo Ahora
+            </button>
+            <p style="font-size:11px; color:var(--text2); text-align:center; margin-top:8px;">El enlace incluye el descuento automáticamente</p>
+            <div style="margin-top:16px;">
+              <div style="font-size:12px; color:var(--text2); margin-bottom:8px;">O usa el código manualmente:</div>
+              <div class="aff-code-box">
+                <span style="color:var(--primary); font-weight:700;">ZONA85</span>
+                <button class="copy-btn" onclick="copyCode('ZONA85')">📋 Copiar</button>
+              </div>
+            </div>
+            <div class="trust-badges">
+              <div class="trust-item">Sin coste extra para ti</div>
+              <div class="trust-item">Descuento verificado hoy</div>
+              <div class="trust-item">Enlace de afiliado oficial</div>
+              <div class="trust-item">18,089+ reviews en Trustpilot</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:20px; margin-top:16px;">
+            <h4 style="margin-bottom:12px;">Comparar con similares</h4>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <button class="btn btn-outline" style="font-size:13px; justify-content:space-between;" onclick="showPage('reviews')">
+                Bulenox <span style="color:var(--primary); font-family:var(--font-mono);">$67 (-89%)</span>
+              </button>
+              <button class="btn btn-outline" style="font-size:13px; justify-content:space-between;">
+                Tradeify <span style="color:var(--primary); font-family:var(--font-mono);">$107 (-30%)</span>
+              </button>
+              <button class="btn btn-outline" style="font-size:13px; justify-content:space-between;">
+                MFF <span style="color:var(--text2); font-family:var(--font-mono);">$165</span>
+              </button>
+            </div>
+            <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:12px;" onclick="showPage('comparador')">
+              Comparar todas →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: DESCUENTOS -->
+<div id="page-descuentos" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Códigos de Descuento</div>
+      <h2 class="mb-2">Descuentos exclusivos verificados</h2>
+      <p class="text-muted mb-8">Actualizados diariamente · Solo códigos activos · 13 ofertas disponibles</p>
+
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;">
+        <span class="badge badge-green">✓ 13 activos</span>
+        <span class="badge badge-gold">⚡ 3 expiran esta semana</span>
+        <span class="tag">Última verificación: hoy</span>
+      </div>
+
+      <div class="discounts-grid" id="discountsGrid">
+        <!-- generated -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: BLOG -->
+<div id="page-blog" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Blog & Guías SEO</div>
+      <h2 class="mb-8">Aprende, mejora y decide con datos</h2>
+
+      <div class="blog-featured-banner">
+        <div>
+          <span class="badge badge-gold" style="margin-bottom:12px;">⭐ Artículo Destacado</span>
+          <h3 style="margin-bottom:8px;">Guía definitiva: Cómo elegir tu primera Empresa de fondeo de Futuros en 2026</h3>
+          <p style="color:var(--text2); font-size:14px; margin-bottom:16px;">Todo lo que necesitas saber sobre drawdown, profit split, payouts y qué firma se adapta mejor a tu estilo de trading del NQ Nasdaq.</p>
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <button class="btn btn-primary">Leer artículo →</button>
+            <span style="font-size:12px; color:var(--text3); font-family:var(--font-mono);">12 min · 3,200 palabras · Actualizado Mar 2026</span>
+          </div>
+        </div>
+        <div style="font-size:72px; opacity:0.5;">📚</div>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- generated -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: HERRAMIENTAS -->
+<div id="page-herramientas" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Herramientas Gratuitas</div>
+      <h2 class="mb-2">Calcula, planifica y decide</h2>
+      <p class="text-muted mb-8">Herramientas gratuitas diseñadas para traders de futuros NQ. Sin registro.</p>
+
+      <div class="tools-grid" style="margin-bottom:48px;">
+        <div class="tool-card">
+          <div class="tool-icon">🧮</div>
+          <div class="tool-tag">CALCULADORA</div>
+          <div class="tool-name">Drawdown Calculator NQ</div>
+          <div class="tool-desc">Cuántos ticks de NQ puedes perder antes de violar. Calcula automáticamente por tamaño de cuenta y firm.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📊</div>
+          <div class="tool-tag">SIMULADOR</div>
+          <div class="tool-name">Profit Split Simulator</div>
+          <div class="tool-desc">Simula payouts reales. Introduce tu beneficio mensual y ve cuánto te llevas en cada firma.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⚖️</div>
+          <div class="tool-tag">ROI</div>
+          <div class="tool-name">ROI del Prueba de fondeo</div>
+          <div class="tool-desc">¿Cuántos payouts para recuperar el coste? Compara el ROI de cada firm antes de comprar.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📅</div>
+          <div class="tool-tag">PLANIFICADOR</div>
+          <div class="tool-name">Plan de Evaluación</div>
+          <div class="tool-desc">¿Cuántos días necesitas para pasar? Introduce tu profit objetivo diario y la firm.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🎯</div>
+          <div class="tool-tag">GESTOR DE RIESGO</div>
+          <div class="tool-name">Position Size NQ</div>
+          <div class="tool-desc">Calcula el tamaño óptimo de posición en NQ según tu riesgo por operación y cuenta.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📈</div>
+          <div class="tool-tag">COMPARADOR</div>
+          <div class="tool-name">Comparador de Payouts</div>
+          <div class="tool-desc">Compara cuánto recibirías en payout en 3 firms distintas con el mismo P&amp;L mensual.</div>
+          <span class="badge badge-green">Gratuito</span>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CALCULATOR -->
+      <div class="section-label">Demo — Calculadora de Drawdown NQ</div>
+      <div class="calc-tool">
+        <h3>🧮 Drawdown Calculator NQ</h3>
+        <div class="calc-field">
+          <label>Tamaño de cuenta</label>
+          <select id="calcAccount" onchange="calcDrawdown()">
+            <option value="25000">$25,000</option>
+            <option value="50000" selected>$50,000</option>
+            <option value="100000">$100,000</option>
+            <option value="150000">$150,000</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Drawdown máximo (USD)</label>
+          <input type="number" id="calcDD" value="2500" oninput="calcDrawdown()" placeholder="ej: 2500">
+        </div>
+        <div class="calc-field">
+          <label>Tipo de drawdown</label>
+          <select id="calcDDType" onchange="calcDrawdown()">
+            <option value="trailing">Trailing (dinámico)</option>
+            <option value="static">Estático (EOD)</option>
+          </select>
+        </div>
+        <div class="calc-result">
+          <div style="font-size:12px; color:var(--text2); margin-bottom:8px; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.08em;">Puedes perder hasta</div>
+          <div class="result-val" id="calcResult">50 ticks</div>
+          <div style="font-size:13px; color:var(--text2); margin-top:6px;" id="calcSubResult">= $1,000 en NQ (1 contrato)</div>
+          <div style="font-size:12px; color:var(--text3); margin-top:4px;">NQ tick = $5 | Contrato = 1 NQ</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PAGE: ARQUITECTURA -->
+<div id="page-arquitectura" class="page">
+  <div class="section">
+    <div class="container">
+      <div class="section-label">Documentación del Proyecto</div>
+      <h2 class="mb-8">Arquitectura Completa del Sitio</h2>
+
+      <div class="arch-grid">
+        <div>
+          <div class="arch-sidebar">
+            <div style="font-size:11px; color:var(--text3); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">Índice</div>
+            <a class="arch-nav-item active" href="#sitemap"><span class="num">01</span>Mapa del Sitio</a>
+            <a class="arch-nav-item" href="#seo"><span class="num">02</span>Estrategia SEO</a>
+            <a class="arch-nav-item" href="#database"><span class="num">03</span>Base de Datos</a>
+            <a class="arch-nav-item" href="#monetizacion"><span class="num">04</span>Monetización</a>
+            <a class="arch-nav-item" href="#afiliados"><span class="num">05</span>Sistema Afiliados</a>
+            <a class="arch-nav-item" href="#crecimiento"><span class="num">06</span>Estrategia Crecimiento</a>
+          </div>
+        </div>
+
+        <div>
+          <!-- SITEMAP -->
+          <div class="doc-section" id="sitemap">
+            <h3>01. Mapa Completo del Sitio</h3>
+            <div class="sitemap-tree">
+              <div class="root">/ (Homepage)</div>
+              <div class="branch">📊 /comparador  <span class="kw">← Alto tráfico SEO</span></div>
+              <div class="branch">⭐ /reviews  <span class="kw">← Hub de reviews</span></div>
+              <div class="leaf">/review/[firma-slug]  <span class="kw">← Páginas afiliado</span></div>
+              <div class="leaf">/review/apex-trader-funding</div>
+              <div class="leaf">/review/bulenox</div>
+              <div class="leaf">/review/my-funded-futures</div>
+              <div class="leaf-last">/review/... (×12 firmas)</div>
+              <div class="branch">🎁 /descuentos  <span class="kw">← CTR alto conversión</span></div>
+              <div class="branch">🔥 /ranking  <span class="kw">← Tráfico navigacional</span></div>
+              <div class="branch">🛠 /herramientas  <span class="kw">← Tráfico herramientas</span></div>
+              <div class="leaf">/herramientas/calculadora-drawdown</div>
+              <div class="leaf">/herramientas/simulador-profit-split</div>
+              <div class="leaf">/herramientas/roi-prueba de fondeo</div>
+              <div class="leaf-last">/herramientas/position-size-nq</div>
+              <div class="branch">📝 /blog  <span class="kw">← Tráfico informacional</span></div>
+              <div class="leaf">/blog/[slug]  <span class="kw">← 3+ artículos/semana</span></div>
+              <div class="branch">📚 /guias  <span class="kw">← Tráfico educacional</span></div>
+              <div class="leaf">/guias/que-es-una-prop-firm</div>
+              <div class="leaf">/guias/como-pasar-evaluacion-nq</div>
+              <div class="leaf-last">/guias/drawdown-trailing-vs-estatico</div>
+              <div class="branch">📅 /calendario-economico</div>
+              <div class="branch">❓ /faq</div>
+              <div class="branch">👤 /sobre-nosotros</div>
+              <div class="branch-last">⚖️ /legal, /privacidad, /cookies</div>
+            </div>
+          </div>
+
+          <!-- SEO -->
+          <div class="doc-section" id="seo">
+            <h3>02. Estrategia SEO & Keywords</h3>
+            <table class="seo-table">
+              <thead>
+                <tr><th>Keyword</th><th>Vol. Est.</th><th>Intención</th><th>Página</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="kw-main">mejores empresas de fondeo futuros</td><td class="vol">1,900</td><td class="intent">Comercial</td><td>/</td></tr>
+                <tr><td class="kw-main">comparar empresas de fondeo 2026</td><td class="vol">880</td><td class="intent">Comparación</td><td>/comparador</td></tr>
+                <tr><td class="kw-main">apex trader funding review</td><td class="vol">1,200</td><td class="intent">Review</td><td>/review/apex</td></tr>
+                <tr><td class="kw-main">bulenox descuento</td><td class="vol">590</td><td class="intent">Transaccional</td><td>/descuentos</td></tr>
+                <tr><td class="kw-main">drawdown trailing vs estatico</td><td class="vol">720</td><td class="intent">Informacional</td><td>/blog/</td></tr>
+                <tr><td class="kw-main">cómo pasar evaluación NQ</td><td class="vol">480</td><td class="intent">Informacional</td><td>/guias/</td></tr>
+                <tr><td class="kw-main">profit split empresas de fondeo futuros</td><td class="vol">390</td><td class="intent">Comparación</td><td>/comparador</td></tr>
+                <tr><td class="kw-main">my funded futures vs apex</td><td class="vol">320</td><td class="intent">Comparación</td><td>/blog/</td></tr>
+                <tr><td class="kw-main">calculadora drawdown NQ</td><td class="vol">260</td><td class="intent">Herramienta</td><td>/herramientas/</td></tr>
+                <tr><td class="kw-main">empresas fondeo futuros españa</td><td class="vol">1,100</td><td class="intent">Comercial</td><td>/</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:20px; padding:16px; background:var(--surface2); border-radius:10px; border:1px solid var(--border);">
+              <h4 style="margin-bottom:10px; font-size:14px;">🎯 Estructura de URLs SEO</h4>
+              <div class="db-schema" style="font-size:11px;">
+# Páginas de dinero (alta conversión)
+/comparador → H1: "Comparar Empresas de fondeo Futuros 2026"
+/descuentos → H1: "Descuentos Empresas de fondeo Futuros - Hasta 89% OFF"
+/review/[firma] → H1: "[Firma] Review 2026 | ¿Vale la pena?"
+
+# Páginas de tráfico (generan visitantes)
+/blog/drawdown-trailing-estatico
+/blog/apex-vs-bulenox
+/herramientas/calculadora-drawdown-nq
+
+# Schema Markup necesario
+- Product (prueba de fondeo) → precio, rating, review
+- FAQPage → preguntas frecuentes de cada firm  
+- HowTo → guías de evaluación
+- BreadcrumbList → navegación</div>
+            </div>
+          </div>
+
+          <!-- DATABASE -->
+          <div class="doc-section" id="database">
+            <h3>03. Esquema de Base de Datos</h3>
+            <div class="db-schema">
+              <div class="db-table">
+                <div class="db-table-name">TABLE: prop_firms</div>
+                <div class="db-field"><span class="field-name">id</span>           <span class="field-type">UUID PRIMARY KEY</span></div>
+                <div class="db-field"><span class="field-name">slug</span>         <span class="field-type">VARCHAR(100) UNIQUE</span>  <span class="field-note">-- "apex-trader-funding"</span></div>
+                <div class="db-field"><span class="field-name">name</span>         <span class="field-type">VARCHAR(100)</span></div>
+                <div class="db-field"><span class="field-name">country</span>      <span class="field-type">VARCHAR(50)</span></div>
+                <div class="db-field"><span class="field-name">founded_year</span> <span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">logo_url</span>     <span class="field-type">TEXT</span></div>
+                <div class="db-field"><span class="field-name">affiliate_url</span><span class="field-type">TEXT</span>          <span class="field-note">-- link afiliado único</span></div>
+                <div class="db-field"><span class="field-name">affiliate_code</span><span class="field-type">VARCHAR(50)</span></div>
+                <div class="db-field"><span class="field-name">trustpilot_rating</span><span class="field-type">DECIMAL(2,1)</span></div>
+                <div class="db-field"><span class="field-name">trustpilot_count</span> <span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">platforms</span>    <span class="field-type">TEXT[]</span>        <span class="field-note">-- ["NinjaTrader","Tradovate"]</span></div>
+                <div class="db-field"><span class="field-name">payout_methods</span><span class="field-type">TEXT[]</span></div>
+                <div class="db-field"><span class="field-name">is_featured</span>  <span class="field-type">BOOLEAN DEFAULT false</span></div>
+                <div class="db-field"><span class="field-name">created_at</span>   <span class="field-type">TIMESTAMPTZ</span></div>
+              </div>
+
+              <div class="db-table">
+                <div class="db-table-name">TABLE: challenge_plans</div>
+                <div class="db-field"><span class="field-name">id</span>             <span class="field-type">UUID PRIMARY KEY</span></div>
+                <div class="db-field"><span class="field-name">firm_id</span>        <span class="field-type">UUID REFERENCES prop_firms</span></div>
+                <div class="db-field"><span class="field-name">account_size</span>   <span class="field-type">INT</span>          <span class="field-note">-- 50000</span></div>
+                <div class="db-field"><span class="field-name">price_original</span> <span class="field-type">DECIMAL(8,2)</span></div>
+                <div class="db-field"><span class="field-name">price_discounted</span><span class="field-type">DECIMAL(8,2)</span></div>
+                <div class="db-field"><span class="field-name">discount_pct</span>   <span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">drawdown_amount</span><span class="field-type">DECIMAL(8,2)</span></div>
+                <div class="db-field"><span class="field-name">drawdown_type</span>  <span class="field-type">ENUM('trailing','eod','static')</span></div>
+                <div class="db-field"><span class="field-name">profit_target</span>  <span class="field-type">DECIMAL(8,2)</span></div>
+                <div class="db-field"><span class="field-name">profit_split_pct</span><span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">phases</span>         <span class="field-type">INT</span>          <span class="field-note">-- 1 o 2</span></div>
+                <div class="db-field"><span class="field-name">min_trading_days</span><span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">max_trading_days</span><span class="field-type">INT NULLABLE</span></div>
+                <div class="db-field"><span class="field-name">news_trading</span>   <span class="field-type">BOOLEAN</span></div>
+                <div class="db-field"><span class="field-name">overnight_hold</span> <span class="field-type">BOOLEAN</span></div>
+                <div class="db-field"><span class="field-name">payout_days</span>    <span class="field-type">VARCHAR(20)</span>  <span class="field-note">-- "7-14"</span></div>
+              </div>
+
+              <div class="db-table">
+                <div class="db-table-name">TABLE: discounts</div>
+                <div class="db-field"><span class="field-name">id</span>           <span class="field-type">UUID PRIMARY KEY</span></div>
+                <div class="db-field"><span class="field-name">firm_id</span>      <span class="field-type">UUID REFERENCES prop_firms</span></div>
+                <div class="db-field"><span class="field-name">code</span>         <span class="field-type">VARCHAR(50)</span></div>
+                <div class="db-field"><span class="field-name">discount_pct</span> <span class="field-type">INT</span></div>
+                <div class="db-field"><span class="field-name">expires_at</span>  <span class="field-type">TIMESTAMPTZ NULLABLE</span></div>
+                <div class="db-field"><span class="field-name">is_permanent</span><span class="field-type">BOOLEAN</span></div>
+                <div class="db-field"><span class="field-name">affiliate_url</span><span class="field-type">TEXT</span></div>
+                <div class="db-field"><span class="field-name">verified_at</span> <span class="field-type">TIMESTAMPTZ</span></div>
+                <div class="db-field"><span class="field-name">is_active</span>   <span class="field-type">BOOLEAN DEFAULT true</span></div>
+              </div>
+
+              <div class="db-table">
+                <div class="db-table-name">TABLE: affiliate_clicks  <span class="field-note">-- tracking conversiones</span></div>
+                <div class="db-field"><span class="field-name">id</span>         <span class="field-type">UUID PRIMARY KEY</span></div>
+                <div class="db-field"><span class="field-name">firm_id</span>    <span class="field-type">UUID</span></div>
+                <div class="db-field"><span class="field-name">page_source</span><span class="field-type">VARCHAR(100)</span>  <span class="field-note">-- "comparador", "review/apex"</span></div>
+                <div class="db-field"><span class="field-name">button_type</span><span class="field-type">VARCHAR(50)</span>   <span class="field-note">-- "cta_hero", "table_row", "sidebar"</span></div>
+                <div class="db-field"><span class="field-name">user_agent</span> <span class="field-type">TEXT</span></div>
+                <div class="db-field"><span class="field-name">referrer</span>   <span class="field-type">TEXT</span></div>
+                <div class="db-field"><span class="field-name">created_at</span> <span class="field-type">TIMESTAMPTZ</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MONETIZACION -->
+          <div class="doc-section" id="monetizacion">
+            <h3>04. Modelo de Monetización</h3>
+            <div class="monetization-grid">
+              <div class="mono-card">
+                <h4>💸 Afiliados directos</h4>
+                <div class="amount">$20-50</div>
+                <p>Por cada prueba de fondeo vendido. ~30-40% del precio. Fuente principal de ingresos.</p>
+              </div>
+              <div class="mono-card">
+                <h4>🎁 Códigos de descuento</h4>
+                <div class="amount">CPA</div>
+                <p>Comisión por compra. Los usuarios activan descuentos vía links con tracking.</p>
+              </div>
+              <div class="mono-card">
+                <h4>📊 Display Ads</h4>
+                <div class="amount">$3-8 RPM</div>
+                <p>Mediavine o Ezoic cuando se alcanza tráfico suficiente. No interfiere con UX.</p>
+              </div>
+              <div class="mono-card">
+                <h4>📧 Email Marketing</h4>
+                <div class="amount">×5 ROI</div>
+                <p>Lista de suscriptores para promociones y descuentos flash de alta conversión.</p>
+              </div>
+              <div class="mono-card">
+                <h4>🤝 Deals directos</h4>
+                <div class="amount">$500-2K/mes</div>
+                <p>Patrocinios directos con empresas de fondeo para placement destacado o artículos.</p>
+              </div>
+              <div class="mono-card">
+                <h4>🎓 Cursos/Recursos</h4>
+                <div class="amount">$47-197</div>
+                <p>Productos propios: guía paso a paso para pasar evaluaciones de NQ.</p>
+              </div>
+            </div>
+            <div style="margin-top:20px; padding:20px; background:var(--primary-dim); border:1px solid rgba(0,212,170,0.2); border-radius:12px;">
+              <h4 style="margin-bottom:8px;">📈 Proyección de Ingresos</h4>
+              <p style="font-size:13px; color:var(--text2); line-height:1.8;">
+                Con 10,000 visitas orgánicas/mes y CTR del 3-5% en CTAs afiliados → ~300-500 clics/mes → conversión del 10-15% → 30-75 ventas × $30 comisión promedio = <strong style="color:var(--primary);">$900-$2,250/mes</strong> en mes 6. Con escala a 50K visitas → potencial de $5K-$12K/mes.
+              </p>
+            </div>
+          </div>
+
+          <!-- AFILIADOS SISTEMA -->
+          <div class="doc-section" id="afiliados">
+            <h3>05. Sistema de Links de Afiliados</h3>
+            <div class="db-schema" style="font-size:12px;">
+// ARQUITECTURA DE TRACKING DE AFILIADOS
+
+// 1. Cada botón incluye parámetros UTM + ID de firma
+const AFF_LINKS = {
+  'apex': 'https://apex.redir.link/?ref=ZONA&utm_source=zonadefondeo&utm_medium=cta&utm_campaign=comparador',
+  'bulenox': 'https://bulenox.com/?ref=ZONA&utm_source=zonadefondeo&...',
+  'mff': 'https://myfundedfutures.com/?ref=ZONA&...',
+};
+
+// 2. Función de click tracking (+ registro en BD)
+function trackAffiliateClick(firmId, pageSource, buttonType) {
+  fetch('/api/track', {
+    method: 'POST',
+    body: JSON.stringify({ firmId, pageSource, buttonType })
+  });
+  // Pequeño delay para asegurar tracking antes de redirigir
+  setTimeout(() => window.open(AFF_LINKS[firmId], '_blank'), 150);
+}
+
+// 3. Reglas de disclosure SEO (rel="sponsored")
+// &lt;a href="..." rel="sponsored noopener" target="_blank"&gt;
+
+// 4. Código de descuento auto-aplicado en URL
+// ?coupon=ZONA85 → se aplica automáticamente
+
+// 5. AB Testing de botones (Vercel Analytics / Plausible)
+// Variante A: "Empezar Prueba de fondeo →"
+// Variante B: "🚀 Comprar con -85% →"
+// Variante C: "Ver oferta activa →"
+            </div>
+          </div>
+
+          <!-- CRECIMIENTO -->
+          <div class="doc-section" id="crecimiento">
+            <h3>06. Estrategia de Crecimiento</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                <div class="badge badge-green" style="margin-bottom:10px;">Mes 1-3</div>
+                <h4 style="margin-bottom:8px; font-size:14px;">Fundamentos SEO</h4>
+                <ul style="font-size:12px; color:var(--text2); padding-left:16px; line-height:2;">
+                  <li>12 reviews completas publicadas</li>
+                  <li>Comparador funcional con datos reales</li>
+                  <li>10 artículos blog long-tail keywords</li>
+                  <li>Google Search Console + Analytics</li>
+                  <li>Schema markup en todas las páginas</li>
+                </ul>
+              </div>
+              <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                <div class="badge badge-gold" style="margin-bottom:10px;">Mes 4-6</div>
+                <h4 style="margin-bottom:8px; font-size:14px;">Tráfico y Comunidad</h4>
+                <ul style="font-size:12px; color:var(--text2); padding-left:16px; line-height:2;">
+                  <li>Canal YouTube complementario</li>
+                  <li>Discord/Telegram comunidad 1K+</li>
+                  <li>Link building en foros trading</li>
+                  <li>Herramientas gratuitas virales</li>
+                  <li>Email list 2,000+ suscriptores</li>
+                </ul>
+              </div>
+              <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                <div class="badge badge-blue" style="margin-bottom:10px;">Mes 7-12</div>
+                <h4 style="margin-bottom:8px; font-size:14px;">Escala y Monetización</h4>
+                <ul style="font-size:12px; color:var(--text2); padding-left:16px; line-height:2;">
+                  <li>Deals directos con empresas de fondeo</li>
+                  <li>Producto propio (guía premium)</li>
+                  <li>Ads display (Mediavine/Ezoic)</li>
+                  <li>Expansión a otros idiomas (EN, PT)</li>
+                  <li>API datos empresas de fondeo para b2b</li>
+                </ul>
+              </div>
+              <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                <div style="font-size:11px; font-family:var(--font-mono); color:var(--primary); text-transform:uppercase; margin-bottom:10px;">Stack Tecnológico</div>
+                <h4 style="margin-bottom:8px; font-size:14px;">Tecnología Recomendada</h4>
+                <ul style="font-size:12px; color:var(--text2); padding-left:16px; line-height:2;">
+                  <li><strong>Framework:</strong> Next.js 15 + App Router</li>
+                  <li><strong>DB:</strong> Supabase (PostgreSQL)</li>
+                  <li><strong>CMS:</strong> Sanity.io para blog</li>
+                  <li><strong>Host:</strong> Vercel (edge network)</li>
+                  <li><strong>Analytics:</strong> Plausible + GSC</li>
+                  <li><strong>Email:</strong> Resend + React Email</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>NQ<span style="color:var(--primary)">Trader</span>Hub</h3>
+        <p>El comparador más completo de empresas de fondeo de futuros para traders del NQ Nasdaq. Reviews honestas, descuentos exclusivos y herramientas gratuitas.</p>
+        <div style="display:flex; gap:10px; margin-top:16px;">
+          <span class="tag">🇪🇸 Español</span>
+          <span class="tag">📊 NQ Nasdaq</span>
+          <span class="tag">⚡ 12 Firms</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Comparar</h4>
+        <div class="footer-links">
+          <a onclick="showPage('comparador')">Comparador completo</a>
+          <a onclick="showPage('reviews')">Reviews</a>
+          <a onclick="showPage('descuentos')">Descuentos activos</a>
+          <a>Ranking 2026</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <div class="footer-links">
+          <a onclick="showPage('herramientas')">Herramientas gratis</a>
+          <a onclick="showPage('blog')">Blog trading</a>
+          <a>Guías para principiantes</a>
+          <a>FAQ</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a>Aviso legal</a>
+          <a>Política de privacidad</a>
+          <a>Política de cookies</a>
+          <a>Divulgación afiliados</a>
+          <a>Sobre nosotros</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Zona de Fondeo. Todos los derechos reservados.</p>
+      <div class="affiliate-disclaimer">
+        ⚠️ Sitio con enlaces de afiliado. Podemos recibir comisión por compras realizadas. No somos asesores financieros. El trading de futuros conlleva alto riesgo de pérdida.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════
+const firms = [
+  { id:'apex', name:'Apex Trader Funding', short:'AP', country:'🇺🇸 USA', founded:2021,
+    price:77, priceOrig:527, discount:85, drawdown:2500, ddType:'trailing',
+    profitTarget:3000, split:90, payout:'7-14d', news:true, overnight:true,
+    rating:4.4, reviews:18089, platforms:'NinjaTrader, Tradovate', phases:1,
+    affUrl:'#apex-affiliate' },
+  { id:'bulenox', name:'Bulenox', short:'BX', country:'🇺🇸 USA', founded:2021,
+    price:67, priceOrig:609, discount:89, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:80, payout:'7d', news:false, overnight:true,
+    rating:4.8, reviews:1507, platforms:'NinjaTrader, R Trader', phases:1,
+    affUrl:'#bulenox-affiliate' },
+  { id:'mff', name:'My Funded Futures', short:'MF', country:'🇺🇸 USA', founded:2022,
+    price:165, priceOrig:165, discount:0, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
+    rating:4.9, reviews:16748, platforms:'NinjaTrader, Tradovate', phases:1,
+    affUrl:'#mff-affiliate' },
+  { id:'tpt', name:'TakeProfitTrader', short:'TP', country:'🇺🇸 USA', founded:2019,
+    price:97, priceOrig:165, discount:40, drawdown:2000, ddType:'static',
+    profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:false,
+    rating:4.4, reviews:8746, platforms:'NinjaTrader, Tradovate', phases:1,
+    affUrl:'#tpt-affiliate' },
+  { id:'tradeify', name:'Tradeify', short:'TF', country:'🇺🇸 USA', founded:2024,
+    price:107, priceOrig:153, discount:30, drawdown:2500, ddType:'trailing',
+    profitTarget:3000, split:85, payout:'7d', news:true, overnight:true,
+    rating:4.6, reviews:2393, platforms:'Tradovate, NinjaTrader', phases:1,
+    affUrl:'#tradeify-affiliate' },
+  { id:'alphaf', name:'Alpha Futures', short:'AF', country:'🇺🇸 USA', founded:2023,
+    price:135, priceOrig:150, discount:10, drawdown:2500, ddType:'trailing',
+    profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
+    rating:4.9, reviews:3243, platforms:'NinjaTrader, Tradovate', phases:1,
+    affUrl:'#alphaf-affiliate' },
+  { id:'topone', name:'Top One Futures', short:'TO', country:'🇺🇸 USA', founded:2025,
+    price:77, priceOrig:197, discount:60, drawdown:2000, ddType:'eod',
+    profitTarget:2000, split:90, payout:'7d', news:true, overnight:true,
+    rating:4.8, reviews:3516, platforms:'NinjaTrader, Tradovate', phases:1,
+    affUrl:'#topone-affiliate' },
+  { id:'earn2t', name:'Earn2Trade', short:'E2', country:'🇺🇸 USA', founded:2016,
+    price:150, priceOrig:214, discount:30, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:true,
+    rating:4.7, reviews:4693, platforms:'NinjaTrader, Finamark', phases:2,
+    affUrl:'#earn2trade-affiliate' },
+  { id:'fundednext', name:'FundedNext', short:'FN', country:'🇦🇪 UAE', founded:2022,
+    price:119, priceOrig:199, discount:40, drawdown:2500, ddType:'eod',
+    profitTarget:4000, split:90, payout:'7d', news:true, overnight:true,
+    rating:4.5, reviews:62666, platforms:'NinjaTrader, TradingView', phases:2,
+    affUrl:'#fundednext-affiliate' },
+  { id:'emerge', name:'EmergeProfit', short:'EP', country:'🇬🇧 UK', founded:2024,
+    price:129, priceOrig:179, discount:28, drawdown:2000, ddType:'eod',
+    profitTarget:2000, split:85, payout:'14d', news:false, overnight:true,
+    rating:4.6, reviews:440, platforms:'Tradovate, NinjaTrader', phases:1,
+    affUrl:'#emerge-affiliate' },
+];
+
+const discounts = [
+  { firm:'Bulenox', pct:89, code:'TRADER89', desc:'Descuento mensual máximo de Bulenox. Válido para todos los tamaños de cuenta.', expiry:'31 Mar 2026', permanent:false, url:'#bulenox-aff' },
+  { firm:'Apex Trader Funding', pct:85, code:'ZONA85', desc:'Promo especial Apex. Rotativa mensual, activar antes de que expire.', expiry:'05 Abr 2026', permanent:false, url:'#apex-aff' },
+  { firm:'TakeProfitTrader', pct:40, code:'ZONA40', desc:'Descuento fijo y permanente en TakeProfitTrader con nuestro link exclusivo.', expiry:null, permanent:true, url:'#tpt-aff' },
+  { firm:'Top One Futures', pct:60, code:'ZONA60', desc:'Nueva firma con descuento de lanzamiento muy agresivo. No durará.', expiry:'15 Abr 2026', permanent:false, url:'#topone-aff' },
+  { firm:'Tradeify', pct:30, code:'ZONA30', desc:'Descuento fijo de Tradeify. Aplica en cuentas de $50K y $100K.', expiry:null, permanent:true, url:'#tradeify-aff' },
+  { firm:'Alpha Futures', pct:10, code:'ZONA', desc:'Descuento base Alpha Futures. Pequeño pero fiable y siempre activo.', expiry:null, permanent:true, url:'#alpha-aff' },
+  { firm:'FundedNext', pct:40, code:'ZONA40', desc:'FundedNext ofrece descuento en futuros y forex. Uno de los más grandes globalmente.', expiry:'20 Abr 2026', permanent:false, url:'#fn-aff' },
+  { firm:'Earn2Trade', pct:30, code:'ZONA30', desc:'La empresa de fondeo más veterana del mercado de futuros. Excelente reputación.', expiry:null, permanent:true, url:'#e2t-aff' },
+];
+
+const blogPosts = [
+  { cat:'GUÍA', icon:'📚', title:'Cómo pasar la evaluación de una Empresa de fondeo de Futuros en 30 días', excerpt:'Estrategia paso a paso para traders del NQ Nasdaq. Gestión de riesgo, número de contratos y plan diario.', date:'Mar 2026', time:'11 min', slug:'pasar-evaluacion-futuros' },
+  { cat:'COMPARATIVA', icon:'⚖️', title:'Apex vs Bulenox 2026: ¿Cuál es mejor para el NQ?', excerpt:'Comparamos en profundidad las dos empresas de fondeo con mayor descuento del mercado. Reglas, precios y experiencia real.', date:'Mar 2026', time:'8 min', slug:'apex-vs-bulenox' },
+  { cat:'EDUCACIÓN', icon:'🎓', title:'Trailing Drawdown vs Drawdown Estático: Todo lo que debes saber', excerpt:'La diferencia que puede costarte la cuenta. Explicación clara con ejemplos reales de operativas en NQ.', date:'Feb 2026', time:'7 min', slug:'trailing-vs-estatico' },
+  { cat:'HERRAMIENTAS', icon:'🛠', title:'Las 5 mejores herramientas para gestionar tu cuenta financiada', excerpt:'Desde diarios de trading hasta calculadoras de riesgo. Todo lo que necesita un trader profesional de futuros.', date:'Feb 2026', time:'6 min', slug:'herramientas-cuenta-financiada' },
+  { cat:'NOTICIAS', icon:'📰', title:'Las mejores Empresas de fondeo de Futuros de 2026: Ranking actualizado', excerpt:'Actualizamos nuestro ranking anual con las novedades del sector, nuevas firmas y cambios de reglas importantes.', date:'Ene 2026', time:'12 min', slug:'ranking-prop-firms-2026' },
+  { cat:'ESTRATEGIA', icon:'🎯', title:'Cómo gestionar el riesgo en NQ Nasdaq para no violar el drawdown', excerpt:'El contrato de NQ se mueve rápido. Aprende a calcular el tamaño ideal de posición según tu cuenta y drawdown.', date:'Ene 2026', time:'9 min', slug:'gestion-riesgo-nq' },
+];
+
+// ═══════════════════════════════════════
+// PAGE NAVIGATION
+// ═══════════════════════════════════════
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  
+  const page = document.getElementById('page-' + pageId);
+  if (page) page.classList.add('active');
+  
+  const navLink = document.querySelector(`.nav-link[onclick="showPage('${pageId}')"]`);
+  if (navLink) navLink.classList.add('active');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ═══════════════════════════════════════
+// TABLE RENDERING
+// ═══════════════════════════════════════
+function renderTable(data) {
+  const tbody = document.getElementById('tableBody');
+  if (!tbody) return;
+  tbody.innerHTML = data.map(f => `
+    <tr${f.split >= 90 ? ' class="featured"' : ''}>
+      <td>
+        <div class="firm-cell">
+          <div class="firm-avatar">${f.short}</div>
+          <div>
+            <div class="firm-name">${f.name}</div>
+            <div class="firm-country">${f.country} · ${f.founded}</div>
+          </div>
+        </div>
+      </td>
+      <td class="price-cell">
+        <div class="price">$${f.price}</div>
+        ${f.discount > 0 ? `<div><span class="original">$${f.priceOrig}</span> <span class="discount">-${f.discount}%</span></div>` : '<div><span style="font-size:11px;color:var(--text3)">Precio estándar</span></div>'}
+      </td>
+      <td><span class="num-cell">$${f.drawdown.toLocaleString()}</span></td>
+      <td><span class="badge ${f.ddType === 'trailing' ? 'badge-gold' : f.ddType === 'eod' ? 'badge-green' : 'badge-blue'}">${f.ddType === 'eod' ? 'EOD' : f.ddType.charAt(0).toUpperCase()+f.ddType.slice(1)}</span></td>
+      <td><span class="num-cell">$${f.profitTarget.toLocaleString()}</span></td>
+      <td><span class="num-cell" style="color:${f.split >= 90 ? 'var(--primary)' : 'var(--text)'}">${f.split}%</span></td>
+      <td><span class="num-cell">${f.payout}</span></td>
+      <td><span class="${f.news ? 'check' : 'cross'}">${f.news ? '✓' : '✗'}</span></td>
+      <td>
+        <div class="rating-cell">
+          <span class="rating-val">${f.rating}</span>
+          <div>
+            <div class="stars">${'★'.repeat(Math.round(f.rating))}${'☆'.repeat(5-Math.round(f.rating))}</div>
+            <div style="font-size:10px; color:var(--text3); font-family:var(--font-mono)">${(f.reviews/1000).toFixed(1)}K</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <button class="btn-convert" style="padding:9px 18px; font-size:13px; white-space:nowrap;" onclick="affClick('${f.id}')">
+          Empezar →
+        </button>
+      </td>
+    </tr>
+  `).join('');
+  document.getElementById('filterCount').textContent = data.length;
+}
+
+// ═══════════════════════════════════════
+// FILTERS
+// ═══════════════════════════════════════
+let sortCol = 1, sortDir = 1;
+
+function applyFilters() {
+  const price = document.getElementById('priceFilter')?.value;
+  const dd = document.getElementById('ddFilter')?.value;
+  const split = document.getElementById('splitFilter')?.value;
+  const news = document.getElementById('newsFilter')?.value;
+
+  let data = [...firms];
+  if (price) data = data.filter(f => f.price <= parseInt(price));
+  if (dd) data = data.filter(f => f.ddType === dd || (dd === 'static' && f.ddType === 'eod'));
+  if (split) data = data.filter(f => f.split >= parseInt(split));
+  if (news === 'si') data = data.filter(f => f.news);
+  if (news === 'no') data = data.filter(f => !f.news);
+  renderTable(data);
+}
+
+function resetFilters() {
+  document.querySelectorAll('.filter-select').forEach(s => s.value = '');
+  document.querySelector('.filter-select').value = '';
+  renderTable(firms);
+}
+
+function sortTable(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  const keyMap = [null, 'price', 'drawdown', 'ddType', 'profitTarget', 'split', 'payout', 'rating'];
+  const key = keyMap[col];
+  if (!key) return;
+  const sorted = [...firms].sort((a, b) => {
+    const va = typeof a[key] === 'string' ? a[key].toLowerCase() : a[key];
+    const vb = typeof b[key] === 'string' ? b[key].toLowerCase() : b[key];
+    return va < vb ? -sortDir : va > vb ? sortDir : 0;
+  });
+  renderTable(sorted);
+}
+
+// ═══════════════════════════════════════
+// REVIEWS GRID
+// ═══════════════════════════════════════
+function renderReviews() {
+  const grid = document.getElementById('reviewsGrid');
+  if (!grid) return;
+  grid.innerHTML = firms.map(f => `
+    <div class="review-card" onclick="showPage('review')">
+      <div class="review-card-header">
+        <div class="review-avatar">${f.short}</div>
+        <div class="review-meta">
+          <div class="stars">${'★'.repeat(Math.round(f.rating))}</div>
+          <span style="font-family:var(--font-mono); font-size:13px; color:var(--gold); font-weight:700">${f.rating}</span>
+          <span style="font-size:11px; color:var(--text3); font-family:var(--font-mono)">${(f.reviews/1000).toFixed(1)}K reseñas</span>
+        </div>
+      </div>
+      <div>
+        <h4>${f.name}</h4>
+        <p style="font-size:12px; color:var(--text2); font-family:var(--font-mono); margin-top:4px">${f.country} · Fundada ${f.founded}</p>
+      </div>
+      <div class="review-score-grid">
+        <div class="score-item"><div class="s-label">Precio</div><div class="s-val" style="color:${f.discount>50?'var(--primary)':'var(--text)'}">$${f.price}</div></div>
+        <div class="score-item"><div class="s-label">Split</div><div class="s-val" style="color:var(--primary)">${f.split}%</div></div>
+        <div class="score-item"><div class="s-label">Drawdown</div><div class="s-val">$${(f.drawdown/1000).toFixed(1)}K</div></div>
+        <div class="score-item"><div class="s-label">Payout</div><div class="s-val">${f.payout}</div></div>
+      </div>
+      <div class="review-tags">
+        ${f.news ? '<span class="badge badge-green">News ✓</span>' : ''}
+        ${f.overnight ? '<span class="badge badge-blue">Overnight ✓</span>' : ''}
+        ${f.discount > 50 ? `<span class="badge badge-gold">-${f.discount}% OFF</span>` : ''}
+        ${f.phases === 1 ? '<span class="badge badge-green">1 Fase</span>' : '<span class="badge badge-blue">2 Fases</span>'}
+      </div>
+      <button class="btn-convert" style="width:100%; justify-content:center;" onclick="event.stopPropagation(); affClick('${f.id}')">
+        Ver prueba de fondeo →
+      </button>
+    </div>
+  `).join('');
+}
+
+// ═══════════════════════════════════════
+// DISCOUNTS
+// ═══════════════════════════════════════
+function renderDiscounts() {
+  const grid = document.getElementById('discountsGrid');
+  if (!grid) return;
+  grid.innerHTML = discounts.map(d => `
+    <div class="discount-card">
+      <div class="discount-pct">-${d.pct}%</div>
+      <div class="discount-card-body">
+        <div class="discount-firm">${d.firm.toUpperCase()}</div>
+        <div class="discount-title">${d.pct >= 80 ? '🔥 Oferta Máxima' : d.pct >= 50 ? '⚡ Gran Descuento' : '✅ Descuento Activo'}</div>
+        <div class="discount-desc">${d.desc}</div>
+        <div class="discount-expiry">${d.permanent ? '✅ Sin fecha de caducidad' : '⏰ Caduca: ' + d.expiry}</div>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <div class="aff-code-box" style="flex:1; min-width:120px;">
+            <span style="color:var(--primary); font-weight:700;">${d.code}</span>
+            <button class="copy-btn" onclick="copyCode('${d.code}')">📋 Copiar</button>
+          </div>
+          <button class="btn-convert" style="padding:10px 18px; font-size:13px;" onclick="affClick('${d.firm.toLowerCase().replace(' ','')}')">Ir →</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ═══════════════════════════════════════
+// BLOG
+// ═══════════════════════════════════════
+function renderBlog() {
+  const grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  grid.innerHTML = blogPosts.map(p => `
+    <div class="blog-card">
+      <div class="blog-thumb">
+        <span class="thumb-icon">${p.icon}</span>
+        <div class="blog-thumb-gradient"></div>
+      </div>
+      <div class="blog-content">
+        <div class="blog-cat">${p.cat}</div>
+        <div class="blog-title">${p.title}</div>
+        <div class="blog-excerpt">${p.excerpt}</div>
+        <div class="blog-meta">
+          <span>${p.date}</span>
+          <span>${p.time} lectura</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ═══════════════════════════════════════
+// AFFILIATE CLICK
+// ═══════════════════════════════════════
+function affClick(firmId) {
+  // En producción: registrar en BD, redirigir a URL afiliado con tracking
+  showToast(`🚀 Redirigiendo a ${firmId.toUpperCase()}... (demo)`);
+  // window.open(AFF_LINKS[firmId], '_blank');
+}
+
+// ═══════════════════════════════════════
+// COPY CODE
+// ═══════════════════════════════════════
+function copyCode(code) {
+  navigator.clipboard.writeText(code).catch(() => {});
+  showToast(`✅ Código "${code}" copiado al portapapeles`);
+}
+
+// ═══════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ═══════════════════════════════════════
+// CALCULATOR
+// ═══════════════════════════════════════
+function calcDrawdown() {
+  const dd = parseFloat(document.getElementById('calcDD')?.value) || 2500;
+  const type = document.getElementById('calcDDType')?.value;
+  const nqTickValue = 5; // $5 per tick per contract
+  const ticks = Math.floor(dd / nqTickValue);
+  const usd = ticks * nqTickValue;
+  const note = type === 'trailing' 
+    ? '⚠️ Trailing: el drawdown sube con tus ganancias'
+    : '✅ EOD: solo se calcula al cierre del día';
+  document.getElementById('calcResult').textContent = `${ticks} ticks`;
+  document.getElementById('calcSubResult').textContent = `= $${usd.toLocaleString()} en NQ (1 contrato) — ${note}`;
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  renderTable(firms);
+  renderReviews();
+  renderDiscounts();
+  renderBlog();
+  calcDrawdown();
+});
+</script>
+
+</body>
+</html>
