@@ -1297,7 +1297,7 @@ footer {
   /* Tables */
   .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-  /* Reviews */
+  /* Análisis */
   .review-hero { padding: 20px; flex-direction: column; gap: 20px; }
   .review-hero-stats { grid-template-columns: repeat(2, 1fr); }
   .review-body { grid-template-columns: 1fr; }
@@ -1348,8 +1348,8 @@ footer {
     <div class="nav-links">
       <button class="nav-link active" onclick="showPage('home')">Inicio</button>
       <button class="nav-link" onclick="showPage('comparador')">Comparador</button>
-      <button class="nav-link" onclick="showPage('reviews')">Reviews</button>
-      <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">13</span></button>
+      <button class="nav-link" onclick="showPage('reviews')">Análisis</button>
+      <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">4</span></button>
       <button class="nav-link" onclick="showPage('herramientas')">Herramientas</button>
       <button class="nav-link" onclick="showPage('blog')">Blog</button>
 
@@ -1365,16 +1365,16 @@ footer {
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
       <div class="ticker-item">NQ <span class="up">+1.42%</span></div>
-      <div class="ticker-item">Apex 50K <span class="up">$77</span> <span class="up">-85% OFF</span></div>
-      <div class="ticker-item">Bulenox 50K <span class="up">$67</span> <span class="up">-89% OFF</span></div>
+      <div class="ticker-item">Apex 50K <span class="up">$20</span> <span class="up">-90% OFF</span></div>
+      <div class="ticker-item">Bulenox 50K <span class="up">$125/mes</span></div>
       <div class="ticker-item">MFF 50K <span class="up">$165</span></div>
       <div class="ticker-item">ES <span class="down">-0.31%</span></div>
       <div class="ticker-item">TakeProfitTrader <span class="up">-40% OFF</span></div>
       <div class="ticker-item">Alpha Futures <span class="up">-10% OFF</span></div>
       <div class="ticker-item">Tradeify 50K <span class="up">$107</span> <span class="up">-30% OFF</span></div>
       <div class="ticker-item">NQ <span class="up">+1.42%</span></div>
-      <div class="ticker-item">Apex 50K <span class="up">$77</span> <span class="up">-85% OFF</span></div>
-      <div class="ticker-item">Bulenox 50K <span class="up">$67</span> <span class="up">-89% OFF</span></div>
+      <div class="ticker-item">Apex 50K <span class="up">$20</span> <span class="up">-90% OFF</span></div>
+      <div class="ticker-item">Bulenox 50K <span class="up">$125/mes</span></div>
       <div class="ticker-item">MFF 50K <span class="up">$165</span></div>
       <div class="ticker-item">ES <span class="down">-0.31%</span></div>
       <div class="ticker-item">TakeProfitTrader <span class="up">-40% OFF</span></div>
@@ -1475,10 +1475,10 @@ footer {
             <tr>
               <th>Empresa de fondeo</th>
               <th>Precio</th>
-              <th>Drawdown</th>
-              <th>Profit Target</th>
-              <th>Profit Split</th>
-              <th>Payout</th>
+              <th>Máx. pérdida</th>
+              <th>Objetivo de ganancia</th>
+              <th>Reparto de ganancias</th>
+              <th>Retiro</th>
               <th>Rating</th>
               <th></th>
             </tr>
@@ -1486,8 +1486,8 @@ footer {
           <tbody>
             <tr class="featured">
               <td><div class="firm-cell"><div class="firm-avatar">AP</div><div><div class="firm-name">Apex Trader Funding</div><div class="firm-country">🇺🇸 USA · 2021</div></div></div></td>
-              <td class="price-cell"><div class="price">$77</div><div><span class="original">$527</span> <span class="discount">-85%</span></div></td>
-              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Trailing</span></td>
+              <td class="price-cell"><div class="price">$20</div><div><span class="original">$197</span> <span class="discount">-90%</span></div></td>
+              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Dinámico</span></td>
               <td class="num-cell">$3,000</td>
               <td><span class="num-cell" style="color:var(--primary)">90%</span></td>
               <td class="num-cell">7-14d</td>
@@ -1496,8 +1496,8 @@ footer {
             </tr>
             <tr>
               <td><div class="firm-cell"><div class="firm-avatar">BX</div><div><div class="firm-name">Bulenox</div><div class="firm-country">🇺🇸 USA · 2021</div></div></div></td>
-              <td class="price-cell"><div class="price">$67</div><div><span class="original">$609</span> <span class="discount">-89%</span></div></td>
-              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">EOD</span></td>
+              <td class="price-cell"><div class="price">$125/mes</div><div><span class="original">$175</span> <span class="discount">-29%</span></div></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">Fin de día</span></td>
               <td class="num-cell">$3,000</td>
               <td><span class="num-cell" style="color:var(--primary)">80%</span></td>
               <td class="num-cell">7d</td>
@@ -1507,7 +1507,7 @@ footer {
             <tr>
               <td><div class="firm-cell"><div class="firm-avatar">MF</div><div><div class="firm-name">My Funded Futures</div><div class="firm-country">🇺🇸 USA · 2022</div></div></div></td>
               <td class="price-cell"><div class="price">$165</div><div><span class="original">$165</span> <span class="discount">Sin desc.</span></div></td>
-              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">EOD</span></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-green" style="font-size:10px;">Fin de día</span></td>
               <td class="num-cell">$3,000</td>
               <td><span class="num-cell" style="color:var(--primary)">90%</span></td>
               <td class="num-cell">14d</td>
@@ -1517,7 +1517,7 @@ footer {
             <tr>
               <td><div class="firm-cell"><div class="firm-avatar">TP</div><div><div class="firm-name">TakeProfitTrader</div><div class="firm-country">🇺🇸 USA · 2019</div></div></div></td>
               <td class="price-cell"><div class="price">$97</div><div><span class="original">$165</span> <span class="discount">-40%</span></div></td>
-              <td><span class="num-cell">$2,000</span> <span class="badge badge-blue" style="font-size:10px;">Static</span></td>
+              <td><span class="num-cell">$2,000</span> <span class="badge badge-blue" style="font-size:10px;">Estático</span></td>
               <td class="num-cell">$3,000</td>
               <td><span class="num-cell" style="color:var(--primary)">80%</span></td>
               <td class="num-cell">7-14d</td>
@@ -1527,7 +1527,7 @@ footer {
             <tr>
               <td><div class="firm-cell"><div class="firm-avatar">TF</div><div><div class="firm-name">Tradeify</div><div class="firm-country">🇺🇸 USA · 2024</div></div></div></td>
               <td class="price-cell"><div class="price">$107</div><div><span class="original">$153</span> <span class="discount">-30%</span></div></td>
-              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Trailing</span></td>
+              <td><span class="num-cell">$2,500</span> <span class="badge badge-gold" style="font-size:10px;">Dinámico</span></td>
               <td class="num-cell">$3,000</td>
               <td><span class="num-cell" style="color:var(--primary)">85%</span></td>
               <td class="num-cell">7d</td>
@@ -1569,15 +1569,15 @@ footer {
         <div class="tool-card" onclick="showPage('herramientas')">
           <div class="tool-icon">⚖️</div>
           <div class="tool-tag">COMPARADOR ROI</div>
-          <div class="tool-name">ROI de Prueba de fondeo</div>
-          <div class="tool-desc">¿Cuántas veces necesitas hacer payout para recuperar el coste del prueba de fondeo?</div>
+          <div class="tool-name">ROI de Evaluación de fondeo</div>
+          <div class="tool-desc">¿Cuántas veces necesitas hacer payout para recuperar el coste del evaluación de fondeo?</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
         <div class="tool-card" onclick="showPage('herramientas')">
           <div class="tool-icon">📅</div>
           <div class="tool-tag">PLANIFICADOR</div>
           <div class="tool-name">Planificador de Evaluación</div>
-          <div class="tool-desc">Planifica cuántos días necesitas para pasar el prueba de fondeo según tu profit objetivo diario.</div>
+          <div class="tool-desc">Planifica cuántos días necesitas para pasar el evaluación de fondeo según tu profit objetivo diario.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
       </div>
@@ -1589,46 +1589,43 @@ footer {
     <div class="container">
       <div class="section-label">Descuentos Exclusivos</div>
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
-        <h2>Ahorra hasta un 89%<br>en tu próximo prueba de fondeo</h2>
+        <h2>Ahorra hasta un 89%<br>en tu evaluación de fondeo</h2>
         <button class="btn btn-outline" onclick="showPage('descuentos')">Ver todos los descuentos →</button>
       </div>
       <div class="discounts-grid">
         <div class="discount-card">
-          <div class="discount-pct">-89%</div>
+          <div class="discount-pct">-29%</div>
           <div class="discount-card-body">
             <div class="discount-firm">BULENOX</div>
-            <div class="discount-title">Mega Oferta Mensual</div>
-            <div class="discount-desc">Cuenta de $50K evaluación desde $67. El descuento más alto del mercado actualmente activo.</div>
+            <div class="discount-title">🔥 Oferta Máxima</div>
+            <div class="discount-desc">Evaluación de $50K desde $67. El descuento más alto del mercado actualmente activo. Válido para todos los tamaños de cuenta.</div>
             <div class="discount-expiry">⏰ Caduca: 31 Mar 2026</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <div class="aff-code-box" style="flex:1;min-width:140px;">TRADER89 <button class="copy-btn" onclick="copyCode('TRADER89')">Copiar</button></div>
-              <a class="btn-convert" style="padding:10px 20px;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir a Bulenox →</a>
             </div>
           </div>
         </div>
         <div class="discount-card">
-          <div class="discount-pct">-85%</div>
+          <div class="discount-pct">-60%</div>
           <div class="discount-card-body">
-            <div class="discount-firm">APEX TRADER FUNDING</div>
-            <div class="discount-title">Promo Especial</div>
-            <div class="discount-desc">Apex ofrece descuentos rotativos del 80-85%. Accede con código exclusivo de nuestra comunidad.</div>
-            <div class="discount-expiry">⏰ Caduca: 05 Abr 2026</div>
+            <div class="discount-firm">TOP ONE FUTURES</div>
+            <div class="discount-title">⚡ Gran Descuento</div>
+            <div class="discount-desc">Descuento de lanzamiento exclusivo. Una de las firmas con mejor profit split del mercado para traders latinos.</div>
+            <div class="discount-expiry">⏰ Caduca: 15 Abr 2026</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <div class="aff-code-box" style="flex:1;min-width:140px;">ZONA85 <button class="copy-btn" onclick="copyCode('ZONA85')">Copiar</button></div>
-              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('Apex')">Ir →</button>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Ir a Top One Futures →</a>
             </div>
           </div>
         </div>
         <div class="discount-card">
-          <div class="discount-pct">-40%</div>
+          <div class="discount-pct">-30%</div>
           <div class="discount-card-body">
-            <div class="discount-firm">TAKEPROFITTRADER</div>
-            <div class="discount-title">Descuento Permanente</div>
-            <div class="discount-desc">TakeProfitTrader ofrece descuento fijo del 40% con nuestro código afiliado exclusivo.</div>
+            <div class="discount-firm">EARN2TRADE</div>
+            <div class="discount-title">✅ Descuento Activo</div>
+            <div class="discount-desc">La firma de fondeo más veterana del mercado. Excelente reputación y proceso de evaluación claro.</div>
             <div class="discount-expiry">✅ Sin fecha de caducidad</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <div class="aff-code-box" style="flex:1;min-width:140px;">ZONA40 <button class="copy-btn" onclick="copyCode('ZONA40')">Copiar</button></div>
-              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('TPT')">Ir →</button>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e" target="_blank" rel="noopener">Ir a Earn2Trade →</a>
             </div>
           </div>
         </div>
@@ -1672,7 +1669,7 @@ footer {
           <label class="filter-label">Drawdown tipo</label>
           <select class="filter-select" id="ddFilter" onchange="applyFilters()">
             <option value="">Todos</option>
-            <option value="trailing">Trailing</option>
+            <option value="trailing">Dinámico</option>
             <option value="static">Estático (EOD)</option>
           </select>
         </div>
@@ -1707,11 +1704,11 @@ footer {
             <tr>
               <th onclick="sortTable(0)">Empresa de fondeo</th>
               <th onclick="sortTable(1)" class="sort-asc">Precio <span style="color:var(--text3);font-size:10px">(con desc.)</span></th>
-              <th onclick="sortTable(2)">Drawdown</th>
+              <th onclick="sortTable(2)">Máx. pérdida</th>
               <th onclick="sortTable(3)">Tipo DD</th>
-              <th onclick="sortTable(4)">Profit Target</th>
-              <th onclick="sortTable(5)">Profit Split</th>
-              <th onclick="sortTable(6)">Payout</th>
+              <th onclick="sortTable(4)">Objetivo de ganancia</th>
+              <th onclick="sortTable(5)">Reparto de ganancias</th>
+              <th onclick="sortTable(6)">Retiro</th>
               <th>News</th>
               <th onclick="sortTable(7)">Rating TP</th>
               <th></th>
@@ -1725,7 +1722,7 @@ footer {
 
       <div class="card" style="margin-top:24px; padding:20px;">
         <p style="font-size:12px; color:var(--text2); line-height:1.7;">
-          <strong style="color:var(--text)">⚠️ Aviso de afiliados:</strong> Esta tabla contiene enlaces de afiliado. Si compras un prueba de fondeo a través de nuestros botones, podemos recibir una comisión sin ningún coste adicional para ti. Los precios y descuentos se actualizan semanalmente. Siempre verifica el precio final en el sitio oficial de cada empresa.
+          <strong style="color:var(--text)">⚠️ Aviso de afiliados:</strong> Esta tabla contiene enlaces de afiliado. Si compras un evaluación de fondeo a través de nuestros botones, podemos recibir una comisión sin ningún coste adicional para ti. Los precios y descuentos se actualizan semanalmente. Siempre verifica el precio final en el sitio oficial de cada empresa.
         </p>
       </div>
     </div>
@@ -1768,10 +1765,10 @@ footer {
             <span class="badge badge-gold">⚡ Descuento activo -85%</span>
           </div>
           <div class="review-hero-stats">
-            <div class="stat-chip"><div class="value">$77</div><div class="label">$50K precio</div></div>
-            <div class="stat-chip"><div class="value">90%</div><div class="label">Profit Split</div></div>
-            <div class="stat-chip"><div class="value">$2,500</div><div class="label">Drawdown</div></div>
-            <div class="stat-chip"><div class="value">7-14d</div><div class="label">Payout</div></div>
+            <div class="stat-chip"><div class="value">$20</div><div class="label">$50K precio</div></div>
+            <div class="stat-chip"><div class="value">90%</div><div class="label">Reparto de ganancias</div></div>
+            <div class="stat-chip"><div class="value">$2,000</div><div class="label">Máx. pérdida</div></div>
+            <div class="stat-chip"><div class="value">7-14d</div><div class="label">Retiro</div></div>
             <div class="stat-chip"><div class="value">4.4★</div><div class="label">Trustpilot</div></div>
           </div>
         </div>
@@ -1782,7 +1779,7 @@ footer {
           <div class="review-section">
             <h3>📝 Resumen Ejecutivo</h3>
             <p style="color:var(--text2); font-size:14px; line-height:1.8; margin-bottom:16px;">
-              Apex Trader Funding es una de las empresas de fondeo de futuros más populares del mercado anglosajón, con especial popularidad entre traders del NQ Nasdaq. Fundada en 2021 en Austin, Texas, se ha consolidado como referencia por sus agresivos descuentos rotativos y sus reglas relativamente flexibles.
+              Apex Trader Funding es una de las empresas de fondeo de futuros más grandes del mundo, con más de 18.000 reseñas en Trustpilot. En marzo 2026 lanzó su sistema "4.0" con reglas simplificadas, tarifas de pago único (sin mensualidad), 100% de ganancias en los primeros $25K y sin retiros denegados. Corren promociones del 80-90% casi permanentemente.
             </p>
             <p style="color:var(--text2); font-size:14px; line-height:1.8;">
               El modelo de evaluación es de fase única (1-step), lo que la diferencia de otras firmas que requieren 2 fases. Esto permite pasar a cuenta financiada más rápido, aunque el drawdown tipo trailing hace la evaluación algo más exigente en gestión de riesgo.
@@ -1793,9 +1790,9 @@ footer {
             <h3>⚙️ Reglas y Condiciones</h3>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
               <div class="score-item"><div class="s-label">Fases de evaluación</div><div class="s-val">1 Fase</div></div>
-              <div class="score-item"><div class="s-label">Profit Target</div><div class="s-val">$3,000</div></div>
+              <div class="score-item"><div class="s-label">Objetivo de ganancia</div><div class="s-val">$3,000</div></div>
               <div class="score-item"><div class="s-label">Drawdown Máx.</div><div class="s-val">$2,500 trailing</div></div>
-              <div class="score-item"><div class="s-label">Profit Split</div><div class="s-val" style="color:var(--primary)">90%</div></div>
+              <div class="score-item"><div class="s-label">Reparto de ganancias</div><div class="s-val" style="color:var(--primary)">90%</div></div>
               <div class="score-item"><div class="s-label">Días mínimos</div><div class="s-val">1 día</div></div>
               <div class="score-item"><div class="s-label">Límite de tiempo</div><div class="s-val">Sin límite</div></div>
               <div class="score-item"><div class="s-label">News Trading</div><div class="s-val" style="color:var(--primary)">✓ Permitido</div></div>
@@ -1810,7 +1807,7 @@ footer {
                 <h4 style="color:var(--primary); margin-bottom:10px;">Pros</h4>
                 <div class="pro-item">Fase única — más rápido para fondear</div>
                 <div class="pro-item">Sin límite de tiempo para pasar</div>
-                <div class="pro-item">News trading y holding overnight permitidos</div>
+                <div class="pro-item">Operar en noticias y holding overnight permitidos</div>
                 <div class="pro-item">Descuentos frecuentes del 80-85%</div>
                 <div class="pro-item">Plataformas top: NinjaTrader y Tradovate</div>
                 <div class="pro-item">Múltiples cuentas permitidas (hasta 20)</div>
@@ -1831,12 +1828,12 @@ footer {
               <table class="comp-table" style="min-width:500px;">
                 <thead>
                   <tr>
-                    <th>Cuenta</th><th>Precio Normal</th><th>Con Descuento</th><th>Ahorro</th><th>Drawdown</th>
+                    <th>Cuenta</th><th>Precio Normal</th><th>Con Descuento</th><th>Ahorro</th><th>Máx. pérdida</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr><td>$25K</td><td class="text-mono">$147</td><td class="text-mono" style="color:var(--primary)">$25</td><td class="text-mono text-primary">-83%</td><td class="text-mono">$1,500</td></tr>
-                  <tr class="featured"><td>$50K ⭐</td><td class="text-mono">$527</td><td class="text-mono" style="color:var(--primary)">$77</td><td class="text-mono text-primary">-85%</td><td class="text-mono">$2,500</td></tr>
+                  <tr class="featured"><td>$50K ⭐</td><td class="text-mono">$197</td><td class="text-mono" style="color:var(--primary)">$20</td><td class="text-mono text-primary">-90%</td><td class="text-mono">$2,000</td></tr>
                   <tr><td>$100K</td><td class="text-mono">$947</td><td class="text-mono" style="color:var(--primary)">$147</td><td class="text-mono text-primary">-84%</td><td class="text-mono">$3,000</td></tr>
                   <tr><td>$150K</td><td class="text-mono">$1,447</td><td class="text-mono" style="color:var(--primary)">$167</td><td class="text-mono text-primary">-88%</td><td class="text-mono">$4,500</td></tr>
                 </tbody>
@@ -1882,26 +1879,20 @@ footer {
         <!-- AFFILIATE SIDEBAR -->
         <div>
           <div class="affiliate-box">
-            <div style="font-size:12px; color:var(--primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">💥 Descuento activo</div>
+            <div style="font-size:12px; color:var(--primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">💥 Promo activa ~90% OFF</div>
             <h4>Apex Trader Funding</h4>
             <div style="display:flex; align-items:baseline; gap:8px; margin:12px 0;">
-              <div class="aff-price">$77</div>
+              <div class="aff-price">$20</div>
               <div>
-                <div class="aff-original">Precio original: $527</div>
+                <div class="aff-original">Precio original: $197</div>
                 <div class="aff-save">Ahorras $450 con nuestro código</div>
               </div>
             </div>
             <button class="btn-convert btn-pulse" onclick="affClick('Apex')" style="width:100%; justify-content:center; font-size:15px;">
-              🚀 Comprar Prueba de fondeo Ahora
+              🚀 Comprar Evaluación de fondeo Ahora
             </button>
-            <p style="font-size:11px; color:var(--text2); text-align:center; margin-top:8px;">El enlace incluye el descuento automáticamente</p>
-            <div style="margin-top:16px;">
-              <div style="font-size:12px; color:var(--text2); margin-bottom:8px;">O usa el código manualmente:</div>
-              <div class="aff-code-box">
-                <span style="color:var(--primary); font-weight:700;">ZONA85</span>
-                <button class="copy-btn" onclick="copyCode('ZONA85')">📋 Copiar</button>
-              </div>
-            </div>
+            <p style="font-size:11px; color:var(--text2); text-align:center; margin-top:8px;">Hacé clic para ir al sitio oficial</p>
+
             <div class="trust-badges">
               <div class="trust-item">Sin coste extra para ti</div>
               <div class="trust-item">Descuento verificado hoy</div>
@@ -1914,7 +1905,7 @@ footer {
             <h4 style="margin-bottom:12px;">Comparar con similares</h4>
             <div style="display:flex; flex-direction:column; gap:8px;">
               <button class="btn btn-outline" style="font-size:13px; justify-content:space-between;" onclick="showPage('reviews')">
-                Bulenox <span style="color:var(--primary); font-family:var(--font-mono);">$67 (-89%)</span>
+                Bulenox <span style="color:var(--primary); font-family:var(--font-mono);">$125/mes (-29%)</span>
               </button>
               <button class="btn btn-outline" style="font-size:13px; justify-content:space-between;">
                 Tradeify <span style="color:var(--primary); font-family:var(--font-mono);">$107 (-30%)</span>
@@ -1939,11 +1930,11 @@ footer {
     <div class="container">
       <div class="section-label">Códigos de Descuento</div>
       <h2 class="mb-2">Descuentos exclusivos verificados</h2>
-      <p class="text-muted mb-8">Actualizados diariamente · Solo códigos activos · 13 ofertas disponibles</p>
+      <p class="text-muted mb-8">Actualizados diariamente · Ofertas exclusivas actualizadas · 4 ofertas disponibles</p>
 
       <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;">
-        <span class="badge badge-green">✓ 13 activos</span>
-        <span class="badge badge-gold">⚡ 3 expiran esta semana</span>
+        <span class="badge badge-green">✓ 4 activos</span>
+        <span class="badge badge-gold">⚡ 1 caduca en abril</span>
         <span class="tag">Última verificación: hoy</span>
       </div>
 
@@ -2007,7 +1998,7 @@ footer {
         <div class="tool-card">
           <div class="tool-icon">⚖️</div>
           <div class="tool-tag">ROI</div>
-          <div class="tool-name">ROI del Prueba de fondeo</div>
+          <div class="tool-name">ROI del Evaluación de fondeo</div>
           <div class="tool-desc">¿Cuántos payouts para recuperar el coste? Compara el ROI de cada firm antes de comprar.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
@@ -2108,7 +2099,7 @@ footer {
               <div class="branch">🛠 /herramientas  <span class="kw">← Tráfico herramientas</span></div>
               <div class="leaf">/herramientas/calculadora-drawdown</div>
               <div class="leaf">/herramientas/simulador-profit-split</div>
-              <div class="leaf">/herramientas/roi-prueba de fondeo</div>
+              <div class="leaf">/herramientas/roi-evaluación de fondeo</div>
               <div class="leaf-last">/herramientas/position-size-nq</div>
               <div class="branch">📝 /blog  <span class="kw">← Tráfico informacional</span></div>
               <div class="leaf">/blog/[slug]  <span class="kw">← 3+ artículos/semana</span></div>
@@ -2133,7 +2124,7 @@ footer {
               <tbody>
                 <tr><td class="kw-main">mejores empresas de fondeo futuros</td><td class="vol">1,900</td><td class="intent">Comercial</td><td>/</td></tr>
                 <tr><td class="kw-main">comparar empresas de fondeo 2026</td><td class="vol">880</td><td class="intent">Comparación</td><td>/comparador</td></tr>
-                <tr><td class="kw-main">apex trader funding review</td><td class="vol">1,200</td><td class="intent">Review</td><td>/review/apex</td></tr>
+                <tr><td class="kw-main">apex trader funding review</td><td class="vol">1,200</td><td class="intent">Análisis</td><td>/review/apex</td></tr>
                 <tr><td class="kw-main">bulenox descuento</td><td class="vol">590</td><td class="intent">Transaccional</td><td>/descuentos</td></tr>
                 <tr><td class="kw-main">drawdown trailing vs estatico</td><td class="vol">720</td><td class="intent">Informacional</td><td>/blog/</td></tr>
                 <tr><td class="kw-main">cómo pasar evaluación NQ</td><td class="vol">480</td><td class="intent">Informacional</td><td>/guias/</td></tr>
@@ -2157,7 +2148,7 @@ footer {
 /herramientas/calculadora-drawdown-nq
 
 # Schema Markup necesario
-- Product (prueba de fondeo) → precio, rating, review
+- Product (evaluación de fondeo) → precio, rating, review
 - FAQPage → preguntas frecuentes de cada firm  
 - HowTo → guías de evaluación
 - BreadcrumbList → navegación</div>
@@ -2239,7 +2230,7 @@ footer {
               <div class="mono-card">
                 <h4>💸 Afiliados directos</h4>
                 <div class="amount">$20-50</div>
-                <p>Por cada prueba de fondeo vendido. ~30-40% del precio. Fuente principal de ingresos.</p>
+                <p>Por cada evaluación de fondeo vendido. ~30-40% del precio. Fuente principal de ingresos.</p>
               </div>
               <div class="mono-card">
                 <h4>🎁 Códigos de descuento</h4>
@@ -2281,32 +2272,22 @@ footer {
             <div class="db-schema" style="font-size:12px;">
 // ARQUITECTURA DE TRACKING DE AFILIADOS
 
-// 1. Cada botón incluye parámetros UTM + ID de firma
 const AFF_LINKS = {
-  'apex': 'https://apex.redir.link/?ref=ZONA&utm_source=zonadefondeo&utm_medium=cta&utm_campaign=comparador',
-  'bulenox': 'https://bulenox.com/?ref=ZONA&utm_source=zonadefondeo&...',
-  'mff': 'https://myfundedfutures.com/?ref=ZONA&...',
+  // ✅ Links de afiliado oficiales verificados
+  'alphaf':      'https://app.alpha-futures.com/signup/Zona021177/',
+  'bulenox':     'https://bulenox.com/member/aff/go/zonadefondeo',
+  'earn2t':      'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'topone':      'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  // ⏳ Sin link de afiliado aún — redirige al sitio oficial
+  'apex':        'https://apextraderfunding.com/',
+  'mff':         'https://myfundedfutures.com/',
+  'tradeify':    'https://tradeify.co/',
+  'tpt':         'https://takeprofittrader.com/',
+  'fundednext':  'https://fundednext.com/',
+  'emerge':      'https://emergeprofit.com/',
 };
 
-// 2. Función de click tracking (+ registro en BD)
-function trackAffiliateClick(firmId, pageSource, buttonType) {
-  fetch('/api/track', {
-    method: 'POST',
-    body: JSON.stringify({ firmId, pageSource, buttonType })
-  });
-  // Pequeño delay para asegurar tracking antes de redirigir
-  setTimeout(() => window.open(AFF_LINKS[firmId], '_blank'), 150);
-}
-
-// 3. Reglas de disclosure SEO (rel="sponsored")
-// &lt;a href="..." rel="sponsored noopener" target="_blank"&gt;
-
-// 4. Código de descuento auto-aplicado en URL
-// ?coupon=ZONA85 → se aplica automáticamente
-
-// 5. AB Testing de botones (Vercel Analytics / Plausible)
-// Variante A: "Empezar Prueba de fondeo →"
-// Variante B: "🚀 Comprar con -85% →"
+// Tracking de afiliados activo
 // Variante C: "Ver oferta activa →"
             </div>
           </div>
@@ -2375,9 +2356,9 @@ function trackAffiliateClick(firmId, pageSource, buttonType) {
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Zona de <span style="color:var(--primary)">Fondeo</span></h3>
-        <p>El comparador más completo de empresas de fondeo de futuros para traders del NQ Nasdaq. Reviews honestas, descuentos exclusivos y herramientas gratuitas.</p>
+        <p>El comparador más completo de empresas de fondeo de futuros para traders del NQ Nasdaq. Análisis honestas, descuentos exclusivos y herramientas gratuitas.</p>
         <div style="display:flex; gap:10px; margin-top:16px;">
-          <span class="tag">🇪🇸 Español</span>
+          <span class="tag">🌎 Latinoamérica</span>
           <span class="tag">📊 NQ Nasdaq</span>
           <span class="tag">⚡ 12 Firms</span>
         </div>
@@ -2386,7 +2367,7 @@ function trackAffiliateClick(firmId, pageSource, buttonType) {
         <h4>Comparar</h4>
         <div class="footer-links">
           <a onclick="showPage('comparador')">Comparador completo</a>
-          <a onclick="showPage('reviews')">Reviews</a>
+          <a onclick="showPage('reviews')">Análisis</a>
           <a onclick="showPage('descuentos')">Descuentos activos</a>
           <a>Ranking 2026</a>
         </div>
@@ -2429,74 +2410,84 @@ function trackAffiliateClick(firmId, pageSource, buttonType) {
 // ═══════════════════════════════════════
 const firms = [
   { id:'apex', name:'Apex Trader Funding', short:'AP', country:'🇺🇸 USA', founded:2021,
-    price:77, priceOrig:527, discount:85, drawdown:2500, ddType:'trailing',
-    profitTarget:3000, split:90, payout:'7-14d', news:true, overnight:true,
-    rating:4.4, reviews:18089, platforms:'NinjaTrader, Tradovate', phases:1,
-    affUrl:'#apex-affiliate' },
-  { id:'bulenox', name:'Bulenox', short:'BX', country:'🇺🇸 USA', founded:2021,
-    price:67, priceOrig:609, discount:89, drawdown:2000, ddType:'eod',
-    profitTarget:3000, split:80, payout:'7d', news:false, overnight:true,
-    rating:4.8, reviews:1507, platforms:'NinjaTrader, R Trader', phases:1,
-    affUrl:'https://bulenox.com/member/aff/go/zonadefondeo' },
+    price:20, priceOrig:197, discount:90, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:100, payout:'Inmediato', news:true, overnight:true,
+    rating:4.4, reviews:18089, platforms:'NinjaTrader, Tradovate, Rithmic, TradingView, Sierra Chart', phases:1,
+    note:'Sistema 4.0 desde marzo 2026. Pago único (no mensual). Promos del 80-90% casi permanentes. 100% ganancias en los primeros $25K. Sin retiros denegados.',
+    affUrl:'https://apextraderfunding.com/?ref=ZONA' },
   { id:'mff', name:'My Funded Futures', short:'MF', country:'🇺🇸 USA', founded:2022,
-    price:165, priceOrig:165, discount:0, drawdown:2000, ddType:'eod',
-    profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
-    rating:4.9, reviews:16748, platforms:'NinjaTrader, Tradovate', phases:1,
-    affUrl:'#mff-affiliate' },
-  { id:'tpt', name:'TakeProfitTrader', short:'TP', country:'🇺🇸 USA', founded:2019,
-    price:97, priceOrig:165, discount:40, drawdown:2000, ddType:'static',
-    profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:false,
-    rating:4.4, reviews:8746, platforms:'NinjaTrader, Tradovate', phases:1,
-    affUrl:'#tpt-affiliate' },
-  { id:'tradeify', name:'Tradeify', short:'TF', country:'🇺🇸 USA', founded:2024,
-    price:107, priceOrig:153, discount:30, drawdown:2500, ddType:'trailing',
-    profitTarget:3000, split:85, payout:'7d', news:true, overnight:true,
-    rating:4.6, reviews:2393, platforms:'Tradovate, NinjaTrader', phases:1,
-    affUrl:'#tradeify-affiliate' },
+    price:77, priceOrig:77, discount:0, drawdown:1500, ddType:'eod',
+    profitTarget:3000, split:80, payout:'5d ganadores', news:true, overnight:true,
+    rating:4.9, reviews:16748, platforms:'NinjaTrader, Tradovate, TradingView', phases:1,
+    note:'Plan Core $50K. Sin tarifa de activación. Rapid plan: $129/mes con 90% reparto.',
+    affUrl:'https://myfundedfutures.com/?ref=ZONA' },
+  { id:'tradeify', name:'Tradeify', short:'TF', country:'🇺🇸 USA', founded:2023,
+    price:159, priceOrig:159, discount:0, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'3d mínimo', news:true, overnight:true,
+    rating:4.7, reviews:3800, platforms:'Tradovate, NinjaTrader, TradingView', phases:1,
+    note:'Select Flex. Sin tarifa de activación. Retiros en horas. Fines de semana incluidos.',
+    affUrl:'https://tradeify.co/?ref=ZONA' },
   { id:'alphaf', name:'Alpha Futures', short:'AF', country:'🇺🇸 USA', founded:2023,
-    price:135, priceOrig:150, discount:10, drawdown:2500, ddType:'trailing',
-    profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
-    rating:4.9, reviews:3243, platforms:'NinjaTrader, Tradovate', phases:1,
+    price:79, priceOrig:79, discount:0, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'24-48h', news:true, overnight:true,
+    rating:4.9, reviews:3500, platforms:'NinjaTrader, Tradovate, TradingView, Quantower', phases:1,
+    note:'Plan Standard. El precio mensual más bajo del mercado. Sin regla de consistencia en fondeo.',
     affUrl:'https://app.alpha-futures.com/signup/Zona021177/' },
+  { id:'tpt', name:'TakeProfitTrader', short:'TP', country:'🇺🇸 USA', founded:2015,
+    price:170, priceOrig:170, discount:0, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:80, payout:'Día 1', news:false, overnight:false,
+    rating:4.4, reviews:8400, platforms:'NinjaTrader, Tradovate, Rithmic, Sierra Chart, 15+', phases:1,
+    note:'$130 tarifa de activación adicional. Retiro desde el día 1 en cuenta fondeada. 80/20 en PRO.',
+    affUrl:'https://takeprofittrader.com/?ref=ZONA' },
+  { id:'bulenox', name:'Bulenox', short:'BX', country:'🇺🇸 USA', founded:2021,
+    price:109, priceOrig:109, discount:0, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'7d', news:true, overnight:true,
+    rating:4.6, reviews:1600, platforms:'NinjaTrader, Sierra Chart, R Trader, 20+', phases:1,
+    note:'Precio varía por promo mensual. 100% de primeros $10K en ganancias. Más de 20 plataformas.',
+    affUrl:'https://bulenox.com/member/aff/go/zonadefondeo' },
   { id:'topone', name:'Top One Futures', short:'TO', country:'🇺🇸 USA', founded:2025,
-    price:77, priceOrig:197, discount:60, drawdown:2000, ddType:'eod',
-    profitTarget:2000, split:90, payout:'7d', news:true, overnight:true,
-    rating:4.8, reviews:3516, platforms:'NinjaTrader, Tradovate', phases:1,
+    price:97, priceOrig:197, discount:50, drawdown:2000, ddType:'eod',
+    profitTarget:2000, split:90, payout:'2-4h', news:true, overnight:true,
+    rating:4.7, reviews:3800, platforms:'NinjaTrader, Tradovate', phases:1,
+    note:'Precio con descuento de lanzamiento del 50%. Retiros en menos de 4 horas. Firma nueva.',
     affUrl:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
   { id:'earn2t', name:'Earn2Trade', short:'E2', country:'🇺🇸 USA', founded:2016,
-    price:150, priceOrig:214, discount:30, drawdown:2000, ddType:'eod',
+    price:150, priceOrig:150, discount:0, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:true,
-    rating:4.7, reviews:4693, platforms:'NinjaTrader, Finamark', phases:2,
+    rating:4.7, reviews:4800, platforms:'NinjaTrader, Finamark', phases:2,
+    note:'La firma más veterana del mercado (2016). 2 fases de evaluación. Excelente reputación.',
     affUrl:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
-  { id:'fundednext', name:'FundedNext', short:'FN', country:'🇦🇪 UAE', founded:2022,
+  { id:'fundednext', name:'FundedNext Futuros', short:'FN', country:'🇦🇪 UAE', founded:2022,
     price:119, priceOrig:199, discount:40, drawdown:2500, ddType:'eod',
     profitTarget:4000, split:90, payout:'7d', news:true, overnight:true,
-    rating:4.5, reviews:62666, platforms:'NinjaTrader, TradingView', phases:2,
-    affUrl:'#fundednext-affiliate' },
+    rating:4.5, reviews:63000, platforms:'NinjaTrader, TradingView', phases:2,
+    note:'La firma con más reseñas del mercado (63K en Trustpilot). Descuento frecuente del 40%.',
+    affUrl:'https://fundednext.com/?ref=ZONA' },
   { id:'emerge', name:'EmergeProfit', short:'EP', country:'🇬🇧 UK', founded:2024,
     price:129, priceOrig:179, discount:28, drawdown:2000, ddType:'eod',
     profitTarget:2000, split:85, payout:'14d', news:false, overnight:true,
-    rating:4.6, reviews:440, platforms:'Tradovate, NinjaTrader', phases:1,
-    affUrl:'#emerge-affiliate' },
-];
+    rating:4.6, reviews:500, platforms:'Tradovate, NinjaTrader', phases:1,
+    note:'Firma nueva del Reino Unido. 85% reparto. Proceso de evaluación simple.',
+    affUrl:'https://emergeprofit.com/?ref=ZONA' },
+]
+
+
 
 const discounts = [
-  { firm:'Bulenox', pct:89, code:'TRADER89', desc:'Descuento mensual máximo de Bulenox. Válido para todos los tamaños de cuenta.', expiry:'31 Mar 2026', permanent:false, url:'#bulenox-aff' },
-  { firm:'Apex Trader Funding', pct:85, code:'ZONA85', desc:'Promo especial Apex. Rotativa mensual, activar antes de que expire.', expiry:'05 Abr 2026', permanent:false, url:'#apex-aff' },
-  { firm:'TakeProfitTrader', pct:40, code:'ZONA40', desc:'Descuento fijo y permanente en TakeProfitTrader con nuestro link exclusivo.', expiry:null, permanent:true, url:'#tpt-aff' },
-  { firm:'Top One Futures', pct:60, code:'ZONA60', desc:'Nueva firma con descuento de lanzamiento muy agresivo. No durará.', expiry:'15 Abr 2026', permanent:false, url:'#topone-aff' },
-  { firm:'Tradeify', pct:30, code:'ZONA30', desc:'Descuento fijo de Tradeify. Aplica en cuentas de $50K y $100K.', expiry:null, permanent:true, url:'#tradeify-aff' },
-  { firm:'Alpha Futures', pct:10, code:'ZONA', desc:'Descuento base Alpha Futures. Pequeño pero fiable y siempre activo.', expiry:null, permanent:true, url:'#alpha-aff' },
-  { firm:'FundedNext', pct:40, code:'ZONA40', desc:'FundedNext ofrece descuento en futuros y forex. Uno de los más grandes globalmente.', expiry:'20 Abr 2026', permanent:false, url:'#fn-aff' },
-  { firm:'Earn2Trade', pct:30, code:'ZONA30', desc:'La empresa de fondeo más veterana del mercado de futuros. Excelente reputación.', expiry:null, permanent:true, url:'#e2t-aff' },
-];
+  { firm:'Bulenox',       pct:89,  label:'Oferta especial',   desc:'100% de los primeros $10K en ganancias. Más de 20 plataformas disponibles. Precio desde $125/mes en $50K.', expiry:null,           permanent:true,  url:'https://bulenox.com/member/aff/go/zonadefondeo' },
+  { firm:'Alpha Futures', pct:10,  label:'Precio exclusivo',  desc:'Desde $79/mes para $50K a través de nuestro enlace. El precio mensual más bajo del mercado. Retiros en 24-48 horas.', expiry:null, permanent:true,  url:'https://app.alpha-futures.com/signup/Zona021177/' },
+  { firm:'Top One Futures',pct:50, label:'Gran Descuento',    desc:'Descuento de lanzamiento del 50% activo. Retiros en menos de 4 horas. Una de las firmas más nuevas y prometedoras.', expiry:'30 Abr 2026', permanent:false, url:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
+  { firm:'Earn2Trade',    pct:30,  label:'Precio especial',   desc:'La empresa de fondeo más veterana del mercado (desde 2016). 2 fases de evaluación. Sólida reputación comprobada.', expiry:null,  permanent:true,  url:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
+]
+
+
 
 const blogPosts = [
   { cat:'GUÍA', icon:'📚', title:'Cómo pasar la evaluación de una Empresa de fondeo de Futuros en 30 días', excerpt:'Estrategia paso a paso para traders del NQ Nasdaq. Gestión de riesgo, número de contratos y plan diario.', date:'Mar 2026', time:'11 min', slug:'pasar-evaluacion-futuros' },
   { cat:'COMPARATIVA', icon:'⚖️', title:'Apex vs Bulenox 2026: ¿Cuál es mejor para el NQ?', excerpt:'Comparamos en profundidad las dos empresas de fondeo con mayor descuento del mercado. Reglas, precios y experiencia real.', date:'Mar 2026', time:'8 min', slug:'apex-vs-bulenox' },
   { cat:'EDUCACIÓN', icon:'🎓', title:'Trailing Drawdown vs Drawdown Estático: Todo lo que debes saber', excerpt:'La diferencia que puede costarte la cuenta. Explicación clara con ejemplos reales de operativas en NQ.', date:'Feb 2026', time:'7 min', slug:'trailing-vs-estatico' },
   { cat:'HERRAMIENTAS', icon:'🛠', title:'Las 5 mejores herramientas para gestionar tu cuenta financiada', excerpt:'Desde diarios de trading hasta calculadoras de riesgo. Todo lo que necesita un trader profesional de futuros.', date:'Feb 2026', time:'6 min', slug:'herramientas-cuenta-financiada' },
-  { cat:'NOTICIAS', icon:'📰', title:'Las mejores Empresas de fondeo de Futuros de 2026: Ranking actualizado', excerpt:'Actualizamos nuestro ranking anual con las novedades del sector, nuevas firmas y cambios de reglas importantes.', date:'Ene 2026', time:'12 min', slug:'ranking-prop-firms-2026' },
+  { cat:'NOTICIAS', icon:'📰', title:'Las mejores Empresas de fondeo de Futuros de 2026: Clasificación actualizado', excerpt:'Actualizamos nuestro ranking anual con las novedades del sector, nuevas firmas y cambios de reglas importantes.', date:'Ene 2026', time:'12 min', slug:'ranking-prop-firms-2026' },
   { cat:'ESTRATEGIA', icon:'🎯', title:'Cómo gestionar el riesgo en NQ Nasdaq para no violar el drawdown', excerpt:'El contrato de NQ se mueve rápido. Aprende a calcular el tamaño ideal de posición según tu cuenta y drawdown.', date:'Ene 2026', time:'9 min', slug:'gestion-riesgo-nq' },
 ];
 
@@ -2538,7 +2529,7 @@ function renderTable(data) {
         ${f.discount > 0 ? `<div><span class="original">$${f.priceOrig}</span> <span class="discount">-${f.discount}%</span></div>` : '<div><span style="font-size:11px;color:var(--text3)">Precio estándar</span></div>'}
       </td>
       <td><span class="num-cell">$${f.drawdown.toLocaleString()}</span></td>
-      <td><span class="badge ${f.ddType === 'trailing' ? 'badge-gold' : f.ddType === 'eod' ? 'badge-green' : 'badge-blue'}">${f.ddType === 'eod' ? 'EOD' : f.ddType.charAt(0).toUpperCase()+f.ddType.slice(1)}</span></td>
+      <td><span class="badge ${f.ddType === 'trailing' ? 'badge-gold' : f.ddType === 'eod' ? 'badge-green' : 'badge-blue'}">${f.ddType === 'eod' ? 'Fin de día' : f.ddType.charAt(0).toUpperCase()+f.ddType.slice(1)}</span></td>
       <td><span class="num-cell">$${f.profitTarget.toLocaleString()}</span></td>
       <td><span class="num-cell" style="color:${f.split >= 90 ? 'var(--primary)' : 'var(--text)'}">${f.split}%</span></td>
       <td><span class="num-cell">${f.payout}</span></td>
@@ -2624,9 +2615,9 @@ function renderReviews() {
       </div>
       <div class="review-score-grid">
         <div class="score-item"><div class="s-label">Precio</div><div class="s-val" style="color:${f.discount>50?'var(--primary)':'var(--text)'}">$${f.price}</div></div>
-        <div class="score-item"><div class="s-label">Split</div><div class="s-val" style="color:var(--primary)">${f.split}%</div></div>
-        <div class="score-item"><div class="s-label">Drawdown</div><div class="s-val">$${(f.drawdown/1000).toFixed(1)}K</div></div>
-        <div class="score-item"><div class="s-label">Payout</div><div class="s-val">${f.payout}</div></div>
+        <div class="score-item"><div class="s-label">Reparto</div><div class="s-val" style="color:var(--primary)">${f.split}%</div></div>
+        <div class="score-item"><div class="s-label">Máx. pérdida</div><div class="s-val">$${(f.drawdown/1000).toFixed(1)}K</div></div>
+        <div class="score-item"><div class="s-label">Retiro</div><div class="s-val">${f.payout}</div></div>
       </div>
       <div class="review-tags">
         ${f.news ? '<span class="badge badge-green">News ✓</span>' : ''}
@@ -2649,18 +2640,15 @@ function renderDiscounts() {
   if (!grid) return;
   grid.innerHTML = discounts.map(d => `
     <div class="discount-card">
-      <div class="discount-pct">-${d.pct}%</div>
+      ${d.pct > 0 ? `<div class="discount-pct">-${d.pct}%</div>` : ''}
       <div class="discount-card-body">
         <div class="discount-firm">${d.firm.toUpperCase()}</div>
-        <div class="discount-title">${d.pct >= 80 ? '🔥 Oferta Máxima' : d.pct >= 50 ? '⚡ Gran Descuento' : '✅ Descuento Activo'}</div>
+        <div class="discount-title">${d.pct >= 80 ? '🔥 ' : d.pct >= 50 ? '⚡ ' : '✅ '}${d.label || (d.pct >= 80 ? 'Oferta Máxima' : d.pct >= 50 ? 'Gran Descuento' : 'Descuento Activo')}</div>
         <div class="discount-desc">${d.desc}</div>
         <div class="discount-expiry">${d.permanent ? '✅ Sin fecha de caducidad' : '⏰ Caduca: ' + d.expiry}</div>
         <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-          <div class="aff-code-box" style="flex:1; min-width:120px;">
-            <span style="color:var(--primary); font-weight:700;">${d.code}</span>
-            <button class="copy-btn" onclick="copyCode('${d.code}')">📋 Copiar</button>
-          </div>
-          <button class="btn-convert" style="padding:10px 18px; font-size:13px;" onclick="affClick('${d.firm.toLowerCase().replace(' ','')}')">Ir →</button>
+
+          <a class="btn-convert" style="padding:10px 18px; font-size:13px; text-decoration:none; ${d.code ? '' : 'width:100%; justify-content:center;'}" href="${d.url}" target="_blank" rel="noopener">Ir a ${d.firm} →</a>
         </div>
       </div>
     </div>
@@ -2708,19 +2696,42 @@ const AFF_LINKS = {
 // AFFILIATE CLICK
 // ═══════════════════════════════════════
 function affClick(firmId) {
+  // Normalizar: minúsculas, sin espacios ni guiones
   const key = firmId.toLowerCase().replace(/\s+/g,'').replace(/-/g,'');
-  // First check direct map
-  if (AFF_LINKS[key]) {
-    window.open(AFF_LINKS[key], '_blank', 'noopener');
+
+  // Mapa de alias para los botones que usan nombre largo
+  const aliasMap = {
+    'apextraderfunding': 'apex',
+    'myfundedfutures':   'mff',
+    'takeprofittrader':  'tpt',
+    'topone':            'topone',
+    'toponefutures':     'topone',
+    'alphafutures':      'alphaf',
+    'earn2trade':        'earn2t',
+    'fundednext':        'fundednext',
+    'emergeprofit':      'emerge',
+  };
+
+  const resolvedKey = aliasMap[key] || key;
+
+  // 1. Buscar en AFF_LINKS
+  if (AFF_LINKS[resolvedKey]) {
+    window.open(AFF_LINKS[resolvedKey], '_blank', 'noopener');
     return;
   }
-  // Then check firms array affUrl
-  const firm = firms.find(f => f.id === key || f.name.toLowerCase().replace(/\s+/g,'') === key);
+
+  // 2. Buscar en el array de firms por id o nombre
+  const firm = firms.find(f =>
+    f.id === resolvedKey ||
+    f.id === key ||
+    f.name.toLowerCase().replace(/\s+/g,'').replace(/-/g,'') === key
+  );
   if (firm && firm.affUrl && !firm.affUrl.startsWith('#')) {
     window.open(firm.affUrl, '_blank', 'noopener');
     return;
   }
-  showToast(`🔗 Link de ${firmId} próximamente — ¡Muy pronto!`);
+
+  showToast('🔗 Link no disponible todavía — próximamente');
 }
 
 // ═══════════════════════════════════════
