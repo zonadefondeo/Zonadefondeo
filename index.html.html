@@ -1271,14 +1271,58 @@ footer {
 
 /* ═══════════════════════════════════════ RESPONSIVE */
 @media (max-width: 768px) {
-  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  /* Hero */
+  h1 { font-size: clamp(28px, 8vw, 48px); letter-spacing: -1px; }
+  h2 { font-size: clamp(22px, 6vw, 36px); letter-spacing: -0.5px; }
+  .hero { padding: 60px 0 48px; }
+  .hero-sub { font-size: 15px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn-convert, .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-social-proof { flex-direction: column; gap: 8px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  /* Nav */
+  nav { padding: 0 12px; }
+  .nav-inner { gap: 4px; }
+  .logo { font-size: 16px; margin-right: 4px; }
+  .nav-links { gap: 0; }
+  .nav-link { padding: 6px 10px; font-size: 12px; }
+  .nav-cta { padding: 7px 12px; font-size: 12px; }
+
+  /* Layout */
+  .container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .section-sm { padding: 32px 0; }
+
+  /* Tables */
+  .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Reviews */
+  .review-hero { padding: 20px; flex-direction: column; gap: 20px; }
   .review-hero-stats { grid-template-columns: repeat(2, 1fr); }
   .review-body { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .arch-grid { grid-template-columns: 1fr; }
   .pros-cons { grid-template-columns: 1fr; }
-  nav { padding: 0 16px; }
-  .container { padding: 0 16px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  /* Discounts */
+  .discounts-grid { grid-template-columns: 1fr; }
+
+  /* Blog */
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-featured-banner { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  /* Arch */
+  .arch-grid { grid-template-columns: 1fr; }
+
+  /* Tools */
+  .tools-grid { grid-template-columns: 1fr; }
+
+  /* Discount cards */
+  .discount-card-body { margin-top: 56px; }
 }
 
 /* Misc helpers */
@@ -1308,7 +1352,7 @@ footer {
       <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">13</span></button>
       <button class="nav-link" onclick="showPage('herramientas')">Herramientas</button>
       <button class="nav-link" onclick="showPage('blog')">Blog</button>
-      <button class="nav-link" onclick="showPage('arquitectura')">📋 Arquitectura</button>
+
     </div>
     <button class="nav-cta" onclick="showPage('comparador')">Comparar →</button>
   </div>
@@ -1558,7 +1602,7 @@ footer {
             <div class="discount-expiry">⏰ Caduca: 31 Mar 2026</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <div class="aff-code-box" style="flex:1;min-width:140px;">TRADER89 <button class="copy-btn" onclick="copyCode('TRADER89')">Copiar</button></div>
-              <button class="btn-convert" style="padding:10px 20px;" onclick="affClick('Bulenox')">Ir →</button>
+              <a class="btn-convert" style="padding:10px 20px;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir →</a>
             </div>
           </div>
         </div>
@@ -2330,7 +2374,7 @@ function trackAffiliateClick(firmId, pageSource, buttonType) {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>NQ<span style="color:var(--primary)">Trader</span>Hub</h3>
+        <h3>Zona de <span style="color:var(--primary)">Fondeo</span></h3>
         <p>El comparador más completo de empresas de fondeo de futuros para traders del NQ Nasdaq. Reviews honestas, descuentos exclusivos y herramientas gratuitas.</p>
         <div style="display:flex; gap:10px; margin-top:16px;">
           <span class="tag">🇪🇸 Español</span>
@@ -2393,7 +2437,7 @@ const firms = [
     price:67, priceOrig:609, discount:89, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:80, payout:'7d', news:false, overnight:true,
     rating:4.8, reviews:1507, platforms:'NinjaTrader, R Trader', phases:1,
-    affUrl:'#bulenox-affiliate' },
+    affUrl:'https://bulenox.com/member/aff/go/zonadefondeo' },
   { id:'mff', name:'My Funded Futures', short:'MF', country:'🇺🇸 USA', founded:2022,
     price:165, priceOrig:165, discount:0, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
@@ -2413,17 +2457,17 @@ const firms = [
     price:135, priceOrig:150, discount:10, drawdown:2500, ddType:'trailing',
     profitTarget:3000, split:90, payout:'14d', news:true, overnight:true,
     rating:4.9, reviews:3243, platforms:'NinjaTrader, Tradovate', phases:1,
-    affUrl:'#alphaf-affiliate' },
+    affUrl:'https://app.alpha-futures.com/signup/Zona021177/' },
   { id:'topone', name:'Top One Futures', short:'TO', country:'🇺🇸 USA', founded:2025,
     price:77, priceOrig:197, discount:60, drawdown:2000, ddType:'eod',
     profitTarget:2000, split:90, payout:'7d', news:true, overnight:true,
     rating:4.8, reviews:3516, platforms:'NinjaTrader, Tradovate', phases:1,
-    affUrl:'#topone-affiliate' },
+    affUrl:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
   { id:'earn2t', name:'Earn2Trade', short:'E2', country:'🇺🇸 USA', founded:2016,
     price:150, priceOrig:214, discount:30, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:true,
     rating:4.7, reviews:4693, platforms:'NinjaTrader, Finamark', phases:2,
-    affUrl:'#earn2trade-affiliate' },
+    affUrl:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
   { id:'fundednext', name:'FundedNext', short:'FN', country:'🇦🇪 UAE', founded:2022,
     price:119, priceOrig:199, discount:40, drawdown:2500, ddType:'eod',
     profitTarget:4000, split:90, payout:'7d', news:true, overnight:true,
@@ -2591,7 +2635,7 @@ function renderReviews() {
         ${f.phases === 1 ? '<span class="badge badge-green">1 Fase</span>' : '<span class="badge badge-blue">2 Fases</span>'}
       </div>
       <button class="btn-convert" style="width:100%; justify-content:center;" onclick="event.stopPropagation(); affClick('${f.id}')">
-        Ver prueba de fondeo →
+        Ver evaluación →
       </button>
     </div>
   `).join('');
@@ -2649,12 +2693,34 @@ function renderBlog() {
 }
 
 // ═══════════════════════════════════════
+// AFFILIATE LINKS
+// ═══════════════════════════════════════
+const AFF_LINKS = {
+  'bulenox':      'https://bulenox.com/member/aff/go/zonadefondeo',
+  'alphaf':       'https://app.alpha-futures.com/signup/Zona021177/',
+  'alphafutures': 'https://app.alpha-futures.com/signup/Zona021177/',
+  'topone':       'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  'earn2t':       'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'earn2trade':   'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+};
+
+// ═══════════════════════════════════════
 // AFFILIATE CLICK
 // ═══════════════════════════════════════
 function affClick(firmId) {
-  // En producción: registrar en BD, redirigir a URL afiliado con tracking
-  showToast(`🚀 Redirigiendo a ${firmId.toUpperCase()}... (demo)`);
-  // window.open(AFF_LINKS[firmId], '_blank');
+  const key = firmId.toLowerCase().replace(/\s+/g,'').replace(/-/g,'');
+  // First check direct map
+  if (AFF_LINKS[key]) {
+    window.open(AFF_LINKS[key], '_blank', 'noopener');
+    return;
+  }
+  // Then check firms array affUrl
+  const firm = firms.find(f => f.id === key || f.name.toLowerCase().replace(/\s+/g,'') === key);
+  if (firm && firm.affUrl && !firm.affUrl.startsWith('#')) {
+    window.open(firm.affUrl, '_blank', 'noopener');
+    return;
+  }
+  showToast(`🔗 Link de ${firmId} próximamente — ¡Muy pronto!`);
 }
 
 // ═══════════════════════════════════════
