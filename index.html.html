@@ -1269,60 +1269,182 @@ footer {
  
 .toast.show { transform: translateY(0); opacity: 1; }
  
+/* ═══════════════════════════════════════ HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+.hamburger:hover { border-color: var(--primary); }
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ 
+/* MOBILE MENU OVERLAY */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0; right: 0;
+  background: rgba(8,11,16,0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px;
+  flex-direction: column;
+  gap: 4px;
+  animation: slideDown 0.25s ease;
+}
+.mobile-menu.open { display: flex; }
+ 
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.mobile-menu .nav-link {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+ 
+.mobile-menu .nav-cta-full {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+ 
 /* ═══════════════════════════════════════ RESPONSIVE */
 @media (max-width: 768px) {
-  /* Hero */
-  h1 { font-size: clamp(28px, 8vw, 48px); letter-spacing: -1px; }
-  h2 { font-size: clamp(22px, 6vw, 36px); letter-spacing: -0.5px; }
-  .hero { padding: 60px 0 48px; }
-  .hero-sub { font-size: 15px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn-convert, .hero-actions .btn { width: 100%; justify-content: center; }
+ 
+  /* ── NAV ── */
+  nav { padding: 0 16px; }
+  .nav-inner { height: 56px; }
+  .logo { font-size: 17px; margin-right: 0; }
+  .nav-links { display: none; }           /* hidden — replaced by mobile-menu */
+  .nav-cta  { display: none; }            /* hidden — inside mobile-menu instead */
+  .hamburger { display: flex; }
+ 
+  /* ── LAYOUT ── */
+  .container { padding: 0 16px; }
+  .section { padding: 44px 0; }
+  .section-sm { padding: 28px 0; }
+ 
+  /* ── TYPOGRAPHY ── */
+  h1 { font-size: clamp(26px, 8vw, 44px); letter-spacing: -1px; }
+  h2 { font-size: clamp(22px, 6vw, 34px); letter-spacing: -0.5px; }
+  h3 { font-size: 18px; }
+ 
+  /* ── HERO ── */
+  .hero { padding: 48px 0 40px; }
+  .hero-sub { font-size: 14px; max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-actions .btn-convert,
+  .hero-actions .btn { width: 100%; justify-content: center; font-size: 14px; }
   .hero-social-proof { flex-direction: column; gap: 8px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .hero-stats .stat-chip .value { font-size: 22px; }
+  .logos-strip { gap: 8px; }
+  .firm-logo-chip { padding: 8px 14px; font-size: 12px; }
  
-  /* Nav */
-  nav { padding: 0 12px; }
-  .nav-inner { gap: 4px; }
-  .logo { font-size: 16px; margin-right: 4px; }
-  .nav-links { gap: 0; }
-  .nav-link { padding: 6px 10px; font-size: 12px; }
-  .nav-cta { padding: 7px 12px; font-size: 12px; }
+  /* ── TABLES (comparador) ── */
+  .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
+  .comp-table { min-width: 700px; }
+  .comp-table th, .comp-table td { padding: 12px 14px; }
+  .filter-bar { flex-direction: column; gap: 12px; padding: 16px; }
+  .filter-group { min-width: 100%; }
+  .filter-reset { width: 100%; }
+  .size-tabs { gap: 6px; }
+  .size-tab { padding: 6px 12px; font-size: 12px; }
  
-  /* Layout */
-  .container { padding: 0 16px; }
-  .section { padding: 48px 0; }
-  .section-sm { padding: 32px 0; }
+  /* ── ANÁLISIS / REVIEWS ── */
+  .reviews-grid { grid-template-columns: 1fr; gap: 14px; }
+  .review-hero { padding: 20px; flex-direction: column; gap: 16px; }
+  .review-hero-logo { width: 60px; height: 60px; font-size: 24px; }
+  .review-hero-info h1 { font-size: 26px; }
+  .review-hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .review-body { grid-template-columns: 1fr; gap: 20px; }
+  .affiliate-box { position: static; }  /* remove sticky on mobile */
+  .pros-cons { grid-template-columns: 1fr; gap: 12px; }
+  .review-section { padding: 20px; }
+  .review-score-grid { grid-template-columns: 1fr 1fr; }
  
-  /* Tables */
-  .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* ── DESCUENTOS ── */
+  .discounts-grid { grid-template-columns: 1fr; gap: 14px; }
+  .discount-card { padding: 20px; }
+  .discount-card-body { margin-top: 52px; }
+  .discount-pct { font-size: 18px; padding: 5px 12px; }
  
-  /* Análisis */
-  .review-hero { padding: 20px; flex-direction: column; gap: 20px; }
-  .review-hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .review-body { grid-template-columns: 1fr; }
-  .pros-cons { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
+  /* ── BLOG ── */
+  .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+  .blog-featured-banner { grid-template-columns: 1fr; padding: 20px; gap: 16px; }
+  .blog-thumb { height: 150px; }
+  .blog-title { font-size: 16px; }
  
-  /* Discounts */
-  .discounts-grid { grid-template-columns: 1fr; }
+  /* ── HERRAMIENTAS ── */
+  .tools-grid { grid-template-columns: 1fr; gap: 12px; }
+  .tool-card { padding: 20px; }
+  .calc-tool { padding: 20px; }
+  .calc-result .result-val { font-size: 28px; }
  
-  /* Blog */
-  .blog-grid { grid-template-columns: 1fr; }
-  .blog-featured-banner { grid-template-columns: 1fr; }
- 
-  /* Footer */
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
- 
-  /* Arch */
+  /* ── ARCHITECTURE ── */
   .arch-grid { grid-template-columns: 1fr; }
+  .arch-sidebar { position: static; margin-bottom: 20px; }
  
-  /* Tools */
-  .tools-grid { grid-template-columns: 1fr; }
+  /* ── FOOTER ── */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  footer { padding: 40px 0 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-bottom .affiliate-disclaimer { max-width: 100%; font-size: 10px; }
+  .footer-brand p { max-width: 100%; }
  
-  /* Discount cards */
-  .discount-card-body { margin-top: 56px; }
+  /* ── MISC ── */
+  .toast { bottom: 16px; right: 16px; left: 16px; text-align: center; }
+  .aff-code-box { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .copy-btn { align-self: flex-end; }
+}
+ 
+/* Extra-small screens (≤ 400px) */
+@media (max-width: 400px) {
+  h1 { font-size: clamp(22px, 9vw, 36px); }
+  h2 { font-size: clamp(19px, 7vw, 28px); }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .hero-stats .stat-chip .value { font-size: 20px; }
+  .logo { font-size: 15px; }
+  .discount-pct { font-size: 16px; top: 14px; right: 14px; }
+  .review-hero-stats { grid-template-columns: 1fr 1fr; }
+  .section-label { font-size: 10px; }
 }
  
 /* Misc helpers */
@@ -1352,11 +1474,25 @@ footer {
       <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">4</span></button>
       <button class="nav-link" onclick="showPage('herramientas')">Herramientas</button>
       <button class="nav-link" onclick="showPage('blog')">Blog</button>
- 
     </div>
     <button class="nav-cta" onclick="showPage('comparador')">Comparar →</button>
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="nav-link" onclick="showPage('home');toggleMobileMenu()">Inicio</button>
+  <button class="nav-link" onclick="showPage('comparador');toggleMobileMenu()">Comparador</button>
+  <button class="nav-link" onclick="showPage('reviews');toggleMobileMenu()">Análisis</button>
+  <button class="nav-link" onclick="showPage('descuentos');toggleMobileMenu()">Descuentos <span class="nav-badge">4</span></button>
+  <button class="nav-link" onclick="showPage('herramientas');toggleMobileMenu()">Herramientas</button>
+  <button class="nav-link" onclick="showPage('blog');toggleMobileMenu()">Blog</button>
+  <button class="nav-cta-full" onclick="showPage('comparador');toggleMobileMenu()">Comparar Empresas →</button>
+</div>
  
 <!-- ═══════════════════════════════════════ PAGE: HOME -->
 <div id="page-home" class="page active">
@@ -2801,15 +2937,35 @@ const blogPosts = [
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-  
+ 
   const page = document.getElementById('page-' + pageId);
   if (page) page.classList.add('active');
-  
-  const navLink = document.querySelector(`.nav-link[onclick="showPage('${pageId}')"]`);
-  if (navLink) navLink.classList.add('active');
-  
+ 
+  // Mark active in desktop nav AND mobile menu
+  document.querySelectorAll(`.nav-link[onclick*="showPage('${pageId}')"]`).forEach(l => l.classList.add('active'));
+ 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+ 
+function toggleMobileMenu() {
+  const btn  = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  // Prevent body scroll when menu is open
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+ 
+// Close mobile menu on outside click
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileMenu');
+  const btn  = document.getElementById('hamburgerBtn');
+  if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
  
 // ═══════════════════════════════════════
 // TABLE RENDERING
@@ -3386,4 +3542,3 @@ function calcComparador() {
  
 </body>
 </html>
- 
