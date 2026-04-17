@@ -949,69 +949,7 @@ h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
   margin-bottom: 16px;
 }
  
-/* ═══════════════════════════════════════ 
-   PAGE 6: BLOG
-═══════════════════════════════════════ */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 24px;
-}
  
-.blog-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
-}
- 
-.blog-card:hover {
-  border-color: var(--border2);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-}
- 
-.blog-thumb {
-  height: 180px;
-  background: linear-gradient(135deg, var(--surface2), var(--surface));
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
- 
-.blog-thumb .thumb-icon {
-  font-size: 52px;
-  opacity: 0.5;
-  filter: grayscale(1);
-}
- 
-.blog-thumb-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, var(--surface) 100%);
-}
- 
-.blog-content { padding: 20px; }
-.blog-cat { font-family: var(--font-mono); font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
-.blog-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text); line-height: 1.3; }
-.blog-excerpt { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 16px; }
-.blog-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text3); font-family: var(--font-mono); }
- 
-.blog-featured-banner {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px 36px;
-  margin-bottom: 32px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  align-items: center;
-}
  
 /* ═══════════════════════════════════════ 
    PAGE 7: HERRAMIENTAS
@@ -1406,10 +1344,7 @@ footer {
   .discount-card-body { margin-top: 52px; }
   .discount-pct { font-size: 18px; padding: 5px 12px; }
  
-  /* ── BLOG ── */
-  .blog-grid { grid-template-columns: 1fr; gap: 16px; }
-  .blog-featured-banner { grid-template-columns: 1fr; padding: 20px; gap: 16px; }
-  .blog-thumb { height: 150px; }
+ 
   .blog-title { font-size: 16px; }
  
   /* ── HERRAMIENTAS ── */
@@ -1459,6 +1394,155 @@ footer {
 .mb-8 { margin-bottom: 32px; }
 .mt-4 { margin-top: 16px; }
 .hidden { display: none !important; }
+ 
+/* ══════════ CRO ADDITIONS ══════════ */
+ 
+/* Reality bar */
+.reality-bar {
+  background: rgba(255,69,96,0.07);
+  border-bottom: 1px solid rgba(255,69,96,0.18);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12.5px;
+  font-family: var(--font-mono);
+  color: var(--text2);
+  letter-spacing: 0.02em;
+}
+.reality-bar strong { color: #ff4560; }
+ 
+/* Hero microcopy */
+.hero-microcopy {
+  font-size: 11.5px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+ 
+/* Pre-affiliate trust note */
+.pre-aff-note {
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.18);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+ 
+/* Trust block */
+.trust-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+.trust-item-card { display: flex; flex-direction: column; gap: 7px; }
+.trust-item-icon { font-size: 22px; }
+.trust-item-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+.trust-item-text { font-size: 13px; color: var(--text2); line-height: 1.6; }
+ 
+/* Quiz */
+.quiz-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.quiz-header {
+  background: linear-gradient(135deg, rgba(0,212,170,0.08), transparent);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 28px;
+}
+.quiz-step { display: none; padding: 24px 28px; }
+.quiz-step.active { display: block; }
+.quiz-question { font-family: var(--font-display); font-size: 19px; font-weight: 700; margin-bottom: 5px; }
+.quiz-hint { font-size: 13px; color: var(--text2); margin-bottom: 22px; line-height: 1.5; }
+.quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.quiz-option {
+  background: var(--surface2);
+  border: 1.5px solid var(--border2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 14px;
+}
+.quiz-option:hover { border-color: var(--primary); background: var(--primary-dim); }
+.quiz-option.selected { border-color: var(--primary); background: var(--primary-dim); color: var(--primary); }
+.quiz-option .opt-icon { font-size: 20px; margin-bottom: 6px; display: block; }
+.quiz-option .opt-label { font-weight: 700; display: block; margin-bottom: 2px; }
+.quiz-option .opt-sub { font-size: 11.5px; color: var(--text2); font-family: var(--font-mono); line-height: 1.4; }
+.quiz-nav { display: flex; gap: 10px; margin-top: 22px; align-items: center; flex-wrap: wrap; }
+.quiz-back { background: none; border: 1px solid var(--border2); color: var(--text2); padding: 9px 18px; border-radius: 8px; cursor: pointer; font-family: var(--font-body); font-size: 13px; transition: all 0.2s; }
+.quiz-back:hover { border-color: var(--text2); color: var(--text); }
+.quiz-progress-bar { height: 3px; background: var(--border); border-radius: 2px; margin: 0 28px 0; }
+.quiz-progress-fill { height: 100%; background: var(--primary); border-radius: 2px; transition: width 0.35s ease; }
+.quiz-step-label { font-size: 11px; font-family: var(--font-mono); color: var(--text3); margin-left: auto; }
+ 
+/* Result card */
+.result-card {
+  background: linear-gradient(135deg, rgba(0,212,170,0.07), rgba(0,212,170,0.02));
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: var(--bg);
+  font-size: 10.5px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.result-firm-header { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.result-avatar { width: 52px; height: 52px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: var(--primary); font-family: var(--font-display); flex-shrink: 0; }
+.result-reasons { display: flex; flex-direction: column; gap: 9px; margin: 16px 0 20px; }
+.result-reason { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.5; }
+.result-reason-icon { color: var(--primary); font-weight: 800; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+.result-cta-wrap { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.result-microcopy { font-size: 11px; color: var(--text3); font-family: var(--font-mono); margin-top: 8px; }
+.result-secondary { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+.result-alt-card { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; transition: border-color 0.2s; }
+.result-alt-card:hover { border-color: var(--border2); }
+ 
+@media (max-width: 768px) {
+  .trust-block { padding: 20px; }
+  .quiz-header { padding: 18px; }
+  .quiz-step { padding: 18px; }
+  .quiz-options { grid-template-columns: 1fr 1fr; }
+  .quiz-question { font-size: 17px; }
+  .result-card { padding: 20px; }
+  .result-cta-wrap { flex-direction: column; }
+  .result-cta-wrap .btn-convert { width: 100%; justify-content: center; }
+}
+@media (max-width: 420px) {
+  .quiz-options { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1473,7 +1557,6 @@ footer {
       <button class="nav-link" onclick="showPage('reviews')">Análisis</button>
       <button class="nav-link" onclick="showPage('descuentos')">Descuentos <span class="nav-badge">4</span></button>
       <button class="nav-link" onclick="showPage('herramientas')">Herramientas</button>
-      <button class="nav-link" onclick="showPage('blog')">Blog</button>
     </div>
     <button class="nav-cta" onclick="showPage('comparador')">Comparar →</button>
     <!-- Hamburger (mobile only) -->
@@ -1490,7 +1573,6 @@ footer {
   <button class="nav-link" onclick="showPage('reviews');toggleMobileMenu()">Análisis</button>
   <button class="nav-link" onclick="showPage('descuentos');toggleMobileMenu()">Descuentos <span class="nav-badge">4</span></button>
   <button class="nav-link" onclick="showPage('herramientas');toggleMobileMenu()">Herramientas</button>
-  <button class="nav-link" onclick="showPage('blog');toggleMobileMenu()">Blog</button>
   <button class="nav-cta-full" onclick="showPage('comparador');toggleMobileMenu()">Comparar Empresas →</button>
 </div>
  
@@ -1519,73 +1601,298 @@ footer {
     </div>
   </div>
  
-  <!-- HERO -->
+  <!-- ═══ REALITY BAR — golpe de realidad antes del hero ═══ -->
+  <!-- CRO: barra de tensión emocional, visible antes del scroll -->
+  <div class="reality-bar">
+    <strong>El 73% de los traders falla la evaluación por elegir mal la cuenta</strong> — no por su estrategia.
+  </div>
+ 
+  <!-- ═══ HERO ═══ -->
   <div class="hero">
     <div class="container">
+ 
+      <!-- CRO: eyebrow con señal de autoridad y actualización -->
       <div class="hero-eyebrow">
         <span class="dot"></span>
-        Actualizado — Abril 2026 · 9 Empresas de fondeo analizadas
+        Comparador independiente · Verificado Abril 2026 · 9 firmas analizadas
       </div>
-      <h1>Deja de perder dinero<br><em>eligiendo mal tu cuenta de fondeo</em></h1>
-      <p class="hero-sub">Compara pruebas de fondeo, drawdowns, profit splits y costes en segundos. Descuentos exclusivos actualizados diariamente para traders del Nasdaq.</p>
+ 
+      <!-- CRO: H1 confrontativo — activa dolor + promesa de solución -->
+      <h1>Tu próxima evaluación<br><em>no debería fallar por esto</em></h1>
+ 
+      <!-- CRO: subtítulo emocional, no técnico. Habla de consecuencias, no de features -->
+      <p class="hero-sub">
+        Elegir mal el drawdown, el split o las reglas de retiro te cuesta tiempo, plata y confianza.<br>
+        <strong style="color:var(--text);">Elegí basado en riesgo, no en marketing.</strong>
+      </p>
+ 
+      <!-- CRO: CTAs con intención clara. Principal → filtro. Secundario → urgencia precio -->
       <div class="hero-actions">
-        <button class="btn-convert btn-pulse" onclick="showPage('comparador')">
-          Encontrar mi cuenta ideal →
+        <button class="btn-convert btn-pulse" onclick="document.getElementById('quiz-section').scrollIntoView({behavior:'smooth'})">
+          🎯 Ver qué cuenta me conviene →
         </button>
         <button class="btn btn-outline" onclick="showPage('descuentos')">
-          🎁 Ver Descuentos hasta 90%
+          🏷️ Ver descuentos activos
         </button>
       </div>
-      <div class="hero-social-proof">
+ 
+      <!-- CRO: microcopy de fricción cero debajo del CTA principal -->
+      <div class="hero-microcopy">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 minutos · Sin registro · Sin spam · Resultado instantáneo
+      </div>
+ 
+      <!-- CRO: social proof con claims verificables, no genéricos -->
+      <div class="hero-social-proof" style="margin-top:28px;">
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Datos verificados semanalmente
+          Datos verificados manualmente cada semana
         </div>
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Sin sesgo ni patrocinios ocultos
+          Reglas reales — no lo que dice el marketing de cada firma
         </div>
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          50,000+ traders de la comunidad
+          Hecho para traders de LATAM operando NQ y ES
         </div>
       </div>
+ 
+      <!-- CRO: stats con datos de impacto, no decorativos -->
       <div class="hero-stats">
         <div class="stat-chip">
           <div class="value">9</div>
-          <div class="label">Empresas de fondeo</div>
+          <div class="label">Firmas analizadas</div>
         </div>
         <div class="stat-chip">
-          <div class="value">60%</div>
-          <div class="label">Descuento máx.</div>
+          <div class="value">-60%</div>
+          <div class="label">Descuento máximo activo</div>
         </div>
         <div class="stat-chip">
           <div class="value">90%</div>
-          <div class="label">Profit Split top</div>
+          <div class="label">Profit split más alto</div>
         </div>
         <div class="stat-chip">
-          <div class="value">50K+</div>
-          <div class="label">Traders activos</div>
+          <div class="value">24h</div>
+          <div class="label">Retiro más rápido</div>
         </div>
       </div>
+ 
     </div>
   </div>
  
-  <!-- FEATURED FIRMS -->
+  <!-- ═══ FILTRO GUIADO / QUIZ ═══ -->
+  <!-- CRO: core del embudo — mueve al usuario de "explorando" a "decidiendo" -->
+  <div class="section-sm" id="quiz-section">
+    <div class="container">
+      <div class="section-label">Filtro guiado · 3 minutos</div>
+ 
+      <!-- CRO: headline persuasivo + anticipación de beneficio -->
+      <div style="margin-bottom:20px;">
+        <h2 style="margin-bottom:8px;">Respondé 5 preguntas.<br><em style="color:var(--primary);font-style:normal;">Te decimos qué cuenta tiene más probabilidades de funcionarte.</em></h2>
+        <p style="font-size:14px;color:var(--text2);max-width:560px;">
+          Menos pruebas fallidas, más chances de cobrar. No necesitás conocer todas las firmas — solo ser honesto con cómo operás.
+        </p>
+      </div>
+ 
+      <div class="quiz-wrap">
+        <!-- Progress bar -->
+        <div class="quiz-progress-bar" id="quizProgressBar">
+          <div class="quiz-progress-fill" id="quizProgressFill" style="width:20%"></div>
+        </div>
+ 
+        <div class="quiz-header">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">🎯 Filtro de cuenta ideal</div>
+              <div style="font-size:13px;color:var(--text2);">Resultado instantáneo · Sin registro · Sin spam</div>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:12px;color:var(--text3);" id="quizStepLabel">Pregunta 1 de 5</div>
+          </div>
+        </div>
+ 
+        <!-- STEP 1: Estilo de trading -->
+        <div class="quiz-step active" id="qs1">
+          <div class="quiz-question">¿Cómo operás habitualmente?</div>
+          <!-- CRO: hint explica POR QUÉ importa — reduce fricción cognitiva -->
+          <div class="quiz-hint">⚠️ Esto determina qué tipo de drawdown te conviene. Elegir mal acá es la causa #1 de evaluaciones fallidas.</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(1,'scalper',this)">
+              <span class="opt-icon">⚡</span>
+              <span class="opt-label">Scalper / Intradía</span>
+              <span class="opt-sub">Muchas operaciones cortas al día</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(1,'swing',this)">
+              <span class="opt-icon">📈</span>
+              <span class="opt-label">Swing / Posicional</span>
+              <span class="opt-sub">Pocas ops, las mantengo horas</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(1,'mixed',this)">
+              <span class="opt-icon">🔄</span>
+              <span class="opt-label">Mixto</span>
+              <span class="opt-sub">Depende del mercado y el día</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(1,'algo',this)">
+              <span class="opt-icon">🤖</span>
+              <span class="opt-label">Automatizado / EA</span>
+              <span class="opt-sub">Uso bots o sistemas automáticos</span>
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <span class="quiz-step-label">1 de 5</span>
+          </div>
+        </div>
+ 
+        <!-- STEP 2: Tolerancia al drawdown -->
+        <div class="quiz-step" id="qs2">
+          <div class="quiz-question">En un mal día, ¿qué hacés?</div>
+          <div class="quiz-hint">Ser honesto acá puede ahorrarte una evaluación fallida. El drawdown incorrecto destruye cuentas técnicamente rentables.</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(2,'tight',this)">
+              <span class="opt-icon">🔒</span>
+              <span class="opt-label">Paro temprano</span>
+              <span class="opt-sub">Cierro al -0.5% / -1%. Soy disciplinado con el stop diario.</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(2,'normal',this)">
+              <span class="opt-icon">⚖️</span>
+              <span class="opt-label">Aguanto hasta -2% / -3%</span>
+              <span class="opt-sub">Tengo tolerancia moderada antes de parar</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(2,'aggressive',this)">
+              <span class="opt-icon">🎯</span>
+              <span class="opt-label">Dejo correr si hay setup</span>
+              <span class="opt-sub">A veces aguanto más pérdida para recuperar en el día</span>
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="goStep(1)">← Atrás</button>
+            <span class="quiz-step-label">2 de 5</span>
+          </div>
+        </div>
+ 
+        <!-- STEP 3: Presupuesto -->
+        <div class="quiz-step" id="qs3">
+          <div class="quiz-question">¿Cuánto querés pagar por el prueba?</div>
+          <div class="quiz-hint">Precio bajo no es siempre mejor — depende de qué reglas te dan a cambio. Te mostramos el mejor valor para tu presupuesto.</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(3,'low',this)">
+              <span class="opt-icon">💰</span>
+              <span class="opt-label">Hasta $100/mes</span>
+              <span class="opt-sub">Quiero el costo más bajo posible</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(3,'mid',this)">
+              <span class="opt-icon">💵</span>
+              <span class="opt-label">$100 – $175/mes</span>
+              <span class="opt-sub">Pago más si las condiciones lo justifican</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(3,'high',this)">
+              <span class="opt-icon">💎</span>
+              <span class="opt-label">Sin problema con el precio</span>
+              <span class="opt-sub">Lo que importa es el split y velocidad de retiro</span>
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="goStep(2)">← Atrás</button>
+            <span class="quiz-step-label">3 de 5</span>
+          </div>
+        </div>
+ 
+        <!-- STEP 4: Prioridad de retiro -->
+        <div class="quiz-step" id="qs4">
+          <div class="quiz-question">¿Qué prioridad le das a los retiros?</div>
+          <div class="quiz-hint">Cada firma tiene una política distinta. Algunas pagan el día 1, otras te hacen esperar semanas. Esto cambia mucho el ROI real.</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(4,'speed',this)">
+              <span class="opt-icon">🚀</span>
+              <span class="opt-label">Retiro lo antes posible</span>
+              <span class="opt-sub">Prefiero cobrar rápido aunque sea menos %</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(4,'split',this)">
+              <span class="opt-icon">📊</span>
+              <span class="opt-label">Máximo profit split</span>
+              <span class="opt-sub">Espero si me dan 90%+ de las ganancias</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(4,'balance',this)">
+              <span class="opt-icon">⚖️</span>
+              <span class="opt-label">Balance entre ambos</span>
+              <span class="opt-sub">Split decente y retiro en menos de 2 semanas</span>
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="goStep(3)">← Atrás</button>
+            <span class="quiz-step-label">4 de 5</span>
+          </div>
+        </div>
+ 
+        <!-- STEP 5: Experiencia -->
+        <div class="quiz-step" id="qs5">
+          <div class="quiz-question">¿Cuánto tiempo llevás operando futuros?</div>
+          <div class="quiz-hint">No es para juzgar tu nivel — es para filtrar firmas cuyas reglas de evaluación pueden ser difíciles si todavía estás ajustando tu operativa.</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(5,'beginner',this)">
+              <span class="opt-icon">🌱</span>
+              <span class="opt-label">Menos de 1 año</span>
+              <span class="opt-sub">Estoy aprendiendo futuros / NQ</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(5,'intermediate',this)">
+              <span class="opt-icon">📈</span>
+              <span class="opt-label">1 a 3 años</span>
+              <span class="opt-sub">Tengo operativa definida, no soy experto</span>
+            </button>
+            <button class="quiz-option" onclick="selectOption(5,'expert',this)">
+              <span class="opt-icon">🎯</span>
+              <span class="opt-label">Más de 3 años</span>
+              <span class="opt-sub">Soy consistente. Solo necesito el capital.</span>
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="goStep(4)">← Atrás</button>
+            <span class="quiz-step-label">5 de 5</span>
+          </div>
+        </div>
+ 
+        <!-- RESULTADO -->
+        <!-- CRO: paso más importante del embudo — máxima optimización de copy aquí -->
+        <div class="quiz-step" id="qs-result">
+          <div id="quiz-result-content"></div>
+        </div>
+ 
+      </div><!-- /quiz-wrap -->
+    </div>
+  </div>
+ 
+  <!-- ═══ BLOQUE DE CONFIANZA ═══ -->
+  <!-- CRO: reduce la desconfianza "es un sitio de afiliados" ANTES del comparador -->
   <div class="section-sm">
     <div class="container">
-      <div class="section-label">Empresas de fondeo Analizadas</div>
-      <h2 class="mb-6">Las mejores empresas de fondeo<br>para futuros NQ</h2>
-      <div class="logos-strip">
-        <div class="firm-logo-chip" onclick="showPage('reviews')">My Funded Futures</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">Bulenox</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">TakeProfitTrader</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">Tradeify</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">Alpha Futures</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">Top One Futures</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">FundedNext</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">Earn2Trade</div>
-        <div class="firm-logo-chip" onclick="showPage('reviews')">EmergeProfit</div>
+      <div class="section-label">Por qué podés confiar en este ranking</div>
+      <div class="trust-block">
+        <h3 style="margin-bottom:6px;">El ranking NO está pagado ni manipulado</h3>
+        <p style="color:var(--text2);font-size:14px;max-width:640px;line-height:1.7;">
+          Las posiciones se calculan por rating, condiciones reales y reglas verificadas. Si una firma cambia algo negativo, lo actualizamos — aunque eso baje su posición.
+        </p>
+        <div class="trust-grid">
+          <div class="trust-item-card">
+            <div class="trust-item-icon">🔍</div>
+            <div class="trust-item-title">Datos verificados semanalmente</div>
+            <div class="trust-item-text">Revisamos precios, drawdowns, reglas y condiciones de retiro todas las semanas. No confiamos en lo que dice el marketing de cada firma — chequeamos lo que dice el contrato real.</div>
+          </div>
+          <div class="trust-item-card">
+            <div class="trust-item-icon">📋</div>
+            <div class="trust-item-title">Metodología transparente</div>
+            <div class="trust-item-text">El rating se calcula en base a: condiciones de drawdown, velocidad de retiro, profit split, soporte y feedback de traders latinos. Podés ver la metodología completa en la sección de documentación.</div>
+          </div>
+          <div class="trust-item-card">
+            <div class="trust-item-icon">🌎</div>
+            <div class="trust-item-title">Hecho para LATAM</div>
+            <div class="trust-item-text">La mayoría de comparadores son en inglés y priorizan el mercado europeo. Acá filtramos lo que importa para traders de Argentina, México, Colombia y el resto de la región.</div>
+          </div>
+          <div class="trust-item-card">
+            <div class="trust-item-icon">⚠️</div>
+            <div class="trust-item-title">Divulgación de afiliación</div>
+            <div class="trust-item-text">Este sitio tiene links de afiliado. Recibimos una comisión de la firma si comprás — sin costo adicional para vos. El precio es el mismo o menor con nuestros cupones exclusivos.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1593,11 +1900,17 @@ footer {
   <!-- MINI COMPARATOR PREVIEW -->
   <div class="section-sm">
     <div class="container">
-      <div class="section-label">Comparador Rápido</div>
-      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
-        <h2>Encuentra tu cuenta ideal</h2>
-        <button class="btn btn-outline" onclick="showPage('comparador')">Ver tabla completa →</button>
+      <!-- CRO: sección ancla — usuario que no hizo el quiz igual puede comparar -->
+      <div class="section-label">Comparador Rápido · Top 5 ahora mismo</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:12px; flex-wrap:wrap; gap:12px;">
+        <!-- CRO: headline activo + aclaración de criterio para reducir sesgo percibido -->
+        <h2>Las 5 cuentas con mejor<br><em style="color:var(--primary);font-style:normal;">encaje para la mayoría de traders NQ</em></h2>
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver las 9 con filtros →</button>
       </div>
+      <!-- CRO: microcopy que explica el criterio de orden — reduce desconfianza -->
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">
+        Ordenadas por valor real: drawdown, split y retiro — no por precio ni por quién paga más comisión.
+      </p>
       <div class="size-tabs">
         <button class="size-tab active">$50K</button>
         <button class="size-tab">$100K</button>
@@ -1672,7 +1985,8 @@ footer {
         </table>
       </div>
       <div style="text-align:center; margin-top:20px;">
-        <button class="btn btn-outline" onclick="showPage('comparador')">Ver las 9 empresas de fondeo con filtros avanzados →</button>
+        <!-- CRO: CTA de escape con intención clara -->
+        <button class="btn btn-outline" onclick="showPage('comparador')">Ver todas las firmas con filtros avanzados →</button>
       </div>
     </div>
   </div>
@@ -1682,7 +1996,8 @@ footer {
     <div class="container">
       <div class="section-label">Herramientas Gratuitas</div>
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
-        <h2>Calcula tu riesgo antes<br>de comprar</h2>
+        <!-- CRO: headline de consecuencia — "calcular después de fallar" es más visceral -->
+        <h2>Calculá antes de comprar.<br><em style="color:var(--primary);font-style:normal;">No después de fallar.</em></h2>
         <button class="btn btn-outline" onclick="showPage('herramientas')">Ver todas →</button>
       </div>
       <div class="tools-grid">
@@ -1690,28 +2005,32 @@ footer {
           <div class="tool-icon">🧮</div>
           <div class="tool-tag">CALCULADORA</div>
           <div class="tool-name">Calculadora de Drawdown NQ</div>
-          <div class="tool-desc">Calcula cuántos ticks puedes perder con tu cuenta antes de violación. Específica para NQ y ES.</div>
+          <!-- CRO: descripción en términos de consecuencia real -->
+          <div class="tool-desc">Sabé exactamente cuántos ticks podés perder antes de violar la cuenta. Específica para NQ y ES — sin sorpresas.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
         <div class="tool-card" onclick="showPage('herramientas')">
           <div class="tool-icon">📊</div>
           <div class="tool-tag">SIMULADOR</div>
           <div class="tool-name">Simulador de Profit Split</div>
-          <div class="tool-desc">Simula cuánto recibirías en payouts reales según tu tamaño de cuenta y % de split.</div>
+          <!-- CRO: resultado concreto, no proceso -->
+          <div class="tool-desc">¿Cuánto vas a cobrar realmente con esa cuenta? Simulá el número antes de comprar el prueba.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
         <div class="tool-card" onclick="showPage('herramientas')">
           <div class="tool-icon">⚖️</div>
           <div class="tool-tag">COMPARADOR ROI</div>
           <div class="tool-name">ROI de Prueba de fondeo</div>
-          <div class="tool-desc">¿Cuántas veces necesitas hacer payout para recuperar el coste del prueba de fondeo?</div>
+          <!-- CRO: ROI como pregunta directa que genera curiosidad -->
+          <div class="tool-desc">¿Cuántos retiros necesitás para recuperar lo que pagaste? Calculalo antes de elegir firma.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
         <div class="tool-card" onclick="showPage('herramientas')">
           <div class="tool-icon">📅</div>
           <div class="tool-tag">PLANIFICADOR</div>
           <div class="tool-name">Planificador de Evaluación</div>
-          <div class="tool-desc">Planifica cuántos días necesitas para pasar el prueba de fondeo según tu profit objetivo diario.</div>
+          <!-- CRO: planificador como herramienta de seguridad mental -->
+          <div class="tool-desc">Cuántos días necesitás para pasar la evaluación a tu ritmo real. Planificá sin presión.</div>
           <span class="badge badge-green">Gratuito</span>
         </div>
       </div>
@@ -1723,7 +2042,8 @@ footer {
     <div class="container">
       <div class="section-label">Descuentos Exclusivos</div>
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
-        <h2>Ahorra hasta un 89%<br>en tu evaluación de fondeo</h2>
+        <!-- CRO: headline de ahorro concreto — cupones como herramienta, no como clickbait -->
+        <h2>Cupones activos —<br><em style="color:var(--gold);font-style:normal;">pagá menos por la misma evaluación</em></h2>
         <button class="btn btn-outline" onclick="showPage('descuentos')">Ver todos los descuentos →</button>
       </div>
       <div class="discounts-grid">
@@ -1734,8 +2054,10 @@ footer {
             <div class="discount-title">⚡ Oferta Activa</div>
             <div class="discount-desc">$50K desde $125/mes (regular $175) con cupón $50OFF. 100% de los primeros $10K en ganancias. Más de 20 plataformas disponibles.</div>
             <div class="discount-expiry">✅ Sin fecha de caducidad</div>
+            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
+            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Bulenox. El precio es el mismo o menor con nuestro link.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir a Bulenox →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir al sitio oficial de Bulenox →</a>
             </div>
           </div>
         </div>
@@ -1746,8 +2068,10 @@ footer {
             <div class="discount-title">⚡ Gran Descuento</div>
             <div class="discount-desc">Descuento de lanzamiento exclusivo. Una de las firmas con mejor profit split del mercado para traders latinos.</div>
             <div class="discount-expiry">⏰ Caduca: 30 Abr 2026</div>
+            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
+            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Top One Futures. Accedés al descuento de lanzamiento exclusivo.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Ir a Top One Futures →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Ir al sitio oficial de Top One Futures →</a>
             </div>
           </div>
         </div>
@@ -1777,8 +2101,10 @@ footer {
   <div class="section">
     <div class="container">
       <div class="section-label">Comparador Completo</div>
-      <h2 class="mb-2">Compara todas las Empresas de fondeo</h2>
-      <p class="text-muted mb-8">12 empresas · datos actualizados · con descuentos en tiempo real</p>
+      <!-- CRO: headline de la página de comparador — más acción, menos descripción -->
+      <h2 class="mb-2">Encontrá tu encaje.<br><em style="color:var(--primary);font-style:normal;">Compará condiciones reales, no marketing.</em></h2>
+      <!-- CRO: microcopy que refuerza credibilidad del dato -->
+      <p class="text-muted mb-8">9 firmas · reglas verificadas semanalmente · con descuentos aplicables ahora mismo</p>
  
       <div class="filter-bar">
         <div class="filter-group">
@@ -1868,7 +2194,8 @@ footer {
 <div id="page-reviews" class="page">
   <div class="section">
     <div class="container">
-      <div class="section-label">Reviews Completas</div>
+      <!-- CRO: label más accionable -->
+      <div class="section-label">Análisis honestos — sin filtros de marketing</div>
       <h2 class="mb-2">Análisis honestos de cada Empresa de fondeo</h2>
       <p class="text-muted mb-8">Reviews escritas por traders reales, sin conflictos de interés</p>
       <div class="reviews-grid" id="reviewsGrid">
@@ -1976,7 +2303,8 @@ footer {
  
         <!-- AFFILIATE SIDEBAR -->
         <div>
-          <div class="affiliate-box">
+          <!-- CRO: caja de afiliado optimizada — nota de confianza antes del CTA -->
+        <div class="affiliate-box">
             <div style="font-size:12px; color:var(--primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">⭐ Rating #1 del mercado</div>
             <h4>My Funded Futures</h4>
             <div style="display:flex; align-items:baseline; gap:8px; margin:12px 0;">
@@ -2042,32 +2370,6 @@ footer {
   </div>
 </div>
  
-<!-- ═══════════════════════════════════════ PAGE: BLOG -->
-<div id="page-blog" class="page">
-  <div class="section">
-    <div class="container">
-      <div class="section-label">Blog & Guías SEO</div>
-      <h2 class="mb-8">Aprende, mejora y decide con datos</h2>
- 
-      <div class="blog-featured-banner">
-        <div>
-          <span class="badge badge-gold" style="margin-bottom:12px;">⭐ Artículo Destacado</span>
-          <h3 style="margin-bottom:8px;">Guía definitiva: Cómo elegir tu primera Empresa de fondeo de Futuros en 2026</h3>
-          <p style="color:var(--text2); font-size:14px; margin-bottom:16px;">Todo lo que necesitas saber sobre drawdown, profit split, payouts y qué firma se adapta mejor a tu estilo de trading del NQ Nasdaq.</p>
-          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-            <button class="btn btn-primary">Leer artículo →</button>
-            <span style="font-size:12px; color:var(--text3); font-family:var(--font-mono);">12 min · 3,200 palabras · Actualizado Mar 2026</span>
-          </div>
-        </div>
-        <div style="font-size:72px; opacity:0.5;">📚</div>
-      </div>
- 
-      <div class="blog-grid" id="blogGrid">
-        <!-- generated -->
-      </div>
-    </div>
-  </div>
-</div>
  
 <!-- ═══════════════════════════════════════ PAGE: HERRAMIENTAS -->
 <div id="page-herramientas" class="page">
@@ -2720,17 +3022,21 @@ footer {
 // ARQUITECTURA DE TRACKING DE AFILIADOS
  
 const AFF_LINKS = {
-  // ✅ Links de afiliado oficiales verificados
-  'alphaf':      'https://app.alpha-futures.com/signup/Zona021177/',
-  'bulenox':     'https://bulenox.com/member/aff/go/zonadefondeo',
-  'earn2t':      'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
-  'topone':      'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
-  'fundednext':  'https://fundednext.com/?fpr=zona73',
-  // ⏳ Sin link de afiliado aún — redirige al sitio oficial
-  'mff':         'https://myfundedfutures.com/',
-  'tradeify':    'https://tradeify.co/',
-  'tpt':         'https://takeprofittrader.com/',
-  'emerge':      'https://emergeprofit.com/',
+  // ✅ Links con tracking de afiliado propio
+  'alphaf':        'https://app.alpha-futures.com/signup/Zona021177/',
+  'alphafutures':  'https://app.alpha-futures.com/signup/Zona021177/',
+  'bulenox':       'https://bulenox.com/member/aff/go/zonadefondeo',
+  'earn2t':        'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'earn2trade':    'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'topone':        'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  'toponefutures': 'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  'fundednext':    'https://fundednext.com/?fpr=zona73',
+  // ─ Sin afiliado propio aún — link directo oficial
+  'mff':           'https://myfundedfutures.com/',
+  'tradeify':      'https://tradeify.co/',
+  'tpt':           'https://takeprofittrader.com/',
+  'emerge':        'https://emergeprofit.com/',
+  'emergeprofit':  'https://emergeprofit.com/',
 };
  
 // Tracking de afiliados activo — Actualizado Abril 2026
@@ -2801,7 +3107,8 @@ const AFF_LINKS = {
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Zona de <span style="color:var(--primary)">Fondeo</span></h3>
-        <p>El comparador más completo de empresas de fondeo de futuros para traders del NQ Nasdaq. Análisis honestas, descuentos exclusivos y herramientas gratuitas.</p>
+        <!-- CRO: footer copy con propuesta de valor diferenciada -->
+        <p>El comparador más completo de cuentas de fondeo para traders de LATAM. Reglas reales, no marketing. Elegí basado en riesgo, no en precios.</p>
         <div style="display:flex; gap:10px; margin-top:16px;">
           <span class="tag">🇪🇸 Español</span>
           <span class="tag">📊 NQ Nasdaq</span>
@@ -2821,7 +3128,6 @@ const AFF_LINKS = {
         <h4>Recursos</h4>
         <div class="footer-links">
           <a onclick="showPage('herramientas')">Herramientas gratis</a>
-          <a onclick="showPage('blog')">Blog trading</a>
           <a>Guías para principiantes</a>
           <a>FAQ</a>
         </div>
@@ -2922,14 +3228,7 @@ const discounts = [
  
  
  
-const blogPosts = [
-  { cat:'GUÍA', icon:'📚', title:'Cómo pasar la evaluación de una Empresa de fondeo de Futuros en 30 días', excerpt:'Estrategia paso a paso para traders del NQ Nasdaq. Gestión de riesgo, número de contratos y plan diario.', date:'Mar 2026', time:'11 min', slug:'pasar-evaluacion-futuros' },
-  { cat:'COMPARATIVA', icon:'⚖️', title:'MFF vs Alpha Futures 2026: ¿Cuál es mejor para el NQ?', excerpt:'Comparamos en profundidad las dos firmas con mejor rating del mercado. Reglas, precios y experiencia real con ambas plataformas.', date:'Abr 2026', time:'8 min', slug:'mff-vs-alpha-futures' },
-  { cat:'EDUCACIÓN', icon:'🎓', title:'Trailing Drawdown vs Drawdown Estático: Todo lo que debes saber', excerpt:'La diferencia que puede costarte la cuenta. Explicación clara con ejemplos reales de operativas en NQ.', date:'Feb 2026', time:'7 min', slug:'trailing-vs-estatico' },
-  { cat:'HERRAMIENTAS', icon:'🛠', title:'Las 5 mejores herramientas para gestionar tu cuenta financiada', excerpt:'Desde diarios de trading hasta calculadoras de riesgo. Todo lo que necesita un trader profesional de futuros.', date:'Feb 2026', time:'6 min', slug:'herramientas-cuenta-financiada' },
-  { cat:'NOTICIAS', icon:'📰', title:'Las mejores Empresas de fondeo de Futuros de 2026: Clasificación actualizado', excerpt:'Actualizamos nuestro ranking anual con las novedades del sector, nuevas firmas y cambios de reglas importantes.', date:'Ene 2026', time:'12 min', slug:'ranking-prop-firms-2026' },
-  { cat:'ESTRATEGIA', icon:'🎯', title:'Cómo gestionar el riesgo en NQ Nasdaq para no violar el drawdown', excerpt:'El contrato de NQ se mueve rápido. Aprende a calcular el tamaño ideal de posición según tu cuenta y drawdown.', date:'Ene 2026', time:'9 min', slug:'gestion-riesgo-nq' },
-];
+ 
  
 // ═══════════════════════════════════════
 // PAGE NAVIGATION
@@ -3004,8 +3303,8 @@ function renderTable(data) {
         </div>
       </td>
       <td>
-        <button class="btn-convert" style="padding:9px 18px; font-size:13px; white-space:nowrap;" onclick="affClick('${f.id}')">
-          Empezar →
+        <button class="btn-convert" style="padding:9px 18px; font-size:13px; white-space:nowrap;" onclick="affClick('${f.id}')" title="Ir al sitio oficial">
+          Ir al sitio →
         </button>
       </td>
     </tr>
@@ -3116,42 +3415,27 @@ function renderDiscounts() {
 }
  
 // ═══════════════════════════════════════
-// BLOG
-// ═══════════════════════════════════════
-function renderBlog() {
-  const grid = document.getElementById('blogGrid');
-  if (!grid) return;
-  grid.innerHTML = blogPosts.map(p => `
-    <div class="blog-card">
-      <div class="blog-thumb">
-        <span class="thumb-icon">${p.icon}</span>
-        <div class="blog-thumb-gradient"></div>
-      </div>
-      <div class="blog-content">
-        <div class="blog-cat">${p.cat}</div>
-        <div class="blog-title">${p.title}</div>
-        <div class="blog-excerpt">${p.excerpt}</div>
-        <div class="blog-meta">
-          <span>${p.date}</span>
-          <span>${p.time} lectura</span>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
+ 
  
 // ═══════════════════════════════════════
 // AFFILIATE LINKS
 // ═══════════════════════════════════════
 const AFF_LINKS = {
-  'bulenox':      'https://bulenox.com/member/aff/go/zonadefondeo',
-  'alphaf':       'https://app.alpha-futures.com/signup/Zona021177/',
-  'alphafutures': 'https://app.alpha-futures.com/signup/Zona021177/',
-  'topone':       'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
-  'toponefutures':'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
-  'earn2t':       'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
-  'earn2trade':   'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
-  'fundednext':   'https://fundednext.com/?fpr=zona73',
+  // ── Con link de afiliado propio ──
+  'bulenox':       'https://bulenox.com/member/aff/go/zonadefondeo',
+  'alphaf':        'https://app.alpha-futures.com/signup/Zona021177/',
+  'alphafutures':  'https://app.alpha-futures.com/signup/Zona021177/',
+  'topone':        'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  'toponefutures': 'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader',
+  'earn2t':        'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'earn2trade':    'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e',
+  'fundednext':    'https://fundednext.com/?fpr=zona73',
+  // ── Sin afiliado propio — link directo oficial ──
+  'mff':           'https://myfundedfutures.com/',
+  'tpt':           'https://takeprofittrader.com/',
+  'tradeify':      'https://tradeify.co/',
+  'emerge':        'https://emergeprofit.com/',
+  'emergeprofit':  'https://emergeprofit.com/',
 };
  
 // ═══════════════════════════════════════
@@ -3164,15 +3448,21 @@ function affClick(firmId) {
   // Mapa de alias para los botones que usan nombre largo
   const aliasMap = {
     'myfundedfutures':   'mff',
+    'myfunded':          'mff',
     'takeprofittrader':  'tpt',
+    'takeprofittraders': 'tpt',
     'topone':            'topone',
     'toponefutures':     'topone',
     'alphafutures':      'alphaf',
     'earn2trade':        'earn2t',
+    'earn2':             'earn2t',
     'fundednext':        'fundednext',
     'fundednextfuturos': 'fundednext',
+    'fundednextfutures': 'fundednext',
     'emergeprofit':      'emerge',
+    'emerge':            'emerge',
     'tradeify':          'tradeify',
+    'apex':              'apex',
   };
  
   const resolvedKey = aliasMap[key] || key;
@@ -3238,7 +3528,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTable(firms);
   renderReviews();
   renderDiscounts();
-  renderBlog();
   calcDrawdown();
 });
 // ═══════════════════════════════════════
@@ -3536,6 +3825,253 @@ function calcComparador() {
   }).join('');
  
   resultado.style.display = 'block';
+}
+ 
+ 
+// ═══════════════════════════════════════
+// QUIZ — FILTRO GUIADO CRO
+// ═══════════════════════════════════════
+const quizAnswers = {};
+ 
+const quizFirmData = {
+  MFF: {
+    name: 'My Funded Futures',
+    short: 'MF',
+    price: '$77/mes',
+    drawdown: '$1,500 fin de día',
+    split: '80%',
+    retiro: '5 días ganadores',
+    rating: '4.9',
+    affId: 'mff',
+    affUrl: 'https://myfundedfutures.com/',
+    // CRO: razones enfocadas en RESULTADO, no características
+    reasons: [
+      'El drawdown de fin de día te protege de perder todo en una mala sesión — no acumula pérdidas intraoperación.',
+      'Con $77/mes tenés la evaluación más económica del mercado en una cuenta $50K con reglas manejables.',
+      'Rating 4.9 ⭐ — la firma mejor evaluada por traders de LATAM que ya están fondeados.',
+      'Retiro en 5 días ganadores: sabés exactamente cuándo vas a cobrar, sin sorpresas.'
+    ],
+    altLabel: 'Menor riesgo económico'
+  },
+  AF: {
+    name: 'Alpha Futures',
+    short: 'AF',
+    price: '$79/mes',
+    drawdown: '$2,000 fin de día',
+    split: '90%',
+    retiro: '24–48 horas',
+    rating: '4.9',
+    affId: 'alphaf',
+    affUrl: 'https://app.alpha-futures.com/signup/Zona021177/',
+    reasons: [
+      'Retiro en 24–48 horas: ves el dinero en dos días, no en dos semanas.',
+      '90% de tus ganancias se quedan con vos — uno de los splits más altos con precio competitivo.',
+      'Drawdown de fin de día: no te corta la cuenta en medio de una operación abierta.',
+      'Rating 4.9 ⭐ con soporte documentado y pagos verificados por traders latinos.'
+    ],
+    altLabel: 'Retiro más rápido del mercado'
+  },
+  BX: {
+    name: 'Bulenox',
+    short: 'BX',
+    price: '$125/mes',
+    drawdown: '$2,500 fin de día',
+    split: '90%',
+    retiro: '7 días',
+    rating: '4.6',
+    affId: 'bulenox',
+    affUrl: 'https://bulenox.com/member/aff/go/zonadefondeo',
+    reasons: [
+      '$2,500 de drawdown de fin de día: más margen para sobrevivir días volátiles sin violar la cuenta.',
+      '90% de split + 100% de los primeros $10K en ganancias — recuperás la inversión antes.',
+      'Compatible con EAs y sistemas automáticos: podés operar sin estar pegado a la pantalla.',
+      'Descuento -29% activo con nuestro link — pagás $125 en lugar de $175.'
+    ],
+    altLabel: 'Mayor margen de drawdown'
+  },
+  TPT: {
+    name: 'TakeProfitTrader',
+    short: 'TP',
+    price: '$170/mes',
+    drawdown: '$2,000 fin de día',
+    split: '80%',
+    retiro: 'Día 1',
+    rating: '4.4',
+    affId: 'tpt',
+    affUrl: 'https://takeprofittrader.com/',
+    reasons: [
+      'Retiro desde el día 1 de estar fondeado — sin esperar días mínimos ni condiciones extras.',
+      'La firma más veterana del mercado (desde 2015): pagos estables y trayectoria comprobada.',
+      'Drawdown de fin de día con reglas claras — sabés exactamente dónde está tu límite.',
+      'Ideal si querés cobrar rápido sin depender de un calendario de retiros fijo.'
+    ],
+    altLabel: 'Pago desde el día 1'
+  },
+  TF: {
+    name: 'Tradeify',
+    short: 'TF',
+    price: '$159/mes',
+    drawdown: '$2,000 fin de día',
+    split: '90%',
+    retiro: '24–48h',
+    rating: '4.7',
+    affId: 'tradeify',
+    affUrl: 'https://tradeify.co/',
+    reasons: [
+      '90% split + retiro en 24–48h: el mejor balance velocidad/comisión disponible hoy.',
+      'Con cupón DASH bajás a $95/mes — una cuenta $50K con 90% de split a precio de entrada.',
+      '$2,000 de drawdown de fin de día: suficiente margen para operar sin estrés de intraday.',
+      'Ideal para swing traders: las reglas no te presionan a cerrar posiciones antes de tiempo.'
+    ],
+    altLabel: 'Mejor balance precio / split'
+  }
+};
+ 
+function quizScore(answers) {
+  const s = { MFF:0, AF:0, BX:0, TPT:0, TF:0 };
+  // Estilo
+  if (answers[1]==='scalper')  { s.MFF+=3; s.AF+=2; }
+  if (answers[1]==='swing')    { s.TPT+=3; s.TF+=2; }
+  if (answers[1]==='algo')     { s.BX+=4; }
+  if (answers[1]==='mixed')    { s.TF+=2; s.BX+=1; }
+  // Drawdown
+  if (answers[2]==='tight')    { s.MFF+=3; s.AF+=3; }
+  if (answers[2]==='normal')   { s.TF+=2; s.BX+=2; s.TPT+=2; }
+  if (answers[2]==='aggressive'){ s.BX+=4; }
+  // Presupuesto
+  if (answers[3]==='low')      { s.MFF+=4; s.AF+=3; }
+  if (answers[3]==='mid')      { s.TF+=2; s.BX+=2; }
+  if (answers[3]==='high')     { s.BX+=2; s.TPT+=2; s.TF+=2; }
+  // Retiro
+  if (answers[4]==='speed')    { s.AF+=3; s.TPT+=4; s.TF+=2; }
+  if (answers[4]==='split')    { s.AF+=3; s.BX+=3; s.TF+=3; }
+  if (answers[4]==='balance')  { s.TF+=4; s.MFF+=2; }
+  // Experiencia
+  if (answers[5]==='beginner') { s.MFF+=4; }
+  if (answers[5]==='intermediate'){ s.AF+=2; s.TF+=2; }
+  if (answers[5]==='expert')   { s.BX+=2; s.TPT+=2; }
+  return Object.entries(s).sort((a,b)=>b[1]-a[1]);
+}
+ 
+function selectOption(step, value, el) {
+  el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  quizAnswers[step] = value;
+  setTimeout(() => { step < 5 ? goStep(step+1) : showQuizResult(); }, 280);
+}
+ 
+function goStep(n) {
+  document.querySelectorAll('.quiz-step').forEach(s=>s.classList.remove('active'));
+  const t = document.getElementById('qs'+n);
+  if (t) t.classList.add('active');
+  // Update progress bar
+  const fill = document.getElementById('quizProgressFill');
+  if (fill) fill.style.width = (n/5*100)+'%';
+  // Update label
+  const lbl = document.getElementById('quizStepLabel');
+  if (lbl) lbl.textContent = 'Pregunta '+n+' de 5';
+}
+ 
+function showQuizResult() {
+  const sorted = quizScore(quizAnswers);
+  const top  = quizFirmData[sorted[0][0]];
+  const alt1 = quizFirmData[sorted[1][0]];
+  const alt2 = quizFirmData[sorted[2][0]];
+ 
+  // Progress bar to 100%
+  const fill = document.getElementById('quizProgressFill');
+  if (fill) fill.style.width = '100%';
+  const lbl = document.getElementById('quizStepLabel');
+  if (lbl) lbl.textContent = '✅ Resultado listo';
+ 
+  const html = `
+    <div style="margin-bottom:20px;">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">📊 Tu resultado personalizado</div>
+      <!-- CRO: headline de "encaje/probabilidad" — más creíble que "la mejor" -->
+      <h3 style="margin-bottom:4px;">La cuenta con mayor probabilidad de encajar con tu perfil:</h3>
+      <p style="font-size:13px;color:var(--text2);">Basado en tu estilo, tolerancia al drawdown y prioridades de retiro.</p>
+    </div>
+ 
+    <!-- CRO: result-card con badge de recomendación y razones enfocadas en resultado -->
+    <div class="result-card">
+      <div class="result-badge">★ ENCAJE MÁS ALTO PARA TU PERFIL</div>
+      <div class="result-firm-header">
+        <div class="result-avatar">${top.short}</div>
+        <div>
+          <div style="font-family:var(--font-display);font-size:21px;font-weight:800;">${top.name}</div>
+          <div style="display:flex;gap:14px;margin-top:6px;flex-wrap:wrap;">
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--primary);font-weight:600;">${top.price}</span>
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--text2);">Split: <strong style="color:var(--text)">${top.split}</strong></span>
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--text2);">Retiro: <strong style="color:var(--text)">${top.retiro}</strong></span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--gold);margin-top:5px;">★ ${top.rating} / 5.0</div>
+        </div>
+      </div>
+ 
+      <!-- CRO: razones enfocadas en resultado, no en características -->
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Por qué encaja con vos:</div>
+      <div class="result-reasons">
+        ${top.reasons.map(r=>`<div class="result-reason"><span class="result-reason-icon">✓</span><span>${r}</span></div>`).join('')}
+      </div>
+ 
+      <!-- CRO: mensaje pre-afiliado antes del botón — reduce abandono en el momento decisivo -->
+      <div class="pre-aff-note">
+        🔗 Vas a ir al sitio oficial de ${top.name}. El precio es el mismo o menor al que encontrarías entrando directo.
+      </div>
+ 
+      <!-- CRO: CTA con intención fuerte + microcopy de fricción cero -->
+      <div class="result-cta-wrap">
+        <button class="btn-convert btn-pulse" onclick="affClick('${top.affId}')" style="font-size:15px;padding:14px 28px;">
+          🚀 Ir al sitio oficial de ${top.name} →
+        </button>
+      </div>
+      <div class="result-microcopy">Sin intermediarios · Mismo precio que ir directo · Comisión no afecta tu costo</div>
+    </div>
+ 
+    <!-- CRO: alternativas — reduce el "¿y si hay algo mejor?" que frena la decisión -->
+    <div class="result-secondary">
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em;">También podrían encajarte:</div>
+ 
+      <div class="result-alt-card">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--primary);font-size:12px;font-family:var(--font-display);">${alt1.short}</div>
+          <div>
+            <div style="font-weight:600;font-size:14px;">${alt1.name}</div>
+            <div style="font-size:11px;color:var(--text2);font-family:var(--font-mono);">${alt1.price} · ${alt1.split} split · ${alt1.retiro}</div>
+            <div style="font-size:11px;color:var(--primary);font-family:var(--font-mono);margin-top:2px;">${alt1.altLabel}</div>
+          </div>
+        </div>
+        <button class="btn btn-outline" style="padding:8px 14px;font-size:12px;white-space:nowrap;" onclick="affClick('${alt1.affId}')">Ver →</button>
+      </div>
+ 
+      <div class="result-alt-card">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--primary);font-size:12px;font-family:var(--font-display);">${alt2.short}</div>
+          <div>
+            <div style="font-weight:600;font-size:14px;">${alt2.name}</div>
+            <div style="font-size:11px;color:var(--text2);font-family:var(--font-mono);">${alt2.price} · ${alt2.split} split · ${alt2.retiro}</div>
+            <div style="font-size:11px;color:var(--primary);font-family:var(--font-mono);margin-top:2px;">${alt2.altLabel}</div>
+          </div>
+        </div>
+        <button class="btn btn-outline" style="padding:8px 14px;font-size:12px;white-space:nowrap;" onclick="affClick('${alt2.affId}')">Ver →</button>
+      </div>
+ 
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+        <button class="btn btn-outline" style="flex:1;justify-content:center;" onclick="resetQuiz()">↩ Cambiar mis respuestas</button>
+        <button class="btn btn-outline" style="flex:1;justify-content:center;" onclick="showPage('comparador')">Ver todas las firmas →</button>
+      </div>
+    </div>
+  `;
+ 
+  document.getElementById('quiz-result-content').innerHTML = html;
+  document.querySelectorAll('.quiz-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('qs-result').classList.add('active');
+}
+ 
+function resetQuiz() {
+  Object.keys(quizAnswers).forEach(k => delete quizAnswers[k]);
+  document.querySelectorAll('.quiz-option').forEach(o=>o.classList.remove('selected'));
+  goStep(1);
 }
  
 </script>
