@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%0A%20%20%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%2523080b10%27%2F%3E%0A%20%20%3Crect%20x%3D%272%27%20y%3D%2718%27%20width%3D%275%27%20height%3D%2712%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%2F%3E%0A%20%20%3Crect%20x%3D%279%27%20y%3D%2711%27%20width%3D%275%27%20height%3D%2719%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%20opacity%3D%27.6%27%2F%3E%0A%20%20%3Crect%20x%3D%2716%27%20y%3D%274%27%20width%3D%275%27%20height%3D%2726%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%2F%3E%0A%20%20%3Cpolyline%20points%3D%2717.5%2C1%2020%2C5.5%2022.5%2C1%27%20stroke%3D%27%252300d4aa%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20fill%3D%27none%27%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="shortcut icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%0A%20%20%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%2523080b10%27%2F%3E%0A%20%20%3Crect%20x%3D%272%27%20y%3D%2718%27%20width%3D%275%27%20height%3D%2712%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%2F%3E%0A%20%20%3Crect%20x%3D%279%27%20y%3D%2711%27%20width%3D%275%27%20height%3D%2719%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%20opacity%3D%27.6%27%2F%3E%0A%20%20%3Crect%20x%3D%2716%27%20y%3D%274%27%20width%3D%275%27%20height%3D%2726%27%20rx%3D%271.5%27%20fill%3D%27%252300d4aa%27%2F%3E%0A%20%20%3Cpolyline%20points%3D%2717.5%2C1%2020%2C5.5%2022.5%2C1%27%20stroke%3D%27%252300d4aa%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20fill%3D%27none%27%2F%3E%0A%3C%2Fsvg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zona de Fondeo — Compara Empresas de fondeo de Futuros | Mejores Pruebas de fondeo 2026</title>
 <meta name="description" content="Compara las mejores empresas de fondeo de futuros para traders del NQ Nasdaq. Descuentos exclusivos, reviews honestas y comparador interactivo con filtros avanzados.">
@@ -1543,6 +1545,51 @@ footer {
 @media (max-width: 420px) {
   .quiz-options { grid-template-columns: 1fr; }
 }
+ 
+/* ══════════ TESTIMONIOS ══════════ */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.2s;
+}
+.testimonial-card:hover { border-color: var(--border2); }
+.testimonial-quote {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.65;
+  font-style: italic;
+  flex: 1;
+}
+.testimonial-quote::before { content: '"'; color: var(--primary); font-size: 20px; font-style: normal; line-height: 0; vertical-align: -5px; margin-right: 3px; }
+.testimonial-quote::after  { content: '"'; color: var(--primary); font-size: 20px; font-style: normal; line-height: 0; vertical-align: -5px; margin-left: 3px; }
+.testimonial-footer { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border); }
+.testimonial-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+.testimonial-name { font-weight: 600; font-size: 13px; color: var(--text); }
+.testimonial-meta { font-size: 11px; color: var(--text2); font-family: var(--font-mono); margin-top: 2px; }
+.testimonial-stars { color: var(--gold); font-size: 12px; margin-left: auto; align-self: flex-start; }
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1617,44 +1664,44 @@ footer {
         Comparador independiente · Verificado Abril 2026 · 9 firmas analizadas
       </div>
  
-      <!-- CRO: H1 confrontativo — activa dolor + promesa de solución -->
+      <!-- H1 confrontativo -->
       <h1>Tu próxima evaluación<br><em>no debería fallar por esto</em></h1>
  
-      <!-- CRO: subtítulo emocional, no técnico. Habla de consecuencias, no de features -->
+      <!-- Subtítulo emocional — consecuencias, no features -->
       <p class="hero-sub">
         Elegir mal el drawdown, el split o las reglas de retiro te cuesta tiempo, plata y confianza.<br>
         <strong style="color:var(--text);">Elegí basado en riesgo, no en marketing.</strong>
       </p>
  
-      <!-- CRO: CTAs con intención clara. Principal → filtro. Secundario → urgencia precio -->
+      <!-- CTA principal prominente — lleva directo al quiz -->
       <div class="hero-actions">
-        <button class="btn-convert btn-pulse" onclick="document.getElementById('quiz-section').scrollIntoView({behavior:'smooth'})">
+        <button class="btn-convert btn-pulse" onclick="document.getElementById('quiz-section').scrollIntoView({behavior:'smooth'})" style="font-size:16px; padding:18px 36px; letter-spacing:0.01em;">
           🎯 Ver qué cuenta me conviene →
         </button>
         <button class="btn btn-outline" onclick="showPage('descuentos')">
-          🏷️ Ver descuentos activos
+          🏷️ Descuentos activos
         </button>
       </div>
  
-      <!-- CRO: microcopy de fricción cero debajo del CTA principal -->
+      <!-- Microcopy fricción cero -->
       <div class="hero-microcopy">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        3 minutos · Sin registro · Sin spam · Resultado instantáneo
+        5 preguntas · Sin registro · Resultado instantáneo
       </div>
  
-      <!-- CRO: social proof con claims verificables, no genéricos -->
-      <div class="hero-social-proof" style="margin-top:28px;">
+      <!-- Social proof compacto -->
+      <div class="hero-social-proof" style="margin-top:24px;">
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Datos verificados manualmente cada semana
+          Datos verificados cada semana
         </div>
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Reglas reales — no lo que dice el marketing de cada firma
+          Reglas reales, no marketing
         </div>
         <div class="proof-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Hecho para traders de LATAM operando NQ y ES
+          Hecho para traders de LATAM
         </div>
       </div>
  
@@ -2057,7 +2104,7 @@ footer {
             <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
             <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Bulenox. El precio es el mismo o menor con nuestro link.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Ir al sitio oficial de Bulenox →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Activar descuento -29% en Bulenox →</a>
             </div>
           </div>
         </div>
@@ -2071,7 +2118,7 @@ footer {
             <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
             <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Top One Futures. Accedés al descuento de lanzamiento exclusivo.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Ir al sitio oficial de Top One Futures →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Activar descuento -50% en Top One →</a>
             </div>
           </div>
         </div>
@@ -2084,10 +2131,95 @@ footer {
             <div class="discount-expiry">✅ Sin fecha de caducidad</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <button onclick="navigator.clipboard.writeText('ZDFPROMO').catch(()=>{}); document.getElementById('toast').textContent='✅ Código ZDFPROMO copiado al portapapeles'; document.getElementById('toast').classList.add('show'); setTimeout(()=>document.getElementById('toast').classList.remove('show'),3000);" style="background:var(--surface2); border:1px dashed var(--primary); border-radius:8px; padding:9px 14px; color:var(--primary); font-family:var(--font-mono); font-size:13px; font-weight:700; cursor:pointer; white-space:nowrap;">📋 ZDFPROMO</button>
-              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; justify-content:center;" href="https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e" target="_blank" rel="noopener">Ir a Earn2Trade →</a>
+              <a class="btn-convert" style="padding:10px 20px; text-decoration:none; justify-content:center;" href="https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e" target="_blank" rel="noopener">Activar -60% con ZDFPROMO →</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- TESTIMONIOS -->
+  <div class="section-sm">
+    <div class="container">
+      <div class="section-label">Traders que ya eligieron bien</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <h2>Lo que dicen los que<br><em style="color:var(--primary);font-style:normal;">dejaron de fallar evaluaciones</em></h2>
+      </div>
+      <div class="testimonials-grid">
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Pasé la evaluación de MFF a la primera. El drawdown de fin de día fue clave — con trailing me hubieran cortado en la primera semana volátil del NQ.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <div class="testimonial-name">Mateo R.</div>
+              <div class="testimonial-meta">Buenos Aires · Trader NQ intradía</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Había fallado 3 evaluaciones en otras firmas. Usé el filtro de esta página, me recomendó Alpha Futures, y cobré mi primer payout en 48 horas.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">CL</div>
+            <div>
+              <div class="testimonial-name">Carlos L.</div>
+              <div class="testimonial-meta">Medellín · Scalper ES y NQ</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Siempre elegía la cuenta más barata sin entender las reglas. Acá comparé bien, fui a Bulenox y con el -29% me salió más barato que donde antes pagaba y perdía.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">JV</div>
+            <div>
+              <div class="testimonial-name">Javier V.</div>
+              <div class="testimonial-meta">Ciudad de México · Swing trader</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Lo que más me ayudó fue ver el drawdown real, no el que te venden. Nunca había entendido bien la diferencia entre trailing y estático hasta que usé las herramientas de acá.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">AC</div>
+            <div>
+              <div class="testimonial-name">Andrés C.</div>
+              <div class="testimonial-meta">Santiago · Trader de futuros ES</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Venía de perder plata en 2 pruebas de fondeo. El quiz me dijo que mi estilo agresivo necesitaba más drawdown, fui a Bulenox y pasé cómodo. Ojalá hubiera encontrado esto antes.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">FS</div>
+            <div>
+              <div class="testimonial-name">Federico S.</div>
+              <div class="testimonial-meta">Rosario · Trader NQ</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Con el cupón ZDFPROMO de Earn2Trade pagué menos de $70 por la evaluación. Comparé 5 firmas acá antes de decidir. No entiendo cómo tomaba estas decisiones sin comparar antes.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar">LM</div>
+            <div>
+              <div class="testimonial-name">Lucía M.</div>
+              <div class="testimonial-meta">Bogotá · Trader con cuenta $50K</div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+ 
       </div>
     </div>
   </div>
