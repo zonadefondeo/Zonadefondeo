@@ -1178,16 +1178,7 @@ footer {
 }
  
 .footer-bottom p { font-size: 12px; color: var(--text3); }
-.footer-bottom .affiliate-disclaimer {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 11px;
-  color: var(--text3);
-  font-family: var(--font-mono);
-  max-width: 450px;
-}
+ 
  
 /* ═══════════════════════════════════════ TOAST */
 .toast {
@@ -1363,7 +1354,6 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   footer { padding: 40px 0 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .footer-bottom .affiliate-disclaimer { max-width: 100%; font-size: 10px; }
   .footer-brand p { max-width: 100%; }
  
   /* ── MISC ── */
@@ -1423,21 +1413,7 @@ footer {
   gap: 6px;
 }
  
-/* Pre-affiliate trust note */
-.pre-aff-note {
-  background: rgba(0,212,170,0.06);
-  border: 1px solid rgba(0,212,170,0.18);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 12px;
-  color: var(--text2);
-  font-family: var(--font-mono);
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  line-height: 1.55;
-  margin-bottom: 10px;
-}
+ 
  
 /* Trust block */
 .trust-block {
@@ -1934,11 +1910,7 @@ footer {
             <div class="trust-item-title">Hecho para LATAM</div>
             <div class="trust-item-text">La mayoría de comparadores son en inglés y priorizan el mercado europeo. Acá filtramos lo que importa para traders de Argentina, México, Colombia y el resto de la región.</div>
           </div>
-          <div class="trust-item-card">
-            <div class="trust-item-icon">⚠️</div>
-            <div class="trust-item-title">Divulgación de afiliación</div>
-            <div class="trust-item-text">Este sitio tiene links de afiliado. Recibimos una comisión de la firma si comprás — sin costo adicional para vos. El precio es el mismo o menor con nuestros cupones exclusivos.</div>
-          </div>
+ 
         </div>
       </div>
     </div>
@@ -2101,8 +2073,6 @@ footer {
             <div class="discount-title">⚡ Oferta Activa</div>
             <div class="discount-desc">$50K desde $125/mes (regular $175) con cupón $50OFF. 100% de los primeros $10K en ganancias. Más de 20 plataformas disponibles.</div>
             <div class="discount-expiry">✅ Sin fecha de caducidad</div>
-            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
-            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Bulenox. El precio es el mismo o menor con nuestro link.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Activar descuento -29% en Bulenox →</a>
             </div>
@@ -2115,8 +2085,6 @@ footer {
             <div class="discount-title">⚡ Gran Descuento</div>
             <div class="discount-desc">Descuento de lanzamiento exclusivo. Una de las firmas con mejor profit split del mercado para traders latinos.</div>
             <div class="discount-expiry">⏰ Caduca: 30 Abr 2026</div>
-            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
-            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Top One Futures. Accedés al descuento de lanzamiento exclusivo.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Activar descuento -50% en Top One →</a>
             </div>
@@ -2313,11 +2281,6 @@ footer {
         </table>
       </div>
  
-      <div class="card" style="margin-top:24px; padding:20px;">
-        <p style="font-size:12px; color:var(--text2); line-height:1.7;">
-          <strong style="color:var(--text)">⚠️ Aviso de afiliados:</strong> Esta tabla contiene enlaces de afiliado. Si compras un prueba de fondeo a través de nuestros botones, podemos recibir una comisión sin ningún coste adicional para ti. Los precios y descuentos se actualizan semanalmente. Siempre verifica el precio final en el sitio oficial de cada empresa.
-        </p>
-      </div>
     </div>
   </div>
 </div>
@@ -3277,9 +3240,7 @@ const AFF_LINKS = {
     </div>
     <div class="footer-bottom">
       <p>© 2026 Zona de Fondeo. Todos los derechos reservados.</p>
-      <div class="affiliate-disclaimer">
-        ⚠️ Sitio con enlaces de afiliado. Podemos recibir comisión por compras realizadas. No somos asesores financieros. El trading de futuros conlleva alto riesgo de pérdida.
-      </div>
+ 
     </div>
   </div>
 </footer>
@@ -4144,11 +4105,6 @@ function showQuizResult() {
       <div style="font-family:var(--font-mono);font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Por qué encaja con vos:</div>
       <div class="result-reasons">
         ${top.reasons.map(r=>`<div class="result-reason"><span class="result-reason-icon">✓</span><span>${r}</span></div>`).join('')}
-      </div>
- 
-      <!-- CRO: mensaje pre-afiliado antes del botón — reduce abandono en el momento decisivo -->
-      <div class="pre-aff-note">
-        🔗 Vas a ir al sitio oficial de ${top.name}. El precio es el mismo o menor al que encontrarías entrando directo.
       </div>
  
       <!-- CRO: CTA con intención fuerte + microcopy de fricción cero -->
