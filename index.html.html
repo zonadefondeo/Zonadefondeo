@@ -1178,7 +1178,16 @@ footer {
 }
  
 .footer-bottom p { font-size: 12px; color: var(--text3); }
- 
+.footer-bottom .affiliate-disclaimer {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  max-width: 450px;
+}
  
 /* ═══════════════════════════════════════ TOAST */
 .toast {
@@ -1354,6 +1363,7 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   footer { padding: 40px 0 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-bottom .affiliate-disclaimer { max-width: 100%; font-size: 10px; }
   .footer-brand p { max-width: 100%; }
  
   /* ── MISC ── */
@@ -1413,7 +1423,21 @@ footer {
   gap: 6px;
 }
  
- 
+/* Pre-affiliate trust note */
+.pre-aff-note {
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.18);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
  
 /* Trust block */
 .trust-block {
@@ -1910,7 +1934,11 @@ footer {
             <div class="trust-item-title">Hecho para LATAM</div>
             <div class="trust-item-text">La mayoría de comparadores son en inglés y priorizan el mercado europeo. Acá filtramos lo que importa para traders de Argentina, México, Colombia y el resto de la región.</div>
           </div>
- 
+          <div class="trust-item-card">
+            <div class="trust-item-icon">⚠️</div>
+            <div class="trust-item-title">Divulgación de afiliación</div>
+            <div class="trust-item-text">Este sitio tiene links de afiliado. Recibimos una comisión de la firma si comprás — sin costo adicional para vos. El precio es el mismo o menor con nuestros cupones exclusivos.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -2073,6 +2101,8 @@ footer {
             <div class="discount-title">⚡ Oferta Activa</div>
             <div class="discount-desc">$50K desde $125/mes (regular $175) con cupón $50OFF. 100% de los primeros $10K en ganancias. Más de 20 plataformas disponibles.</div>
             <div class="discount-expiry">✅ Sin fecha de caducidad</div>
+            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
+            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Bulenox. El precio es el mismo o menor con nuestro link.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://bulenox.com/member/aff/go/zonadefondeo" target="_blank" rel="noopener">Activar descuento -29% en Bulenox →</a>
             </div>
@@ -2085,6 +2115,8 @@ footer {
             <div class="discount-title">⚡ Gran Descuento</div>
             <div class="discount-desc">Descuento de lanzamiento exclusivo. Una de las firmas con mejor profit split del mercado para traders latinos.</div>
             <div class="discount-expiry">⏰ Caduca: 30 Abr 2026</div>
+            <!-- CRO: mensaje pre-afiliado que reduce abandono en el momento del clic -->
+            <div class="pre-aff-note">🔗 Vas a ir al sitio oficial de Top One Futures. Accedés al descuento de lanzamiento exclusivo.</div>
             <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
               <a class="btn-convert" style="padding:10px 20px; text-decoration:none; width:100%; justify-content:center;" href="https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader" target="_blank" rel="noopener">Activar descuento -50% en Top One →</a>
             </div>
@@ -2281,6 +2313,11 @@ footer {
         </table>
       </div>
  
+      <div class="card" style="margin-top:24px; padding:20px;">
+        <p style="font-size:12px; color:var(--text2); line-height:1.7;">
+          <strong style="color:var(--text)">⚠️ Aviso de afiliados:</strong> Esta tabla contiene enlaces de afiliado. Si compras un prueba de fondeo a través de nuestros botones, podemos recibir una comisión sin ningún coste adicional para ti. Los precios y descuentos se actualizan semanalmente. Siempre verifica el precio final en el sitio oficial de cada empresa.
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -3240,7 +3277,9 @@ const AFF_LINKS = {
     </div>
     <div class="footer-bottom">
       <p>© 2026 Zona de Fondeo. Todos los derechos reservados.</p>
- 
+      <div class="affiliate-disclaimer">
+        ⚠️ Sitio con enlaces de afiliado. Podemos recibir comisión por compras realizadas. No somos asesores financieros. El trading de futuros conlleva alto riesgo de pérdida.
+      </div>
     </div>
   </div>
 </footer>
@@ -3253,70 +3292,71 @@ const AFF_LINKS = {
 // DATA
 // ═══════════════════════════════════════
 const firms = [
-  { id:'mff', name:'My Funded Futures', short:'MF', country:'🇺🇸 USA', founded:2022,
-    price:77, priceOrig:77, discount:0, drawdown:1500, ddType:'eod',
+  // Datos verificados — Mayo 2026
+  { id:'mff', name:'My Funded Futures', short:'MF', country:'🇺🇸 USA', founded:2023,
+    price:107, priceOrig:157, discount:32, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:80, payout:'5d ganadores', news:true, overnight:true,
     rating:4.9, reviews:17000, platforms:'NinjaTrader, Tradovate, TradingView, Quantower', phases:1,
-    note:'Plan Core $50K a $77/mes. Sin tarifa de activación. Plan Rapid a $129/mes con 90% reparto y retiros diarios. Sin regla de consistencia en fondeo.',
+    note:'Plan Flex $50K a $107/mes. Plan Rapid $157/mes con 90% reparto y retiros diarios. Plan Core $77/mes ($50K). Sin tarifa de activación en ningún plan. EOD drawdown en evaluación. Sin regla de consistencia en fondeo.',
     affUrl:'https://myfundedfutures.com/' },
-  { id:'alphaf', name:'Alpha Futures', short:'AF', country:'🇬🇧 UK', founded:2023,
+  { id:'alphaf', name:'Alpha Futures', short:'AF', country:'🇬🇧 UK', founded:2024,
     price:79, priceOrig:79, discount:0, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:90, payout:'24-48h', news:true, overnight:true,
-    rating:4.9, reviews:2600, platforms:'NinjaTrader, Tradovate, TradingView, Quantower, AlphaTicks', phases:1,
-    note:'El precio mensual más bajo del mercado para $50K. Rating 4.9/5 en Trustpilot. Sin tarifa de activación en plan Zero. EOD drawdown. Retiros en 24-48h.',
+    rating:4.9, reviews:2800, platforms:'NinjaTrader, Tradovate, TradingView, Quantower, AlphaTicks', phases:1,
+    note:'Plan Standard $79/mes para $50K. Plan Advanced $149/mes (90% desde el primer pago, sin consistencia en fondeo). Plan Zero $199/mes (sin tarifa de activación, pasa en 1 día). EOD drawdown. Tarifa de activación $149 en Standard/Advanced.',
     affUrl:'https://app.alpha-futures.com/signup/Zona021177/' },
   { id:'tpt', name:'TakeProfitTrader', short:'TP', country:'🇺🇸 USA', founded:2015,
     price:170, priceOrig:170, discount:0, drawdown:2000, ddType:'eod',
-    profitTarget:3000, split:80, payout:'Día 1', news:false, overnight:false,
+    profitTarget:3000, split:90, payout:'Día 1', news:false, overnight:false,
     rating:4.4, reviews:8400, platforms:'NinjaTrader, Tradovate, Rithmic, Sierra Chart, 15+', phases:1,
-    note:'Firma fundada en 2015, una de las más veteranas. $130 tarifa de activación. Retiro desde el día 1. 80% split en PRO, 90% en PRO+. Sin news ni overnight (cierre 5PM obligatorio).',
+    note:'Firma fundada en 2015, una de las más veteranas. Retiro desde el día 1 fondeado. 90% split en PRO+. Reset a $649. Sin news ni overnight (cierre 5PM ET obligatorio). Trailing drawdown en PRO+.',
     affUrl:'https://takeprofittrader.com/' },
-  { id:'bulenox', name:'Bulenox', short:'BX', country:'🇺🇸 USA', founded:2021,
+  { id:'bulenox', name:'Bulenox', short:'BX', country:'🇺🇸 USA', founded:2022,
     price:125, priceOrig:175, discount:29, drawdown:2500, ddType:'eod',
     profitTarget:3000, split:90, payout:'7d', news:true, overnight:true,
-    rating:4.6, reviews:1800, platforms:'NinjaTrader, Sierra Chart, R Trader, 20+', phases:1,
-    note:'$50K a $125/mes con cupón $50OFF (regular $175). 100% de primeros $10K en ganancias. Más de 20 plataformas. EOD drawdown. News y overnight permitidos.',
+    rating:4.8, reviews:1800, platforms:'NinjaTrader, Tradovate, Rithmic, Sierra Chart, ATAS, Quantower, 20+', phases:1,
+    note:'$50K a $125/mes con cupón $50OFF (regular $175). 100% de primeros $10K en ganancias, luego 90%. EOD o trailing drawdown a elección. 10 días mínimos en Master antes del primer pago. Activación Master ~$148.',
     affUrl:'https://bulenox.com/member/aff/go/zonadefondeo' },
   { id:'tradeify', name:'Tradeify', short:'TF', country:'🇺🇸 USA', founded:2023,
-    price:159, priceOrig:159, discount:0, drawdown:2000, ddType:'eod',
-    profitTarget:3000, split:90, payout:'24-48h', news:true, overnight:true,
+    price:111, priceOrig:159, discount:30, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'24-48h', news:true, overnight:false,
     rating:4.7, reviews:4200, platforms:'Tradovate, NinjaTrader, TradingView', phases:1,
-    note:'Select $159/mes (40% OFF con código DASH). Tradeify 3.0 con nueva plataforma TradeSea. Sin tarifa de activación. 90% split. Retiros en 24-48h. News y overnight permitidos.',
+    note:'Select $159/mes (30% OFF con código SOPF = $111/mes). Sin tarifa de activación. 90% split. Retiros en 24-48h. EOD drawdown con lock permanente. Sin overnight — cierre 4:59PM ET obligatorio. Plan Select Flex o Daily a elegir.',
     affUrl:'https://tradeify.co/' },
   { id:'topone', name:'Top One Futures', short:'TO', country:'🇺🇸 USA', founded:2025,
-    price:97, priceOrig:197, discount:50, drawdown:2000, ddType:'eod',
-    profitTarget:2000, split:90, payout:'2-4h', news:true, overnight:true,
-    rating:4.7, reviews:3800, platforms:'NinjaTrader, Tradovate', phases:1,
-    note:'Precio con descuento de lanzamiento del 50%. Retiros en menos de 4 horas. Firma nueva con reglas muy trader-friendly.',
+    price:99, priceOrig:189, discount:48, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:90, payout:'Semanal', news:true, overnight:true,
+    rating:4.7, reviews:3800, platforms:'NinjaTrader, Tradovate, TradingView, Quantower', phases:1,
+    note:'Elite Access $189 (código ANNIVERSARY -40% = $113). Elite $99 (código NINJA60 -60% = $40 para primera cuenta). Activación $149. Sin tarifa mensual. 90% split sin tope por pago. EOD drawdown. Sin daily loss en Elite Access. Regla de consistencia 40%.',
     affUrl:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
   { id:'earn2t', name:'Earn2Trade', short:'E2', country:'🇺🇸 USA', founded:2016,
-    price:60, priceOrig:150, discount:60, drawdown:2000, ddType:'eod',
-    profitTarget:3000, split:80, payout:'7-14d', news:false, overnight:true,
-    rating:4.7, reviews:4800, platforms:'NinjaTrader, Tradovate, Finamark', phases:2,
-    note:'La firma más veterana del mercado (2016). Trader Career Path: 2 fases, escala hasta $400K. Usá el cupón ZDFPROMO para 60% de descuento. Tarifa activación $139 descontada del primer retiro.',
+    price:76, priceOrig:190, discount:60, drawdown:2000, ddType:'eod',
+    profitTarget:3000, split:80, payout:'Miércoles', news:false, overnight:true,
+    rating:4.7, reviews:4800, platforms:'NinjaTrader, Tradovate, TradingView, Finamark', phases:2,
+    note:'TCP50 $190/mes (cupón ZDFPROMO -60% = ~$76/mes). Trader Career Path: escala de $50K hasta $400K con drawdown fijo. 80% split. Retiros semanales (miércoles). Regla de consistencia 30%. Plataformas: NinjaTrader, Tradovate y TradingView desde marzo 2026.',
     coupon:'ZDFPROMO',
     affUrl:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
   { id:'fundednext', name:'FundedNext Futuros', short:'FN', country:'🇦🇪 UAE', founded:2022,
-    price:150, priceOrig:200, discount:25, drawdown:2000, ddType:'eod',
+    price:129, priceOrig:200, discount:35, drawdown:2000, ddType:'eod',
     profitTarget:3000, split:80, payout:'24h garantizado', news:true, overnight:false,
     rating:4.5, reviews:63000, platforms:'NinjaTrader, Tradovate, TradingView', phases:1,
-    note:'La firma con más reseñas del mercado (63K en Trustpilot). Pago único sin mensualidad. 80% split. Garantía de pago en 24h o $1,000 extra. News trading permitido. No overnight.',
+    note:'La firma con más reseñas del mercado (63K en Trustpilot). Plan Rapid $50K a $129/mes. 80% split. Garantía de pago en 24h o $1,000 de compensación. News trading permitido. Sin overnight.',
     affUrl:'https://fundednext.com/?fpr=zona73' },
   { id:'emerge', name:'EmergeProfit', short:'EP', country:'🇬🇧 UK', founded:2024,
     price:129, priceOrig:179, discount:28, drawdown:2000, ddType:'eod',
     profitTarget:2000, split:85, payout:'14d', news:false, overnight:true,
     rating:4.6, reviews:500, platforms:'Tradovate, NinjaTrader', phases:1,
-    note:'Firma nueva del Reino Unido. 85% reparto. Proceso de evaluación simple.',
+    note:'Firma nueva del Reino Unido. 85% reparto. Proceso de evaluación simple. EOD drawdown.',
     affUrl:'https://emergeprofit.com/' },
 ]
  
  
  
 const discounts = [
-  { firm:'Bulenox',       pct:29,  label:'Oferta activa',      desc:'$50K desde $125/mes con cupón $50OFF (regular $175). 100% de primeros $10K en ganancias. Más de 20 plataformas. EOD drawdown.', expiry:null, permanent:true, url:'https://bulenox.com/member/aff/go/zonadefondeo' },
-  { firm:'Alpha Futures', pct:10,  label:'Precio exclusivo',   desc:'Desde $79/mes para $50K a través de nuestro enlace. El precio mensual más bajo del mercado. Retiros en 24-48h. Rating 4.9/5 en Trustpilot.', expiry:null, permanent:true, url:'https://app.alpha-futures.com/signup/Zona021177/' },
-  { firm:'Top One Futures',pct:50, label:'Gran Descuento',     desc:'Descuento de lanzamiento del 50% activo. Retiros en menos de 4 horas. Una de las firmas más nuevas y prometedoras del mercado.', expiry:'30 Abr 2026', permanent:false, url:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
-  { firm:'Earn2Trade',    pct:60,  label:'Gran Descuento con cupón', desc:'La empresa de fondeo más veterana del mercado (desde 2016). Trader Career Path: escala hasta $400K fondeado. Usá el cupón para obtener tu descuento.', expiry:null, permanent:true, code:'ZDFPROMO', url:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
+  { firm:'Bulenox',       pct:29,  label:'Oferta activa',      desc:'$50K desde $125/mes con cupón $50OFF (precio regular $175). 100% de los primeros $10K en ganancias, luego 90%. EOD o trailing drawdown a elección. Más de 20 plataformas.', expiry:null, permanent:true, url:'https://bulenox.com/member/aff/go/zonadefondeo' },
+  { firm:'Top One Futures',pct:60, label:'Código NINJA60',     desc:'Primera cuenta Elite $99 → $40 con código NINJA60. Sin mensualidad. Activación $149. Sin daily loss limit en Elite Access. 90% split sin tope de pago. EOD drawdown.', expiry:null, permanent:false, url:'https://toponetrader.com/guide/?linkId=lp_243488&sourceId=zona-de-fondeo&tenantId=toponetrader' },
+  { firm:'Earn2Trade',    pct:60,  label:'Cupón ZDFPROMO', desc:'TCP50 desde $190/mes → ~$76/mes con ZDFPROMO. Trader Career Path: escalás de $50K hasta $400K. 80% split. Plataformas: NinjaTrader, Tradovate y TradingView.', expiry:null, permanent:true, code:'ZDFPROMO', url:'https://www.earn2trade.com/trader-career-path?a_pid=38197000&a_bid=8d7b4b9e' },
+  { firm:'Alpha Futures', pct:10,  label:'Precio exclusivo',   desc:'Plan Standard desde $79/mes para $50K. Plan Zero desde $199/mes — sin tarifa de activación y podés pasar en 1 día. 90% split. Retiros en 24-48h. Rating 4.9/5 Trustpilot.', expiry:null, permanent:true, url:'https://app.alpha-futures.com/signup/Zona021177/' },
 ]
  
  
@@ -4105,6 +4145,11 @@ function showQuizResult() {
       <div style="font-family:var(--font-mono);font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Por qué encaja con vos:</div>
       <div class="result-reasons">
         ${top.reasons.map(r=>`<div class="result-reason"><span class="result-reason-icon">✓</span><span>${r}</span></div>`).join('')}
+      </div>
+ 
+      <!-- CRO: mensaje pre-afiliado antes del botón — reduce abandono en el momento decisivo -->
+      <div class="pre-aff-note">
+        🔗 Vas a ir al sitio oficial de ${top.name}. El precio es el mismo o menor al que encontrarías entrando directo.
       </div>
  
       <!-- CRO: CTA con intención fuerte + microcopy de fricción cero -->
