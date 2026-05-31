@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/journal", "destination": "/journal.html" },
-    { "source": "/journal/success", "destination": "/journal-success.html" }
+    { "source": "/diario", "destination": "/diario.html" },
+    { "source": "/diario/exito", "destination": "/diario-exito.html" }
   ]
 }
