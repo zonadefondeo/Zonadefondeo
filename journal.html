@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO ═══ -->
+<title>Trading Journal Gratuito para Traders de Fondeo | Zona de Fondeo</title>
+<meta name="description" content="Descargá gratis el Trading Journal MNQ — dashboard profesional para analizar tus operaciones, medir tu rendimiento y mejorar tu consistencia en prop firms.">
+<meta name="keywords" content="trading journal gratuito, trading journal MNQ, journal para traders, bitácora de trading, prop firm trading journal, journal futuros NQ, diario de trading">
+<link rel="canonical" href="https://zonadefondeo.com/journal">
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zonadefondeo.com/journal">
+<meta property="og:title" content="Trading Journal Gratuito para Traders de Fondeo">
+<meta property="og:description" content="Dashboard profesional para analizar tus operaciones en MNQ. Curva de equity, drawdown, win rate por setup, registro completo. 100% gratis.">
+<meta property="og:image" content="https://zonadefondeo.com/og-journal.png">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Zona de Fondeo">
+
+<!-- ═══ TWITTER CARDS ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://zonadefondeo.com/journal">
+<meta name="twitter:title" content="Trading Journal Gratuito para Traders de Fondeo">
+<meta name="twitter:description" content="Dashboard profesional para analizar tus operaciones en MNQ. 100% gratis — dejá tu email y accedé ahora.">
+<meta name="twitter:image" content="https://zonadefondeo.com/og-journal.png">
+
+<!-- ═══ FAVICONS — same as main site ═══ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%23080b10%27%2F%3E%3Crect%20x%3D%272%27%20y%3D%2718%27%20width%3D%275%27%20height%3D%2712%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%2F%3E%3Crect%20x%3D%279%27%20y%3D%2711%27%20width%3D%275%27%20height%3D%2719%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%20opacity%3D%27.6%27%2F%3E%3Crect%20x%3D%2716%27%20y%3D%274%27%20width%3D%275%27%20height%3D%2726%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%2F%3E%3Cpolyline%20points%3D%2717.5%2C1%2020%2C5.5%2022.5%2C1%27%20stroke%3D%27%2300d4aa%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20fill%3D%27none%27%2F%3E%3C%2Fsvg%3E">
+
+<!-- ═══ FONTS — same as main site ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ═══ GA4 — same ID as main site ═══ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWZHRNB5CJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWZHRNB5CJ');
+</script>
+
+<style>
+/* ═══════════════════════════════════════ DESIGN TOKENS — identicos al sitio principal */
+:root {
+  --bg:            #080b10;
+  --surface:       #0e1219;
+  --surface2:      #141a23;
+  --border:        #1c2333;
+  --border2:       #2a3545;
+  --primary:       #00d4aa;
+  --primary-dim:   rgba(0,212,170,0.12);
+  --primary-glow:  rgba(0,212,170,0.35);
+  --gold:          #f5b731;
+  --gold-dim:      rgba(245,183,49,0.12);
+  --red:           #ff4560;
+  --red-dim:       rgba(255,69,96,0.12);
+  --text:          #e2e8f0;
+  --text2:         #94a3b8;
+  --text3:         #4a5568;
+  --font-display:  'Syne', sans-serif;
+  --font-body:     'DM Sans', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+  --radius:        12px;
+  --radius-lg:     20px;
+  --shadow:        0 0 40px rgba(0,212,170,0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0,212,170,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(245,183,49,0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══ NAV ═══ */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,16,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  margin-right: 12px;
+  white-space: nowrap;
+}
+.logo span { color: var(--primary); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+.nav-link:hover { background: var(--surface2); color: var(--text); }
+.nav-link.active { background: var(--surface2); color: var(--primary); }
+
+.nav-badge {
+  background: var(--primary);
+  color: var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.nav-cta {
+  margin-left: auto;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: #00efc4; transform: translateY(-1px); box-shadow: 0 4px 20px var(--primary-glow); }
+
+/* ═══ HAMBURGER ═══ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text2);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(8,11,16,0.98);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+}
+.mobile-menu.open { display: flex; }
+
+.nav-cta-full {
+  background: var(--primary);
+  color: var(--bg);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; margin-left: auto; }
+}
+
+/* ═══ LAYOUT ═══ */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.section    { padding: 80px 0; }
+.section-sm { padding: 48px 0; }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  width: 3px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 800; line-height: 1.15; letter-spacing: -0.5px; }
+h1 { font-size: clamp(36px, 5.5vw, 62px); }
+h2 { font-size: clamp(26px, 3.5vw, 42px); }
+h3 { font-size: 20px; }
+
+em { font-style: normal; color: var(--primary); }
+
+.text-muted { color: var(--text2); }
+.mb-2  { margin-bottom: 8px; }
+.mb-4  { margin-bottom: 16px; }
+.mb-6  { margin-bottom: 24px; }
+.mb-8  { margin-bottom: 32px; }
+.mt-6  { margin-top: 24px; }
+.mt-8  { margin-top: 32px; }
+
+/* ═══ BUTTONS ═══ */
+.btn-convert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #080b10;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  font-family: var(--font-body);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: -0.2px;
+}
+.btn-convert:hover { background: #00efc4; transform: translateY(-2px); box-shadow: 0 8px 30px var(--primary-glow); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border: 1.5px solid var(--border2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70%  { box-shadow: 0 0 0 14px rgba(0,212,170,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,212,170,0); }
+}
+.btn-pulse { animation: pulse-ring 2.4s ease-out infinite; }
+
+/* ═══ HERO ═══ */
+.hero {
+  padding: 80px 0 60px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+}
+
+.hero-eyebrow .dot {
+  width: 7px; height: 7px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.hero h1 { margin-bottom: 20px; }
+.hero-sub {
+  font-size: 17px;
+  color: var(--text2);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.hero-microcopy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  margin-top: -32px;
+  margin-bottom: 48px;
+}
+
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text2);
+  font-size: 13px;
+}
+.proof-item svg { color: var(--primary); flex-shrink: 0; }
+
+/* HERO STATS */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.stat-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+.stat-chip .value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-chip .label {
+  font-size: 12px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+  line-height: 1.4;
+}
+
+/* ═══ BENEFITS ═══ */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.benefit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.benefit-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
+.benefit-icon {
+  width: 44px; height: 44px;
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.benefit-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.benefit-desc {
+  font-size: 13.5px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.benefit-stat {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--primary);
+  background: var(--primary-dim);
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* ═══ SCREENSHOTS GALLERY ═══ */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.screenshot-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.screenshot-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,212,170,0.1);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  transition: transform 0.4s;
+}
+.screenshot-card:hover img { transform: scale(1.02); }
+
+.screenshot-label {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+}
+.screenshot-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+.screenshot-name {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text2);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,11,16,0.95);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border2);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  font-size: 22px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+}
+.lightbox-close:hover { border-color: var(--red); color: var(--red); }
+
+/* ═══ FORM SECTION ═══ */
+.form-section {
+  padding: 80px 0;
+}
+
+.form-wrap {
+  max-width: 540px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), rgba(0,212,170,0));
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form-header h2 { font-size: 26px; margin-bottom: 8px; }
+.form-header p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+.form-free-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(245,183,49,0.3);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text2);
+  font-family: var(--font-mono);
+}
+
+.form-input {
+  background: var(--surface2);
+  border: 1.5px solid var(--border2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--text);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+.form-input::placeholder { color: var(--text3); }
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,212,170,0.1);
+}
+
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #080b10;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.form-submit:hover { background: #00efc4; transform: translateY(-2px); box-shadow: 0 8px 30px var(--primary-glow); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.form-microcopy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.form-error {
+  background: var(--red-dim);
+  border: 1px solid rgba(255,69,96,0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--red);
+  margin-bottom: 16px;
+  display: none;
+}
+.form-error.visible { display: block; }
+
+/* ═══ TRUST ITEMS below form ═══ */
+.trust-items {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+}
+.trust-item svg { color: var(--primary); }
+
+/* ═══ SOCIAL PROOF ═══ */
+.social-proof-strip {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+}
+
+/* ═══ FAQ ═══ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 18px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--primary); }
+.faq-q .chevron {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  color: var(--text3);
+  transition: transform 0.2s;
+}
+.faq-item.open .chevron { transform: rotate(180deg); }
+.faq-item.open .faq-q { color: var(--primary); }
+
+.faq-a {
+  display: none;
+  padding: 0 20px 18px;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.65;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ═══ FOOTER ═══ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  position: relative;
+  z-index: 1;
+}
+footer a { color: var(--text2); text-decoration: none; }
+footer a:hover { color: var(--primary); }
+.footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .hero { padding: 48px 0 40px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .screenshots-grid { grid-template-columns: 1fr; }
+  .form-wrap { padding: 28px 20px; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .benefits-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .trust-items { flex-direction: column; align-items: center; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn-convert, .hero-actions .btn-outline { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="/">Zona de <span>Fondeo</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="/">Inicio</a>
+      <a class="nav-link" href="/#comparador">Comparador</a>
+      <a class="nav-link" href="/#reviews">Análisis</a>
+      <a class="nav-link" href="/#descuentos">Descuentos <span class="nav-badge">4</span></a>
+      <a class="nav-link" href="/#herramientas">Herramientas</a>
+      <a class="nav-link active" href="/journal">Journal</a>
+    </div>
+    <a class="nav-cta" href="/#comparador">Comparar →</a>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a class="nav-link" href="/" onclick="closeMobile()">Inicio</a>
+  <a class="nav-link" href="/#comparador" onclick="closeMobile()">Comparador</a>
+  <a class="nav-link" href="/#reviews" onclick="closeMobile()">Análisis</a>
+  <a class="nav-link" href="/#descuentos" onclick="closeMobile()">Descuentos <span class="nav-badge">4</span></a>
+  <a class="nav-link" href="/#herramientas" onclick="closeMobile()">Herramientas</a>
+  <a class="nav-link active" href="/journal" onclick="closeMobile()">Journal</a>
+  <a class="nav-cta-full" href="/#comparador">Comparar Empresas →</a>
+</div>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div class="hero">
+  <div class="container">
+
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      Herramienta gratuita · Exclusivo para Zona de Fondeo · Sin costo
+    </div>
+
+    <h1>Trading Journal<br><em>Gratuito para Traders<br>de Fondeo</em></h1>
+
+    <p class="hero-sub">
+      Analizá tus operaciones, medí tu rendimiento y mejorá tu consistencia con un dashboard profesional diseñado específicamente para traders de futuros MNQ.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-convert btn-pulse" onclick="scrollToForm()">
+        📊 Obtener acceso gratuito →
+      </button>
+      <button class="btn-outline" onclick="scrollToScreenshots()">
+        Ver el dashboard
+      </button>
+    </div>
+
+    <div class="hero-microcopy">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Sin tarjeta de crédito · Acceso inmediato · 100% gratis
+    </div>
+
+    <div class="hero-social-proof">
+      <div class="proof-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Dashboard con 4 vistas completas
+      </div>
+      <div class="proof-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Curva de equity en tiempo real
+      </div>
+      <div class="proof-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Estadísticas por setup y sesión
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-chip">
+        <div class="value">4</div>
+        <div class="label">Vistas del dashboard</div>
+      </div>
+      <div class="stat-chip">
+        <div class="value">+15</div>
+        <div class="label">Métricas calculadas</div>
+      </div>
+      <div class="stat-chip">
+        <div class="value">$0</div>
+        <div class="label">Costo total</div>
+      </div>
+      <div class="stat-chip">
+        <div class="value">MNQ</div>
+        <div class="label">Especialmente para NQ</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ BENEFITS ═══════════════════ -->
+<div class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-label">Lo que incluye</div>
+    <h2 class="mb-2">Todo lo que necesitás<br>para <em>mejorar como trader</em></h2>
+    <p class="text-muted mb-8" style="max-width:520px;">Un journal incompleto te da datos. Este dashboard te da claridad sobre lo que está funcionando y lo que no.</p>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="benefit-title">Win Rate en tiempo real</div>
+        <div class="benefit-desc">Calculado automáticamente sobre tus operaciones registradas. Separado por wins y losses con gráfico visual.</div>
+        <div class="benefit-stat">✓ Desglosado por setup y sesión</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="benefit-title">Profit Factor</div>
+        <div class="benefit-desc">Relación ganancia/pérdida bruta para saber si tu sistema es rentable a largo plazo.</div>
+        <div class="benefit-stat">✓ Incluye avg ganancia y avg pérdida</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="benefit-title">Curva de Equity</div>
+        <div class="benefit-desc">Visualizá la evolución de tu cuenta operación por operación. Detectá rachas y patrones de rendimiento.</div>
+        <div class="benefit-stat">✓ Gráfico interactivo con puntos</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M13 17V9"/><path d="M18 17V5"/><path d="M8 17v-3"/></svg>
+        </div>
+        <div class="benefit-title">Drawdown USD</div>
+        <div class="benefit-desc">Monitoreo visual del drawdown máximo en dólares. Fundamental para operar dentro de las reglas de tu prop firm.</div>
+        <div class="benefit-stat">✓ Alerta visual cuando se acerca al límite</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="benefit-title">Calendario de Trading</div>
+        <div class="benefit-desc">Vista mensual de tus días operados con P&L diario, win rate y estado emocional por fecha.</div>
+        <div class="benefit-stat">✓ Colores por rendimiento del día</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="benefit-title">Estadísticas por Setup</div>
+        <div class="benefit-desc">Breakout, ICT, Scalp, Mean Reversion — ver qué setup funciona mejor en tu caso específico.</div>
+        <div class="benefit-stat">✓ Win rate individual por estrategia</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="benefit-title">Registro de Operaciones</div>
+        <div class="benefit-desc">Tabla completa con fecha, entrada, SL, TP, contratos, resultado, R:R, setup, sesión y estado emocional.</div>
+        <div class="benefit-stat">✓ Filtros por setup y estado</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </div>
+        <div class="benefit-title">Métricas Psicológicas</div>
+        <div class="benefit-desc">Registro del estado emocional por operación y métricas de psicología del trader por sesión y setup.</div>
+        <div class="benefit-stat">✓ Escala 1-10 por operación</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCREENSHOTS ═══════════════════ -->
+<div class="section-sm" id="screenshots-section">
+  <div class="container">
+    <div class="section-label">Capturas del dashboard</div>
+    <h2 class="mb-2">Así se ve tu journal<br><em>por dentro</em></h2>
+    <p class="text-muted mb-8" style="max-width:520px;">Hacé clic en cualquier captura para verla en detalle.</p>
+
+    <div class="screenshots-grid">
+      <div class="screenshot-card" onclick="openLightbox(0)">
+        <img src="/screenshots/journal-dashboard.png" alt="Dashboard principal del Trading Journal MNQ" loading="lazy">
+        <div class="screenshot-label">
+          <div class="screenshot-dot"></div>
+          <span class="screenshot-name">Dashboard principal</span>
+        </div>
+      </div>
+      <div class="screenshot-card" onclick="openLightbox(1)">
+        <img src="/screenshots/journal-calendario.png" alt="Calendario de trading del Trading Journal" loading="lazy">
+        <div class="screenshot-label">
+          <div class="screenshot-dot"></div>
+          <span class="screenshot-name">Calendario mensual</span>
+        </div>
+      </div>
+      <div class="screenshot-card" onclick="openLightbox(2)">
+        <img src="/screenshots/journal-registro.png" alt="Registro de operaciones del Trading Journal" loading="lazy">
+        <div class="screenshot-label">
+          <div class="screenshot-dot"></div>
+          <span class="screenshot-name">Registro de operaciones</span>
+        </div>
+      </div>
+      <div class="screenshot-card" onclick="openLightbox(3)">
+        <img src="/screenshots/journal-metricas.png" alt="Métricas avanzadas del Trading Journal" loading="lazy">
+        <div class="screenshot-label">
+          <div class="screenshot-dot"></div>
+          <span class="screenshot-name">Métricas avanzadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ FORM ═══════════════════ -->
+<div class="form-section" id="form-section">
+  <div class="container">
+
+    <div style="text-align:center;margin-bottom:40px;">
+      <div class="section-label" style="justify-content:center;">Acceso gratuito</div>
+      <h2 class="mb-2">Empezá a trackear<br><em>tus operaciones hoy</em></h2>
+      <p class="text-muted">Sin tarjeta de crédito. Sin costo. Acceso inmediato después del registro.</p>
+    </div>
+
+    <div class="form-wrap">
+      <div class="form-header">
+        <div class="form-free-badge">
+          ⭐ 100% GRATUITO · ACCESO INMEDIATO
+        </div>
+        <h2>Obtené tu Journal Ahora</h2>
+        <p>Dejá tu nombre y email para recibir acceso al Trading Journal MNQ completamente gratis.</p>
+      </div>
+
+      <div id="form-error" class="form-error"></div>
+
+      <div id="journal-form">
+        <div class="form-group">
+          <label class="form-label" for="input-name">Nombre</label>
+          <input
+            id="input-name"
+            type="text"
+            class="form-input"
+            placeholder="Tu nombre"
+            autocomplete="given-name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-email">Email</label>
+          <input
+            id="input-email"
+            type="email"
+            class="form-input"
+            placeholder="tu@email.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <button class="form-submit btn-pulse" id="submit-btn" onclick="handleSubmit()">
+          <span id="submit-text">📊 Quiero mi Journal Gratis →</span>
+        </button>
+
+        <p class="form-microcopy">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Sin spam. Solo contenido útil para traders.
+        </p>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div id="form-success" style="display:none; text-align:center; padding:12px 0;">
+        <div style="font-size:48px; margin-bottom:16px;">🎉</div>
+        <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;color:var(--primary);">Tu acceso está listo.</h3>
+        <p style="color:var(--text2);font-size:14px;margin-bottom:28px;line-height:1.6;">Registrado correctamente. Hacé clic abajo para abrir el Trading Journal ahora mismo.</p>
+        <a
+          href="https://bitacora-mnq-app.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="btn-convert"
+          style="display:inline-flex;justify-content:center;width:100%;"
+        >
+          📊 Abrir Trading Journal →
+        </a>
+        <p style="font-size:12px;color:var(--text3);font-family:var(--font-mono);margin-top:16px;">
+          También enviamos el link a tu email como respaldo.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TRUST ítems debajo del form -->
+    <div class="trust-items">
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sin tarjeta de crédito
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Email nunca compartido
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Acceso instantáneo
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Soporte por email
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<div class="section" style="padding-top:0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:8px;">
+      <div class="section-label" style="justify-content:center;">Preguntas frecuentes</div>
+      <h2>¿Tenés dudas?</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Es realmente gratis?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Sí, completamente. No hay plan pago, no hay límite de uso, no hay tarjeta de crédito. Dejás tu email, accedés al journal y listo.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Para qué mercados sirve?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">El journal está diseñado principalmente para Micro Nasdaq (MNQ), pero funciona para cualquier contrato de futuros. Los cálculos de P&L son en puntos y dólares.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Tengo que instalar algo?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">No. Es una aplicación web que funciona directo en el browser. No requiere instalación ni descarga. Solo abrís el link y empezás a registrar operaciones.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Los datos se guardan automáticamente?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Sí. Los datos se guardan en el storage local del browser. Para no perderlos, recomendamos no limpiar el caché del navegador. Próximamente vamos a agregar sincronización en la nube.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Para qué sirve dejar el email?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Para mantenerte actualizado con nuevas funciones del journal, guías de trading para prop firms y descuentos exclusivos en evaluaciones. Podés darte de baja cuando quieras.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ LIGHTBOX ═══════════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Captura del journal">
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Zona de Fondeo</a>
+      <a href="/#comparador">Comparador</a>
+      <a href="/#herramientas">Herramientas</a>
+      <a href="/journal">Trading Journal</a>
+    </div>
+    <p>© 2026 Zona de Fondeo — Herramientas gratuitas para traders de LATAM.</p>
+    <p style="margin-top:6px; font-size:11px;">Este sitio puede contener enlaces de afiliados. Ver condiciones.</p>
+  </div>
+</footer>
+
+<script>
+// ═══ NAV MOBILE ═══
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobile() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ═══ SCROLL ═══
+function scrollToForm() {
+  document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function scrollToScreenshots() {
+  document.getElementById('screenshots-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ═══ FAQ ACCORDION ═══
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  // Toggle clicked
+  if (!isOpen) item.classList.add('open');
+}
+
+// ═══ LIGHTBOX ═══
+const screenshots = [
+  { src: '/screenshots/journal-dashboard.png',  alt: 'Dashboard principal del Trading Journal MNQ' },
+  { src: '/screenshots/journal-calendario.png', alt: 'Calendario de trading mensual' },
+  { src: '/screenshots/journal-registro.png',   alt: 'Registro de operaciones' },
+  { src: '/screenshots/journal-metricas.png',   alt: 'Métricas avanzadas' },
+];
+
+function openLightbox(idx) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = screenshots[idx].src;
+  img.alt = screenshots[idx].alt;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// ═══ FORM SUBMIT ═══
+async function handleSubmit() {
+  const nameEl  = document.getElementById('input-name');
+  const emailEl = document.getElementById('input-email');
+  const errorEl = document.getElementById('form-error');
+  const btnEl   = document.getElementById('submit-btn');
+  const textEl  = document.getElementById('submit-text');
+
+  const name  = nameEl.value.trim();
+  const email = emailEl.value.trim();
+
+  // Reset
+  errorEl.classList.remove('visible');
+  errorEl.textContent = '';
+
+  // Client validation
+  if (!name) {
+    showError('Por favor ingresá tu nombre.');
+    nameEl.focus();
+    return;
+  }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showError('Por favor ingresá un email válido.');
+    emailEl.focus();
+    return;
+  }
+
+  // Loading state
+  btnEl.disabled = true;
+  textEl.textContent = 'Procesando...';
+
+  try {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || 'Error al registrar.');
+    }
+
+    // ✅ Success
+    gtag('event', 'journal_signup', {
+      event_category: 'conversion',
+      event_label: 'journal_form',
+    });
+
+    document.getElementById('journal-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+
+  } catch (err) {
+    showError(err.message || 'Error inesperado. Intentá de nuevo.');
+    btnEl.disabled = false;
+    textEl.textContent = '📊 Quiero mi Journal Gratis →';
+  }
+}
+
+function showError(msg) {
+  const el = document.getElementById('form-error');
+  el.textContent = msg;
+  el.classList.add('visible');
+}
+
+// Enter key on form inputs
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const active = document.activeElement;
+    if (active && (active.id === 'input-name' || active.id === 'input-email')) {
+      handleSubmit();
+    }
+  }
+});
+</script>
+
+</body>
+</html>

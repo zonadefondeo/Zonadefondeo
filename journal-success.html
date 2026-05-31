@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu acceso está listo — Trading Journal | Zona de Fondeo</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%23080b10%27%2F%3E%3Crect%20x%3D%272%27%20y%3D%2718%27%20width%3D%275%27%20height%3D%2712%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%2F%3E%3Crect%20x%3D%279%27%20y%3D%2711%27%20width%3D%275%27%20height%3D%2719%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%20opacity%3D%27.6%27%2F%3E%3Crect%20x%3D%2716%27%20y%3D%274%27%20width%3D%275%27%20height%3D%2726%27%20rx%3D%271.5%27%20fill%3D%27%2300d4aa%27%2F%3E%3Cpolyline%20points%3D%2717.5%2C1%2020%2C5.5%2022.5%2C1%27%20stroke%3D%27%2300d4aa%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20fill%3D%27none%27%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWZHRNB5CJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWZHRNB5CJ');
+  // Track conversion
+  gtag('event', 'journal_access', { event_category: 'conversion', event_label: 'success_page' });
+</script>
+<style>
+:root {
+  --bg: #080b10; --surface: #0e1219; --border: #1c2333; --border2: #2a3545;
+  --primary: #00d4aa; --primary-dim: rgba(0,212,170,0.12); --primary-glow: rgba(0,212,170,0.35);
+  --gold: #f5b731; --text: #e2e8f0; --text2: #94a3b8; --text3: #4a5568;
+  --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif; --font-mono: 'JetBrains Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,212,170,0.1) 0%, transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+.card {
+  background: var(--surface); border: 1.5px solid var(--border2);
+  border-radius: 20px; padding: 56px 48px; max-width: 480px; width: 100%;
+  text-align: center; position: relative; z-index: 1;
+  box-shadow: 0 40px 80px rgba(0,212,170,0.08);
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, var(--primary), rgba(0,212,170,0));
+  border-radius: 20px 20px 0 0;
+}
+.emoji { font-size: 56px; margin-bottom: 20px; display: block; }
+h1 { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+p { color: var(--text2); font-size: 15px; line-height: 1.65; margin-bottom: 32px; }
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--primary); color: #080b10; padding: 16px 24px;
+  border-radius: 10px; font-weight: 800; font-size: 16px;
+  text-decoration: none; font-family: var(--font-body);
+  transition: all 0.2s; width: 100%;
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+.btn:hover { background: #00efc4; transform: translateY(-2px); box-shadow: 0 8px 30px var(--primary-glow); }
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70%  { box-shadow: 0 0 0 14px rgba(0,212,170,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,212,170,0); }
+}
+.back {
+  display: block; margin-top: 20px; font-size: 13px; color: var(--text3);
+  font-family: var(--font-mono); text-decoration: none; transition: color 0.2s;
+}
+.back:hover { color: var(--primary); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="emoji">🎉</span>
+  <h1>Tu acceso está listo.</h1>
+  <p>Registrado correctamente. Hacé clic abajo para abrir el Trading Journal MNQ ahora mismo y empezar a registrar tus operaciones.</p>
+  <a href="https://bitacora-mnq-app.vercel.app" target="_blank" rel="noopener" class="btn">
+    📊 Abrir Trading Journal →
+  </a>
+  <a href="/" class="back">← Volver a Zona de Fondeo</a>
+</div>
+</body>
+</html>
